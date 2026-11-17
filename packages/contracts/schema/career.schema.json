@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/career.schema.json",
+  "title": "Career/mission record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "kind", "title", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "kind": { "enum": ["career", "mission"] },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "institution": { "type": "string", "maxLength": 300 },
+    "jurisdiction": { "type": "string", "maxLength": 100, "description": "Country/region whose rules apply. Eligibility varies by jurisdiction." },
+    "region": { "type": "string", "maxLength": 100 },
+    "general_skills": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/non_empty_string" }, "description": "Durable, transferable skills — safe to state generally." },
+    "current_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["requirement", "checked_at"],
+        "properties": {
+          "requirement": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+          "checked_at": { "$ref": "common.schema.json#/$defs/date" },
+          "official_url": { "$ref": "common.schema.json#/$defs/url" }
+        }
+      },
+      "description": "Time-sensitive eligibility per official sources; checked_at is mandatory. No guarantees implied."
+    },
+    "mission_milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title"],
+        "properties": {
+          "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+          "date": { "$ref": "common.schema.json#/$defs/date" },
+          "note": { "type": "string", "maxLength": 1000 }
+        }
+      }
+    },
+    "official_url": { "$ref": "common.schema.json#/$defs/url" },
+    "checked_at": { "$ref": "common.schema.json#/$defs/date" },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

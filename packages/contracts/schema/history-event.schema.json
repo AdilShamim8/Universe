@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/history-event.schema.json",
+  "title": "History event record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "experience", "track", "title", "time", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "experience": { "enum": ["cosmic-history"] },
+    "track": {
+      "enum": ["early-cosmic-history", "cosmic-dawn", "structure-evolution", "solar-system", "earth-biosphere", "history-of-knowledge", "space-exploration", "future-scenarios"],
+      "description": "future-scenarios events are conditional projections and must be labeled separately from known history."
+    },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "summary": { "type": "string", "maxLength": 2000 },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frame", "precision"],
+      "properties": {
+        "frame": { "enum": ["cosmic-age", "lookback", "geological", "calendar"] },
+        "unit": {
+          "enum": ["s", "yr", "kyr", "Myr", "Gyr", "ka", "Ma"],
+          "description": "Decimal-safe string values; unit applies to value/bounds."
+        },
+        "value": { "type": ["string", "null"], "pattern": "^-?\\d+(?:\\.\\d+)?$", "description": "Nominal value as decimal string. Null when unknown — unknown is rendered as unknown, never zero." },
+        "lower_bound": { "type": ["string", "null"], "pattern": "^-?\\d+(?:\\.\\d+)?$" },
+        "upper_bound": { "type": ["string", "null"], "pattern": "^-?\\d+(?:\\.\\d+)?$" },
+        "model_ref": { "type": ["string", "null"], "maxLength": 200, "description": "Cosmological model ID/version for cosmic-age/lookback frames (e.g. flat LCDM, Planck 2018 parameters)." },
+        "precision": { "enum": ["exact", "year", "month", "day", "interval", "unknown"] },
+        "uncertainty_note": { "type": "string", "maxLength": 1000 }
+      }
+    },
+    "claim_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "evidence_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "concept_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "future_scenario": { "type": "boolean", "default": false, "description": "True for conditional projections; must pair with track future-scenarios." },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

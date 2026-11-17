@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/common.schema.json",
+  "title": "Common definitions",
+  "description": "Shared definitions for all universe-platform record contracts. Schema contracts are versioned; SCHEMA_VERSION is the current major.",
+  "$defs": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Contract schema major version. Bump with a migration script and ADR."
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)+$",
+      "description": "Opaque, stable, namespace-prefixed record ID, e.g. 'concept.fixture.example' or 'cosmology'. IDs are never reused after deprecation.",
+      "examples": ["concept.observable-universe", "claim.cosmic-expansion", "event.fixture.example-epoch"]
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 96
+    },
+    "lifecycle_status": {
+      "description": "Publication lifecycle of the record itself. This is NOT evidence status and NOT proof of review: approval requires a maintainer-recorded review decision bound to the record hash.",
+      "enum": ["draft", "in-review", "approved", "published", "withdrawn", "deprecated"]
+    },
+    "evidence_status": {
+      "description": "Scientific evidential standing of a claim, kept separate from lifecycle.",
+      "enum": ["established", "model-dependent", "contested", "hypothesis", "historical-superseded"]
+    },
+    "rights_mode": {
+      "enum": ["link-only", "metadata-only", "permitted-redistribution", "restricted", "prohibited"]
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Calendar date (ISO 8601, no time, no timezone)."
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "non_empty_string": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "HTTPS-only URL. http:// is rejected; there is no reason to fetch or link insecure origins."
+    }
+  }
+}

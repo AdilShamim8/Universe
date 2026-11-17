@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/visualization.schema.json",
+  "title": "Visualization record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "renderer", "representation", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "renderer": { "enum": ["static-svg", "css-animation", "canvas-2d", "webgl", "notebook"] },
+    "representation": {
+      "enum": ["observational-data", "processed-composite", "simulation", "model-output", "artists-impression", "schematic"],
+      "description": "Mandatory honesty label: what the viewer is actually looking at."
+    },
+    "dataset_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "claim_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "assumptions": { "type": "string", "maxLength": 2000, "description": "Model assumptions, coordinate frames, scale treatment." },
+    "units_note": { "type": "string", "maxLength": 1000 },
+    "renderer_version": { "type": "string", "maxLength": 50 },
+    "credit": { "type": "string", "maxLength": 500 },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description"],
+      "properties": {
+        "description": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+        "static_asset": { "type": "string", "maxLength": 300 },
+        "text_alternative": { "type": "string", "maxLength": 4000, "description": "Full text description for screen readers / no-JS." }
+      }
+    },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

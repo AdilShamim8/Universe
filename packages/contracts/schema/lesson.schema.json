@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/lesson.schema.json",
+  "title": "Lesson record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "module", "title", "level", "concept_refs", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "module": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "level": { "enum": ["L0", "L1", "L2", "L3", "L4", "L5"] },
+    "concept_refs": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "objectives": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/non_empty_string" }, "maxItems": 10 },
+    "prerequisites": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/record_id" },
+      "description": "Concept or lesson IDs the learner should know first. Must not form cycles (validated by registry)."
+    },
+    "body": { "type": "string", "maxLength": 200000, "description": "Reviewed lesson content (sanitized Markdown, no executable MDX, no raw HTML)." },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "prompt"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "prompt": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+          "hint": { "type": "string", "maxLength": 2000 },
+          "solution": { "type": "string", "maxLength": 20000 }
+        }
+      }
+    },
+    "reading_time_min": { "type": "integer", "minimum": 1, "maximum": 240 },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

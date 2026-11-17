@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/concept.schema.json",
+  "title": "Concept record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "module", "title", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "module": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "summary": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "Short definition. Scientific text must be human-authored and reviewed."
+    },
+    "aliases": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/non_empty_string" }, "maxItems": 20 },
+    "taxonomy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["provider", "term"],
+        "properties": {
+          "provider": { "enum": ["uat"] },
+          "term": { "type": "string", "maxLength": 200 },
+          "version": { "type": "string", "maxLength": 50, "description": "Pinned taxonomy version (required for UAT redistribution; UAT is CC BY-SA 3.0)." }
+        }
+      }
+    },
+    "level_coverage": {
+      "type": "array",
+      "items": { "enum": ["L0", "L1", "L2", "L3", "L4", "L5"] },
+      "uniqueItems": true,
+      "description": "Depth levels with at least one reviewed lesson or explanation attached."
+    },
+    "related_concepts": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}
