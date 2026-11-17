@@ -1,0 +1,26 @@
+name: Weekly source scan (dry-run)
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Dry-run only: fixtures, zero network. Live scanning stays maintainer-
+      # controlled (registries/sources/allowlist.yaml refresh.enabled) until
+      # a human reviews a dry-run report. Scheduled workflows can be delayed
+      # or disabled by GitHub; check the run history for actual freshness.
+      - run: npm run ingest:dry-run
