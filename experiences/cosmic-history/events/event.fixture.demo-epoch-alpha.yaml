@@ -1,0 +1,30 @@
+# NON-SCIENCE TEST FIXTURE — engineering preview renderer demo.
+#
+# This event exists to exercise the timeline engine (positioning, uncertainty
+# intervals, keyboard navigation) with values that are deliberately NOT
+# astronomy. The ID carries the reserved "fixture" namespace so the approved
+# projection and Pagefind search always exclude it. It must never be
+# presented as a scientific event. Replace with reviewed events once human
+# curators and reviewers are registered.
+schema_version: 1
+id: event.fixture.demo-epoch-alpha
+experience: cosmic-history
+track: early-cosmic-history
+title: "Fixture: Demo Epoch Alpha (not science)"
+summary: >-
+  Synthetic engineering fixture. The time value below is an arbitrary
+  interval chosen to test interval rendering, not a statement about the
+  universe.
+time:
+  frame: cosmic-age
+  unit: Gyr
+  value: null
+  lower_bound: "0.0000001"
+  upper_bound: "0.000001"
+  model_ref: null
+  precision: interval
+  uncertainty_note: "Fixture interval for renderer testing only."
+claim_refs: []
+evidence_refs: []
+concept_refs: []
+status: draft

@@ -1,0 +1,24 @@
+# NON-SCIENCE TEST FIXTURE — engineering preview renderer demo.
+#
+# Second synthetic event for the timeline demo: a nominal-value point event
+# with a different track, to exercise sorting and track grouping. The
+# "fixture" namespace keeps it out of public output and search.
+schema_version: 1
+id: event.fixture.demo-epoch-beta
+experience: cosmic-history
+track: structure-evolution
+title: "Fixture: Demo Epoch Beta (not science)"
+summary: Synthetic engineering fixture with a nominal point value for sort tests.
+time:
+  frame: cosmic-age
+  unit: Gyr
+  value: "4.5"
+  lower_bound: null
+  upper_bound: null
+  model_ref: null
+  precision: exact
+  uncertainty_note: "Fixture point value; deliberately arbitrary."
+claim_refs: []
+evidence_refs: []
+concept_refs: []
+status: draft

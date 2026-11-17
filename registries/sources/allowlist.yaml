@@ -1,0 +1,31 @@
+# External source allowlist — operator configuration for ingestion adapters.
+#
+# Adapters may only fetch from entries listed here (fail-closed). Each entry
+# pins the permitted fields, rights mode, and request budget. Crossref
+# metadata is allowlisted for bibliographic fields ONLY (no abstracts, no
+# full text) per docs/architecture/SYSTEM_DESIGN.md §9 and ADR 0005.
+sources:
+  - id: crossref.metadata
+    provider: Crossref
+    base_url: https://api.crossref.org
+    endpoint: /works
+    protocol: rest-json
+    permitted_fields: [DOI, title, author, container-title, issued, publisher, type, URL, ISSN, volume, issue, page]
+    forbidden_fields: [abstract, full-text] # abstracts are excluded by rights
+    rights:
+      mode: metadata-only
+      note: >-
+        Crossref REST metadata is used for identification and linking only;
+        abstracts are explicitly excluded (copyrighted, not openly licensed
+        for redistribution). No content is fed into any model.
+    request_budget:
+      max_items_per_run: 25
+      requests_per_run: 5
+      timeout_ms: 10000
+      max_response_bytes: 5242880
+      retries: 2
+      backoff_ms: 500
+    refresh:
+      cadence: weekly
+      enabled: false # Enable only after maintainer review of a dry-run report.
+    status: draft

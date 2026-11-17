@@ -1,0 +1,14 @@
+schema_version: 1
+id: foundations
+title: Foundations
+description: >-
+  Mathematics, physics, scales, units, the scientific method, and coordinate
+  systems that the rest of the platform builds on. This manifest is a
+  draft-stage placeholder describing intended scope only; no lesson content
+  exists yet, and nothing here has been scientifically reviewed.
+status: draft
+owners: [] # No consenting reviewer registered yet; publication blocked by design.
+depends_on: []
+taxonomy_provider: uat
+locales: [en]
+review_policy: science-and-education

@@ -326,24 +326,36 @@ export function discoverRegistry(root = REGISTRY_ROOT): Registry {
   // --- registries/sources: ingestion allowlist (operator config, not source records) ---
   for (const file of listFiles(join(root, "registries", "sources"))) {
     const rel = relPath(root, file);
-    let data: AnyRecord | null = null;
+    let parsed: unknown;
     try {
-      const parsed = readYamlOrJson(file);
-      if (parsed !== null && typeof parsed === "object" && !Array.isArray(parsed)) data = parsed as AnyRecord;
+      parsed = readYamlOrJson(file);
     } catch (e) {
       findings.push({ severity: "error", code: "source-registry-parse-error", message: (e as Error).message, file: rel });
-    }
-    if (!data) continue;
-    const id = data.id;
-    if (typeof id !== "string" || id.length === 0) {
-      findings.push({ severity: "error", code: "source-registry-missing-id", message: "allowlist entry missing id", file: rel });
       continue;
     }
-    if (sourceAllowlist.has(id)) {
-      findings.push({ severity: "error", code: "duplicate-source-id", message: `duplicate allowlist id '${id}'`, file: rel });
-      continue;
+    if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) continue;
+    const obj = parsed as AnyRecord;
+    // Accept either a single entry ({ id, ... }) or a list file ({ sources: [ ... ] }).
+    const entries: AnyRecord[] = [];
+    if (Array.isArray(obj.sources)) {
+      for (const item of obj.sources) {
+        if (item !== null && typeof item === "object" && !Array.isArray(item)) entries.push(item as AnyRecord);
+      }
+    } else if (typeof obj.id === "string") {
+      entries.push(obj);
     }
-    sourceAllowlist.set(id, { id, data, file: rel });
+    for (const data of entries) {
+      const id = data.id;
+      if (typeof id !== "string" || id.length === 0) {
+        findings.push({ severity: "error", code: "source-registry-missing-id", message: "allowlist entry missing id", file: rel });
+        continue;
+      }
+      if (sourceAllowlist.has(id)) {
+        findings.push({ severity: "error", code: "duplicate-source-id", message: `duplicate allowlist id '${id}'`, file: rel });
+        continue;
+      }
+      sourceAllowlist.set(id, { id, data, file: rel });
+    }
   }
 
   // --- registries/reviewers: roster + decisions/ ---

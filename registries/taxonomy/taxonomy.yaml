@@ -1,0 +1,26 @@
+# Taxonomy provider configuration.
+#
+# The Unified Astronomy Thesaurus (UAT) is the reference vocabulary for
+# astronomical concept mapping. UAT is licensed CC BY-SA 3.0: if any
+# UAT-derived taxonomy is ever redistributed or adapted inside this project,
+# it must remain separately attributed and licensed under compatible
+# share-alike terms (see docs/architecture/SYSTEM_DESIGN.md §3 and §9).
+#
+# No UAT data is vendored today. Concepts reference UAT terms by external
+# pointer only, so this file records the pinned version and license WITHOUT
+# importing anything.
+provider: uat
+# Pin the inspected release. Last verified 2026-11-17 at
+# https://github.com/astrothesaurus/UAT (source repository).
+pinned_version: "5.0.0"
+license:
+  name: CC BY-SA 3.0
+  url: https://creativecommons.org/licenses/by-sa/3.0/
+  attribution: Unified Astronomy Thesaurus, American Institute of Physics
+redistribution:
+  vendored: false
+  note: >-
+    Terms are referenced by ID/label, not redistributed. If a derived
+    taxonomy is introduced later, it must be published under CC BY-SA 3.0
+    with clear attribution, separately from project-original CC BY 4.0
+    content.

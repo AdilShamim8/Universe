@@ -1,0 +1,25 @@
+# Cosmic History experience — flagship vertical slice.
+#
+# Cross-domain curated experience with its own event records. This manifest
+# declares scope and curation policy. Event records live in events/ and
+# reference claims/concepts owned by the domain modules.
+id: cosmic-history
+title: The History of the Universe
+description: >-
+  A chronological journey from the earliest modeled epochs to the present,
+  built strictly from human-reviewed timeline events with explicit time
+  frames, uncertainty, and evidence. Currently an engineering preview: it
+  contains no reviewed scientific events, only clearly labeled non-science
+  fixtures used to test the renderer.
+curator: null # No consenting human curator registered yet.
+tracks:
+  - early-cosmic-history
+  - cosmic-dawn
+  - structure-evolution
+  - solar-system
+  - earth-biosphere
+  - history-of-knowledge
+  - space-exploration
+  - future-scenarios
+time_frames: [cosmic-age, lookback, geological, calendar]
+status: draft
