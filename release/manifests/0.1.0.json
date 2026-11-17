@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "created_at": "2026-11-17",
+  "git_commit": "95f438997689650def5ed296e7fdb2a63ca2b5bc",
+  "contract_schema_version": 1,
+  "module_revisions": {
+    "cosmology": 1,
+    "foundations": 1
+  },
+  "approved_record_count": {},
+  "source_versions": [
+    {
+      "source_id": "crossref.metadata",
+      "retrieved_at": "2026-11-17"
+    }
+  ],
+  "dependency_versions": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.9.1",
+    "@types/node": "26.6.6",
+    "oxlint": "1.94.0",
+    "prettier": "3.10.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "excluded": {
+    "fixture": 3
+  },
+  "verification": {
+    "validate": "pass",
+    "test": "pass",
+    "test_summary": "vitest 119 passed (unit+integration); build+search green; e2e pending",
+    "build": "pass",
+    "e2e": "not-run"
+  },
+  "artifact": {
+    "kind": "local-tarball",
+    "digest": "sha256-4eb44b8870d4ac1b9175351b9d6bdb785e02902cbb3d115d771a08f175480d58",
+    "note": "SHA-256 over the deterministic apps/web/dist tree at manifest time."
+  },
+  "withdrawn_records": [],
+  "notes": "Engineering preview: zero approved scientific records by design (no registered reviewers). Withdrawn/deprecated records listed here must never reappear in a rollback of this or later releases."
+}

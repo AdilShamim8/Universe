@@ -1,0 +1,15 @@
+{
+  "name": "@universe/release",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/cli.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@universe/contracts": "*",
+    "@universe/registry": "*",
+    "@universe/compiler": "*"
+  }
+}
