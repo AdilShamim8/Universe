@@ -1,0 +1,145 @@
+/* app-specific styles on top of the UI package */
+
+/* Theme toggle placement (visible only when JS enabled) */
+body > .theme-toggle {
+  position: absolute;
+  inset-block-start: var(--space-2);
+  inset-inline-end: var(--space-4);
+  z-index: 20;
+}
+
+/* Hero constellation decoration (CSS only, reduced-motion safe via base.css) */
+.hero {
+  background:
+    radial-gradient(1200px 500px at 50% -10%, color-mix(in oklab, var(--accent-0) 10%, transparent), transparent),
+    var(--bg-0);
+}
+
+/* Timeline demo styles */
+.timeline-figure {
+  margin: var(--space-6) 0;
+  overflow-x: auto;
+}
+.timeline-svg {
+  max-width: 100%;
+  height: auto;
+  background: var(--bg-1);
+  border: var(--border-1) solid var(--border-0);
+  border-radius: var(--radius-md);
+}
+.tl-axis {
+  stroke: var(--border-1c);
+  stroke-width: 1.5;
+}
+.tl-axis-label {
+  fill: var(--fg-2);
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+.tl-point {
+  fill: var(--accent-0);
+}
+.tl-interval {
+  fill: color-mix(in oklab, var(--accent-0) 55%, transparent);
+  stroke: var(--accent-0);
+  stroke-width: 1;
+}
+.tl-future {
+  fill: color-mix(in oklab, var(--accent-2) 55%, transparent);
+  stroke: var(--accent-2);
+  stroke-dasharray: 4 2;
+}
+.tl-label {
+  fill: var(--fg-1);
+  font-size: 12px;
+}
+.tl-label-future {
+  fill: var(--accent-2);
+  font-style: italic;
+}
+.tl-caption {
+  color: var(--fg-2);
+  font-size: var(--text-sm);
+  margin-block-start: var(--space-2);
+}
+.tl-accessible {
+  margin-block: var(--space-8);
+}
+.tl-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.tl-list-item {
+  background: var(--bg-1);
+  border: var(--border-1) solid var(--border-0);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: baseline;
+}
+.tl-list-item:focus {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.tl-list-title {
+  font-weight: 600;
+}
+.tl-list-time {
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+.tl-list-flag {
+  color: var(--accent-2);
+  font-size: var(--text-xs);
+  border: var(--border-1) dashed var(--accent-2);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-2);
+}
+.tl-unknown .tl-list-time {
+  color: var(--warn-0);
+}
+
+/* Search UI */
+.search-box {
+  display: flex;
+  gap: var(--space-2);
+  max-width: var(--measure);
+}
+.search-input {
+  flex: 1;
+  background: var(--bg-2);
+  border: var(--border-1) solid var(--border-1c);
+  border-radius: var(--radius-md);
+  color: var(--fg-0);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-base);
+}
+.search-results {
+  margin-block-start: var(--space-4);
+}
+
+/* Coverage table */
+.coverage-table {
+  margin-block: var(--space-6);
+}
+
+/* Level filter chips */
+.level-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    flex-direction: column;
+  }
+}

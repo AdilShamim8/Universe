@@ -1,0 +1,19 @@
+# Build outputs
+dist/
+.astro/
+node_modules/
+*.tsbuildinfo
+
+# Local state - never commit candidate stores, caches or credentials
+.data/
+*-candidates.json
+.env
+.env.*
+
+# Test artifacts
+test-results/
+playwright-report/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

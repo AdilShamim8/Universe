@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/dataset.schema.json",
+  "title": "Dataset record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "provider", "download_url", "format", "rights", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "provider": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "download_url": { "$ref": "common.schema.json#/$defs/url" },
+    "version": { "type": "string", "maxLength": 100 },
+    "released_at": { "$ref": "common.schema.json#/$defs/date" },
+    "size_bytes": { "type": "integer", "minimum": 0 },
+    "format": { "enum": ["csv", "fits", "votable", "json", "ecsv", "hdf5", "netcdf", "parquet", "txt"] },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode"],
+      "properties": {
+        "mode": { "$ref": "common.schema.json#/$defs/rights_mode" },
+        "license": { "type": "string", "maxLength": 200 },
+        "attribution": { "type": "string", "maxLength": 2000, "description": "Required acknowledgment text (e.g. NASA Exoplanet Archive rules)." }
+      }
+    },
+    "checksum": { "type": "string", "pattern": "^sha256-[0-9a-f]{64}$" },
+    "units_note": { "type": "string", "maxLength": 2000 },
+    "data_dictionary_url": { "$ref": "common.schema.json#/$defs/url" },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

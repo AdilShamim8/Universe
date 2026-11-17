@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/claim.schema.json",
+  "title": "Claim record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "module", "concept", "statement", "evidence_status", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "module": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "concept": { "$ref": "common.schema.json#/$defs/record_id" },
+    "statement": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000,
+      "description": "Exact proposition. Human-authored, reviewed. First-person of evidence status: this is what the evidence supports."
+    },
+    "evidence_status": { "$ref": "common.schema.json#/$defs/evidence_status" },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["measurement-interval", "confidence-level", "model-range", "unconstrained"] },
+        "note": { "type": "string", "maxLength": 1000 }
+      }
+    },
+    "limitations": { "type": "string", "maxLength": 2000, "description": "What the claim does not establish." },
+    "contradicted_by": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" }, "description": "Evidence records that challenge this claim; keep visible." },
+    "evidence_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "source_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "reviewed_at": { "$ref": "common.schema.json#/$defs/date" },
+    "superseded_by": { "$ref": "common.schema.json#/$defs/record_id" },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

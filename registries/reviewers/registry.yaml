@@ -1,0 +1,8 @@
+# Reviewer registry — trusted humans only.
+#
+# Entries here are real, consenting people who agreed to be listed with their
+# review role(s). The registry is maintainer-controlled: content contributors
+# and agents may NEVER add entries or review decisions (see AGENTS.md §1).
+# An empty roster means the platform is draft-only; approval workflows stay
+# blocked until at least one subject and one educational reviewer register.
+reviewers: [] # EMPTY BY DESIGN — no human has consented to be listed yet.

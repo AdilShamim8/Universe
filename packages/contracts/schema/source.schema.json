@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/source.schema.json",
+  "title": "Source record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "rights", "retrieved_at", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "title": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "url": { "$ref": "common.schema.json#/$defs/url" },
+    "doi": { "type": "string", "pattern": "^10\\.\\d{4,9}/\\S+$" },
+    "provider": { "type": "string", "maxLength": 200 },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 200 }
+    },
+    "version": { "type": "string", "maxLength": 100 },
+    "released_at": { "$ref": "common.schema.json#/$defs/date", "description": "Publication or release date of the cited version." },
+    "retrieved_at": { "$ref": "common.schema.json#/$defs/date", "description": "Date the record's content was verified against the live source." },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode"],
+      "properties": {
+        "mode": { "$ref": "common.schema.json#/$defs/rights_mode" },
+        "license": { "type": "string", "maxLength": 200, "description": "SPDX identifier or named license, when known." },
+        "note": { "type": "string", "maxLength": 1000 }
+      }
+    },
+    "checksum": { "type": "string", "pattern": "^(sha256-)[0-9a-f]{64}$", "description": "Integrity pin for stored artifacts (sha256-<hex>)." },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "superseded_by": { "$ref": "common.schema.json#/$defs/record_id" }
+  }
+}

@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import { loadSiteModel } from "../lib/site-data";
+import { emptyState } from "@universe/ui";
+
+const { data, sections } = loadSiteModel();
+---
+<Base title="Start" description="Choose a learning goal and navigate to reviewed introductions." current="/">
+  <section class="hero">
+    <h1>Understand the universe, from your first question to open research.</h1>
+    <p>
+      A free, open learning platform in the making: evidence-first explanations, honest
+      uncertainty, and traceable sources. Currently an engineering preview — no scientific
+      content has been reviewed or approved yet.
+    </p>
+  </section>
+
+  <nav aria-label="Sections" class="section-grid-wrap">
+    <ul class="section-grid">
+      {sections.map((s) => (
+        <li>
+          <a href={s.route}>
+            <div class="section-card-title">{s.title}</div>
+            <div class="section-card-summary">{s.summary}</div>
+            {data.nav.find((n) => n.route === s.route)?.count === 0 && (
+              <div class="section-card-status">Awaiting reviewed content</div>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  {data.emptyState && (
+  <Fragment set:html={emptyState(
+    "No approved content yet",
+    "This platform is in an engineering preview. Sections render honest empty states until human scientific reviewers approve records. No placeholder science is shown.",
+    { awaitingReview: true },
+  )} />
+)}
+</Base>

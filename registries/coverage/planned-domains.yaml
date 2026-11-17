@@ -1,0 +1,50 @@
+# Planned ownership domains — coverage map input, NOT active modules.
+#
+# These twelve domains are the long-term organization described in
+# docs/architecture/SYSTEM_DESIGN.md §3. Only foundations and cosmology exist
+# as draft module directories today. Each entry below documents a future
+# module proposal (user need and scope) without creating empty lesson trees.
+# A domain is activated only after a manifest with a registered owner and
+# reviewed records exists (see CONTRIBUTING.md, module extension flow).
+schema_version: 1
+planned_domains:
+  - id: galaxies
+    title: Galaxies and extragalactic astronomy
+    need: Formation, evolution, clusters, active nuclei
+    depends_on: [foundations, cosmology]
+  - id: stars
+    title: Stars
+    need: Star formation, stellar evolution, nucleosynthesis, variable stars
+    depends_on: [foundations]
+  - id: compact-objects
+    title: Compact objects and high-energy astrophysics
+    need: Black holes, neutron stars, gravitational waves, cosmic rays
+    depends_on: [foundations, stars]
+  - id: planetary-science
+    title: Solar system and planetary science
+    need: Sun, planets, moons, asteroids, planetary geology and atmospheres
+    depends_on: [foundations]
+  - id: exoplanets-astrobiology
+    title: Exoplanets and astrobiology
+    need: Detection, habitability, origins, biosignatures
+    depends_on: [foundations, planetary-science]
+  - id: earth-life
+    title: Earth and life
+    need: Geological history, planetary habitability, atmosphere and biosphere
+    depends_on: [foundations, planetary-science]
+  - id: observational-astronomy
+    title: Observational astronomy
+    need: Instruments, spectroscopy, surveys, data processing, multi-messenger astronomy
+    depends_on: [foundations]
+  - id: space-engineering
+    title: Space engineering and exploration
+    need: Propulsion, spacecraft, orbital mechanics, communication, robotics
+    depends_on: [foundations]
+  - id: human-spaceflight
+    title: Human spaceflight
+    need: Mission history, astronaut pathways, human factors, space physiology
+    depends_on: [space-engineering]
+  - id: history-society
+    title: History of science, society and space policy
+    need: Global astronomical traditions, discovery history, governance, ethics
+    depends_on: []

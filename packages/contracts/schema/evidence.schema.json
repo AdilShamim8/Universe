@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/evidence.schema.json",
+  "title": "Evidence record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "claim", "source", "relation", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "claim": { "$ref": "common.schema.json#/$defs/record_id" },
+    "source": { "$ref": "common.schema.json#/$defs/record_id" },
+    "locator": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Exact location in the source: section, figure, table, DOI, dataset row, timestamp."
+    },
+    "relation": { "enum": ["supports", "challenges", "context"] },
+    "method": { "type": "string", "maxLength": 2000, "description": "Observational or inferential method behind this evidence." },
+    "limitations": { "type": "string", "maxLength": 2000 },
+    "uncertainty_note": { "type": "string", "maxLength": 1000 },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

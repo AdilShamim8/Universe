@@ -1,0 +1,5 @@
+# Public slug redirects — editorial renames, never deletions.
+#
+# A record's ID is permanent; its public slug may change. This map keeps old
+# slugs working. Targets are site routes (leading /) or record IDs.
+redirects: [] # No published slugs have been renamed yet.

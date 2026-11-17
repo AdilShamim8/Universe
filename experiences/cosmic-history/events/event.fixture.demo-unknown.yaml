@@ -1,0 +1,24 @@
+# NON-SCIENCE TEST FIXTURE — engineering preview renderer demo.
+#
+# Third synthetic event: fully UNKNOWN time. The timeline must render
+# "unknown" for this event — never zero, never a fabricated epoch. The
+# "fixture" namespace keeps it out of public output and search.
+schema_version: 1
+id: event.fixture.demo-unknown
+experience: cosmic-history
+track: cosmic-dawn
+title: "Fixture: Demo Unknown Time (not science)"
+summary: Synthetic engineering fixture with unknown time for unknown-state tests.
+time:
+  frame: cosmic-age
+  unit: Gyr
+  value: null
+  lower_bound: null
+  upper_bound: null
+  model_ref: null
+  precision: unknown
+  uncertainty_note: "Fixture: time intentionally unknown to test honest unknown rendering."
+claim_refs: []
+evidence_refs: []
+concept_refs: []
+status: draft

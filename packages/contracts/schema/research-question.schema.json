@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://universe-platform.dev/contracts/research-question.schema.json",
+  "title": "Research question record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "module", "question", "status"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/schema_version" },
+    "id": { "$ref": "common.schema.json#/$defs/record_id" },
+    "module": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "question": { "$ref": "common.schema.json#/$defs/non_empty_string" },
+    "context": { "type": "string", "maxLength": 4000, "description": "What is established and what remains uncertain — source-backed, human-reviewed." },
+    "evidence_gap": { "type": "string", "maxLength": 4000 },
+    "methods": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/non_empty_string" } },
+    "required_skills": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/non_empty_string" } },
+    "dataset_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "source_refs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" } },
+    "investigated_by": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/record_id" }, "description": "Missions, instruments or methods records." },
+    "question_status": { "enum": ["proposed", "active", "disputed", "partially-resolved", "resolved", "superseded"], "description": "Never set automatically; requires review." },
+    "question_status_note": { "type": "string", "maxLength": 2000 },
+    "status": { "$ref": "common.schema.json#/$defs/lifecycle_status" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" }
+  }
+}

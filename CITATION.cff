@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you reference this software, please cite it as below.
+  Note: this is an engineering preview with no approved scientific content.
+title: Universe Learning Platform
+type: software
+authors:
+  - given-names: Adil
+    family-names: Shamim
+    alias: AdilShamim8
+repository-code: "https://github.com/AdilShamim8/Universe"
+abstract: >-
+  Open, modular scientific learning infrastructure: versioned content
+  contracts, a deterministic fail-closed registry, a static-first website,
+  a decimal-safe cosmic timeline engine, and bounded metadata ingestion.
+  Engineering preview; scientific content is awaiting human review.
+keywords:
+  - astronomy
+  - education
+  - open-science
+  - knowledge-graph
+  - static-site
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-17"

@@ -1,0 +1,13 @@
+schema_version: 1
+id: cosmology
+title: Cosmology
+description: >-
+  Expansion of the universe, the early universe, the cosmic microwave
+  background, dark matter, dark energy, and structure formation. Draft-stage
+  scope declaration only — no reviewed content exists in this module yet.
+status: draft
+owners: [] # No consenting reviewer registered yet; publication blocked by design.
+depends_on: [foundations]
+taxonomy_provider: uat
+locales: [en]
+review_policy: science-and-education

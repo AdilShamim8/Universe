@@ -1,0 +1,120 @@
+---
+import Base from "../layouts/Base.astro";
+import { emptyState, recordCard, evidenceChip } from "@universe/ui";
+import { loadSiteModel } from "../lib/site-data";
+
+interface Props {
+  route: string;
+  title: string;
+  summary: string;
+}
+const { route, title, summary } = Astro.props;
+const { data } = loadSiteModel();
+const count = data.nav.find((n) => n.route === route)?.count ?? 0;
+
+const scoped: Record<string, { title: string; href: string; meta: { label: string; value: string }[]; chip?: string }[]> = {
+  "/explore/": data.concepts.map((c) => ({
+    title: c.title,
+    href: c.route,
+    meta: [
+      { label: "ID", value: c.id },
+      { label: "Module", value: c.module },
+      { label: "Levels", value: c.levels.join(", ") || "—" },
+    ],
+  })),
+  "/academy/": data.lessons.map((l) => ({
+    title: l.title,
+    href: l.route,
+    meta: [
+      { label: "Level", value: l.level },
+      { label: "Module", value: l.module },
+    ],
+  })),
+  "/evidence/": data.claims.map((c) => ({
+    title: c.statement,
+    href: c.route,
+    meta: [
+      { label: "ID", value: c.id },
+      { label: "Module", value: c.module },
+    ],
+    chip: evidenceChip(c.evidenceStatus),
+  })),
+  "/research/": data.researchQuestions.map((q) => ({
+    title: q.question,
+    href: q.route,
+    meta: [
+      { label: "ID", value: q.id },
+      { label: "Module", value: q.module },
+      ...(q.status ? [{ label: "Status", value: q.status }] : []),
+    ],
+  })),
+  "/library/": data.sources.map((s) => ({
+    title: s.title,
+    href: `/library/${s.id}/`,
+    meta: [
+      { label: "ID", value: s.id },
+      { label: "Rights", value: s.rightsMode },
+      ...(s.doi ? [{ label: "DOI", value: s.doi }] : []),
+    ],
+  })),
+};
+const items = scoped[route] ?? [];
+---
+<Base title={title} description={summary} current={route}>
+  <h1>{title}</h1>
+  <p class="section-intro">{summary}</p>
+
+  {count === 0 ? (
+    <Fragment set:html={emptyState(
+      `No reviewed ${title.toLowerCase()} content yet`,
+      "This section will fill in as human reviewers approve records. It deliberately shows nothing rather than placeholder science.",
+      { awaitingReview: true },
+    )} />
+  ) : (
+    <p>{count} approved record{count === 1 ? "" : "s"} in this section.</p>
+  )}
+
+  {items.length > 0 && (
+    <div class="record-list">
+      {items.map((item) => (
+        <Fragment set:html={recordCard(item)} />
+      ))}
+    </div>
+  )}
+
+  {route === "/academy/" && (
+    <section aria-labelledby="levels-h">
+      <h2 id="levels-h">Coverage by level</h2>
+      <ul class="level-legend">
+        {data.levels.map((l) => (
+          <li class="chip">{l.level}: {l.count}</li>
+        ))}
+      </ul>
+      <p>Levels L0–L5 describe depth from everyday analogies to investigating open problems — not a ranking of people. Not every concept needs all six levels.</p>
+    </section>
+  )}
+
+  {route === "/community/" && (
+    <section aria-labelledby="coverage-h">
+      <h2 id="coverage-h">Coverage map</h2>
+      <p>What is covered, planned, and unknown. A domain is never "complete" because its folder exists.</p>
+      <table class="coverage-table">
+        <caption>Module coverage — approved vs draft records per domain</caption>
+        <thead>
+          <tr><th scope="col">Domain</th><th scope="col">State</th><th scope="col">Approved</th><th scope="col">Draft</th></tr>
+        </thead>
+        <tbody>
+          {data.coverage.map((c) => (
+            <tr>
+              <td>{c.title}</td>
+              <td class={c.state === "planned" ? "state-planned" : ""}>{c.state === "planned" ? "planned" : "draft module"}</td>
+              <td>{c.approvedRecords}</td>
+              <td>{c.draftRecords}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p>Changelog and review process are documented in the repository (CONTRIBUTING.md, docs/editorial, docs/operations).</p>
+    </section>
+  )}
+</Base>

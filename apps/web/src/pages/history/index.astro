@@ -1,0 +1,82 @@
+---
+import Base from "../../layouts/Base.astro";
+import { emptyState } from "@universe/ui";
+import { loadSiteModel, fixtureTimeline } from "../../lib/site-data";
+import { renderTimeline, renderTimelineSvg, renderAccessibleList } from "@universe/visualizations";
+
+const { data, fixtureEvents } = loadSiteModel();
+// Fixture demo timeline (log scale). Engineering fixtures only — never science.
+const logLayout = fixtureTimeline("logarithmic");
+const linearLayout = fixtureTimeline("linear");
+const hasApprovedEvents = data.events.length > 0;
+---
+<Base
+  title="Universe History"
+  description="Cosmic evolution, Earth and life, astronomy, exploration — a chronological journey built from reviewed events."
+  current="/history/"
+>
+  <h1>Universe History</h1>
+  <p>
+    A chronological journey through cosmic, geological, and human history. Every event
+    carries its time frame, uncertainty, evidence, and review status. Times span vastly
+    different scales; the timeline offers logarithmic, linear, and schematic views, and
+    unknown times stay unknown.
+  </p>
+
+  {hasApprovedEvents ? (
+    <p>{data.events.length} reviewed event{data.events.length === 1 ? "" : "s"}.</p>
+  ) : (
+    <Fragment set:html={emptyState(
+      "No reviewed timeline events yet",
+      "The cosmic history experience ships as an engineering preview. Events appear here only after human scientific review; none exist yet.",
+      { awaitingReview: true },
+    )} />
+  )}
+
+  <section aria-labelledby="demo-h" class="tl-demo" data-pagefind-ignore data-fixture-demo>
+    <h2 id="demo-h">Renderer demo — engineering fixtures (not science)</h2>
+    <p>
+      The block below exercises the timeline engine with {fixtureEvents.length} synthetic
+      fixture events (interval, point, and unknown time). These are
+      <strong>not</strong> statements about the universe; they demonstrate positioning,
+      uncertainty intervals, and honest unknown-time rendering. This demo is excluded
+      from search and marked noindex.
+    </p>
+    <div class="tl-scale-tabs" role="tablist" aria-label="Scale mode">
+      {(["logarithmic", "linear", "schematic"] as const).map((mode) => (
+        <span class="chip">{mode}</span>
+      ))}
+    </div>
+
+    <h3>Logarithmic (zero-safe)</h3>
+    <Fragment set:html={renderTimeline(logLayout, { fixtureDemo: true })} />
+
+    <details class="disclosure">
+      <summary>Linear scale view</summary>
+      <Fragment set:html={renderTimelineSvg(linearLayout, { fixtureDemo: true })} />
+      <p class="tl-caption">Linear scale spreads values evenly; wide ranges compress early events toward one end — hence log views.</p>
+    </details>
+
+    <h3>How time works here</h3>
+    <ul>
+      <li><strong>Cosmic age</strong> — time since the modeled hot early universe (model-dependent).</li>
+      <li><strong>Lookback time</strong> — how far back an observation reaches, given a cosmological model.</li>
+      <li><strong>Geological age</strong> — relative chronology (e.g. Ma before present), pinned to a chart version.</li>
+      <li><strong>Calendar dates</strong> — human-recorded dates (discovery, launch, publication), sometimes only year-precision.</li>
+    </ul>
+    <p>
+      These frames are never mixed on one axis or converted without an explicit model.
+      Uncertainty renders as an interval, not a fake point. No exact "first star date"
+      exists; unknown stays unknown.
+    </p>
+  </section>
+
+  <section aria-labelledby="how-know-h">
+    <h2 id="how-know-h">How do we know?</h2>
+    <p>
+      Every era will open with an evidence view: what is directly observed, what is
+      reconstructed, and what depends on models. This section awaits reviewed content —
+      it will not be filled with generated text.
+    </p>
+  </section>
+</Base>

@@ -1,0 +1,72 @@
+---
+import "@universe/ui/tokens.css";
+import "@universe/ui/base.css";
+import "@universe/ui/components.css";
+import "../styles/site.css";
+import { header, previewBanner, footer, themeToggle } from "@universe/ui";
+import { loadSiteModel } from "../lib/site-data";
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Current nav route for aria-current. */
+  current?: string;
+  /** Exclude this page from search indexing (fixtures, empty sections). */
+  noindex?: boolean;
+}
+
+const { title, description, current, noindex } = Astro.props;
+const { data } = loadSiteModel();
+const navEntries = data.nav.map((n) => ({
+  route: n.route,
+  title: n.title,
+  count: n.count,
+  current: current !== undefined && (current === "/" ? n.route === "/" : n.route !== "/" && current.startsWith(n.route)),
+}));
+---
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Universe Platform</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      // Theme + motion preferences before first paint (no flash). The toggle
+      // stays hidden when JS is unavailable (progressive enhancement only).
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var media = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.dataset.theme = stored === "light" || stored === "dark" ? stored : media;
+        } catch (e) {
+          /* private mode: keep default dark */
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          var btn = document.querySelector("[data-theme-toggle]");
+          if (!btn) return;
+          btn.hidden = false;
+          btn.addEventListener("click", function () {
+            var next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+            document.documentElement.dataset.theme = next;
+            try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
+          });
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <Fragment set:html={header(navEntries, { brand: "Universe Platform", tagline: "Open scientific learning infrastructure — engineering preview" })} />
+    <Fragment set:html={previewBanner("No scientific content has been reviewed or approved yet. Every section below is an honest empty state; nothing here is verified educational material.")} />
+    <Fragment set:html={themeToggle()} />
+    <main id="main">
+      <slot />
+    </main>
+    <Fragment set:html={footer({
+      status: "Engineering preview · no approved scientific records",
+      license: "Apache-2.0 proposed for code · CC BY 4.0 proposed for content (pending owner ratification)",
+    })} />
+  </body>
+</html>
