@@ -31,7 +31,10 @@ jobs:
       - run: npm test
       - run: npm run build
       - name: Generate release manifest
-        run: npm run release:manifest -- --version=${{ inputs.version }} "--test-summary=CI: lint/typecheck/validate/test/build green; e2e in ci.yml"
+        run: >
+          npm run release:manifest --
+          --version="${{ inputs.version }}"
+          --test-summary="CI gates green (lint, typecheck, validate, test, build); e2e covered in ci.yml"
       - name: Commit manifest
         run: |
           git config user.name "release-bot"
