@@ -162,7 +162,7 @@ if (args[0] !== "__import__") {
   try {
     const manifest = buildReleaseManifest({
       version,
-      testSummary: testSummary?.slice("--test-summary=".length),
+      ...(testSummary !== undefined ? { testSummary: testSummary.slice("--test-summary=".length) } : {}),
       now: new Date().toISOString().slice(0, 10),
     });
     const file = writeReleaseManifest(manifest);

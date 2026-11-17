@@ -31,9 +31,11 @@ const { data, sections } = loadSiteModel();
     </ul>
   </nav>
 
-  {data.emptyState && emptyState(
+  {data.emptyState && (
+  <Fragment set:html={emptyState(
     "No approved content yet",
     "This platform is in an engineering preview. Sections render honest empty states until human scientific reviewers approve records. No placeholder science is shown.",
     { awaitingReview: true },
-  )}
+  )} />
+)}
 </Base>

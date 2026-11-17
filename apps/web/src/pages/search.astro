@@ -17,11 +17,13 @@ const searchableCount =
     the build output that Pagefind scans.
   </p>
 
-  {searchableCount === 0 ? emptyState(
+  {searchableCount === 0 ? (
+  <Fragment set:html={emptyState(
     "Nothing to search yet",
     "The search index contains zero approved records, so search is disabled rather than pretending to find things. It activates automatically once reviewed records exist.",
     { awaitingReview: true },
-  ) : (
+  )} />
+) : (
     <div class="search-box">
       <input type="search" id="search" class="search-input" placeholder={`Search ${searchableCount} approved records…`} aria-label="Search approved records" />
       <button type="button" id="search-btn" class="theme-toggle">Search</button>

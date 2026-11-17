@@ -59,8 +59,8 @@ const navEntries = data.nav.map((n) => ({
   </head>
   <body>
     <Fragment set:html={header(navEntries, { brand: "Universe Platform", tagline: "Open scientific learning infrastructure — engineering preview" })} />
-    {previewBanner("No scientific content has been reviewed or approved yet. Every section below is an honest empty state; nothing here is verified educational material.")}
-    {themeToggle()}
+    <Fragment set:html={previewBanner("No scientific content has been reviewed or approved yet. Every section below is an honest empty state; nothing here is verified educational material.")} />
+    <Fragment set:html={themeToggle()} />
     <main id="main">
       <slot />
     </main>

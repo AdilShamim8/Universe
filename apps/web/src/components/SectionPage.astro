@@ -64,17 +64,21 @@ const items = scoped[route] ?? [];
   <h1>{title}</h1>
   <p class="section-intro">{summary}</p>
 
-  {count === 0 ? emptyState(
-    `No reviewed ${title.toLowerCase()} content yet`,
-    "This section will fill in as human reviewers approve records. It deliberately shows nothing rather than placeholder science.",
-    { awaitingReview: true },
+  {count === 0 ? (
+    <Fragment set:html={emptyState(
+      `No reviewed ${title.toLowerCase()} content yet`,
+      "This section will fill in as human reviewers approve records. It deliberately shows nothing rather than placeholder science.",
+      { awaitingReview: true },
+    )} />
   ) : (
     <p>{count} approved record{count === 1 ? "" : "s"} in this section.</p>
   )}
 
   {items.length > 0 && (
     <div class="record-list">
-      {items.map((item) => recordCard(item))}
+      {items.map((item) => (
+        <Fragment set:html={recordCard(item)} />
+      ))}
     </div>
   )}
 

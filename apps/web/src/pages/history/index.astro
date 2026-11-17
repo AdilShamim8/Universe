@@ -26,11 +26,11 @@ const hasApprovedEvents = data.events.length > 0;
   {hasApprovedEvents ? (
     <p>{data.events.length} reviewed event{data.events.length === 1 ? "" : "s"}.</p>
   ) : (
-    emptyState(
+    <Fragment set:html={emptyState(
       "No reviewed timeline events yet",
       "The cosmic history experience ships as an engineering preview. Events appear here only after human scientific review; none exist yet.",
       { awaitingReview: true },
-    )
+    )} />
   )}
 
   <section aria-labelledby="demo-h" class="tl-demo" data-pagefind-ignore data-fixture-demo>
