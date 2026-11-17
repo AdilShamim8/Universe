@@ -29,8 +29,15 @@ import {
 import { computeRecordHash } from "./canonical.js";
 import { parseTime, TemporalError, type ParsedTime } from "./temporal.js";
 
-/** Repository root (three levels up from this compiled file's package). */
-export const REGISTRY_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+/**
+ * Repository root. Resolved from import.meta.url by default; overridden by
+ * UNIVERSE_ROOT when the code is bundled (Astro prerender moves chunks into
+ * dist/.prerender/, breaking the relative path). The web app sets
+ * UNIVERSE_ROOT at build time.
+ */
+export const REGISTRY_ROOT = process.env.UNIVERSE_ROOT
+  ? process.env.UNIVERSE_ROOT
+  : join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 
 export type Severity = "error" | "warning";
 

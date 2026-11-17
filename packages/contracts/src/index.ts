@@ -23,7 +23,14 @@ const addFormats = (ajvFormatsNS as unknown as { default: (ajv: Ajv2020Instance)
 
 export const SCHEMA_VERSION = 1 as const;
 
-const schemaDir = join(dirname(fileURLToPath(import.meta.url)), "..", "schema");
+/**
+ * Schema directory. Resolved from import.meta.url by default; overridden by
+ * UNIVERSE_CONTRACTS_DIR when the code is bundled (Astro prerender moves
+ * chunks into dist/.prerender/, breaking the relative path).
+ */
+const schemaDir = process.env.UNIVERSE_CONTRACTS_DIR
+  ? process.env.UNIVERSE_CONTRACTS_DIR
+  : join(dirname(fileURLToPath(import.meta.url)), "..", "schema");
 
 export type LifecycleStatus =
   | "draft"
