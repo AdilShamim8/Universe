@@ -6,11 +6,20 @@
  * validate representative records. Schema changes require an ADR and a
  * version bump with a migration script.
  */
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
+// ajv's 2020 entry is CommonJS: the class is a named export, and the formats
+// plugin is exposed as `.default` on the module object (verified against the
+// runtime shape: keys are ["__esModule", "default", "module.exports"]). The
+// explicit cast keeps tsc's NodeNext interop happy without weakening the
+// workspace's verbatimModuleSyntax/strict settings.
+import { Ajv2020 } from "ajv/dist/2020.js";
+import * as ajvFormatsNS from "ajv-formats";
 import { readFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import type { ValidateFunction } from "ajv";
+
+type Ajv2020Instance = InstanceType<typeof Ajv2020>;
+const addFormats = (ajvFormatsNS as unknown as { default: (ajv: Ajv2020Instance) => unknown }).default;
 
 export const SCHEMA_VERSION = 1 as const;
 
@@ -93,17 +102,19 @@ export interface BaseRecord {
   revision?: number;
 }
 
-export interface ModuleManifest extends BaseRecord {
+export interface ModuleManifest {
+  schema_version: number;
   id: string; // module id equals directory name
   title: string;
-  description?: string;
+  description?: string | undefined;
+  /** Module maturity (distinct from record lifecycle status). */
   status: "proposed" | "draft" | "active" | "maintenance" | "archived";
   owners: string[];
   depends_on: string[];
-  taxonomy_provider?: "uat" | null;
+  taxonomy_provider?: "uat" | null | undefined;
   locales: string[];
   review_policy: "science-and-education" | "science-only" | "engineering-only";
-  planned?: boolean;
+  planned?: boolean | undefined;
 }
 
 export interface ConceptRecord extends BaseRecord {
@@ -324,19 +335,19 @@ export function createValidator(): CompiledValidator {
   const common = schemas.get("common");
   if (!common) throw new Error("common.schema.json missing from contracts package");
   ajv.addSchema(common);
-  const compiled = new Map<string, { fn: (d: unknown) => boolean; ajv: Ajv2020 }>();
+  const compiled = new Map<string, ValidateFunction>();
   for (const [name, schema] of schemas) {
     if (name === "common") continue;
     const fn = ajv.compile(schema);
-    compiled.set(name, { fn, ajv });
+    compiled.set(name, fn);
   }
   return {
     validate(recordType, record) {
-      const entry = compiled.get(recordType);
-      if (!entry) return [`unknown record type: ${recordType}`];
-      const ok = entry.fn(record);
+      const fn = compiled.get(recordType);
+      if (!fn) return [`unknown record type: ${recordType}`];
+      const ok = fn(record);
       if (ok) return [];
-      const errs = entry.fn.errors ?? [];
+      const errs = fn.errors ?? [];
       return errs.map((e) => `${e.instancePath || "<root>"} ${e.message ?? "(no message)"}`);
     },
     isValid(recordType, record) {

@@ -1,0 +1,14 @@
+{
+  "name": "@universe/registry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@universe/contracts": "*",
+    "yaml": "2.9.1"
+  }
+}
