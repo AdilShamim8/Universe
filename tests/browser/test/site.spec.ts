@@ -122,3 +122,88 @@ test.describe("coverage and honesty", () => {
     await expect(page.locator("h1")).toContainText("Page not found");
   });
 });
+
+test.describe("planet detail pages", () => {
+  test("earth page shows fact table with NSSDC values", async ({ page }) => {
+    await page.goto("/explore/planets/earth/");
+    await expect(page.locator("h1.hero-title")).toHaveText("Earth");
+    const rows = await page.locator(".data-table tbody tr").count();
+    expect(rows).toBe(15);
+    await expect(page.locator(".data-table", { hasText: "12,756 km" })).toBeVisible();
+    await expect(page.locator(".planet-sizebar")).toBeVisible();
+  });
+
+  test("prev/next navigation traverses the set", async ({ page }) => {
+    await page.goto("/explore/planets/venus/");
+    await expect(page.locator(".planet-nav-link", { hasText: "Next →" })).toBeVisible();
+    await page.locator(".planet-nav-link", { hasText: "Next →" }).click();
+    await expect(page.locator("h1.hero-title")).toHaveText("Earth");
+    await page.locator(".planet-nav-link", { hasText: "← Previous" }).click();
+    await expect(page.locator("h1.hero-title")).toHaveText("Venus");
+  });
+
+  test("all 10 planet routes resolve", async ({ page }) => {
+    for (const p of ["mercury","venus","earth","moon","mars","jupiter","saturn","uranus","neptune","pluto"]) {
+      const res = await page.goto(`/explore/planets/${p}/`);
+      expect(res?.status()).toBe(200);
+    }
+  });
+});
+
+test.describe("explore visualizations", () => {
+  test("scale strip renders 10 positioned objects", async ({ page }) => {
+    await page.goto("/explore/");
+    expect(await page.locator(".scalestrip-stop").count()).toBe(10);
+    await expect(page.locator(".scalestrip", { hasText: "Observable universe" })).toBeVisible();
+  });
+
+  test("planet bars chart is an accessible image with values", async ({ page }) => {
+    await page.goto("/explore/");
+    const aria = await page.locator("svg.planetbars").getAttribute("aria-label");
+    expect(aria).toContain("Jupiter");
+    expect(aria).toContain("1,398");
+  });
+
+  test("planet table links into detail pages", async ({ page }) => {
+    await page.goto("/explore/");
+    await page.locator(".data-table tbody tr a", { hasText: "Mars" }).click();
+    await expect(page).toHaveURL(/\/explore\/planets\/mars\/$/);
+  });
+});
+
+test.describe("search and 404", () => {
+  test("404 page offers recovery actions", async ({ page }) => {
+    await page.goto("/definitely-not-a-page/");
+    await expect(page.locator("h1.hero-title")).toContainText("drifted out of orbit");
+    await expect(page.getByRole("link", { name: "Back to the homepage" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Search the platform" })).toBeVisible();
+  });
+
+  test("search page input exists and is labeled", async ({ page }) => {
+    await page.goto("/search");
+    await expect(page.getByLabel("Search the platform")).toBeVisible();
+  });
+});
+
+test.describe("seo", () => {
+  test("canonical + og tags on homepage", async ({ page }) => {
+    await page.goto("/");
+    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+    expect(canonical).toBe("https://universe-101.vercel.app/");
+    expect(await page.locator('meta[property="og:title"]').count()).toBe(1);
+    expect(await page.locator('script[type="application/ld+json"]').count()).toBe(1);
+  });
+
+  test("favicon and sitemap served", async ({ page }) => {
+    const fav = await page.request.get("/favicon.svg");
+    expect(fav.status()).toBe(200);
+    const sm = await page.request.get("/sitemap-index.xml");
+    expect(sm.status()).toBe(200);
+  });
+
+  test("planet pages have per-page canonicals", async ({ page }) => {
+    await page.goto("/explore/planets/jupiter/");
+    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+    expect(canonical).toContain("/explore/planets/jupiter/");
+  });
+});
