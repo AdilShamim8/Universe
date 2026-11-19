@@ -1,7 +1,7 @@
 {
   "name": "universe-platform",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Universe Learning Platform \u2014 an open, modular scientific learning infrastructure (engineering preview). Internal neutral codename: universe-platform; public name pending owner decision.",
   "license": "Apache-2.0",
   "type": "module",
