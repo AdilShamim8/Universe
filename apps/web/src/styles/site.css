@@ -457,3 +457,17 @@ table.data-table {
     box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
   }
 }
+
+/* Era progress + footnav */
+.era-progress {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--fg-2);
+  margin-block: var(--space-2) var(--space-4);
+}
+.era-footnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-block: var(--space-8) var(--space-4);
+}
