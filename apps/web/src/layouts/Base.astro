@@ -19,9 +19,14 @@ interface Props {
   current?: string;
   /** Exclude this page from search indexing (fixtures, empty sections). */
   noindex?: boolean;
+  /** Canonical path override (defaults to Astro.url.pathname). */
+  canonical?: string;
 }
 
-const { title, description, current, noindex } = Astro.props;
+const { title, description, current, noindex, canonical } = Astro.props;
+const SITE = "https://universe-101.vercel.app";
+const canonicalURL = new URL(canonical ?? Astro.url.pathname, SITE);
+const ogImage = new URL("/og-default.svg", SITE);
 const navEntries = [
   { route: "/", title: "Home" },
   { route: "/history/", title: "History" },
@@ -41,7 +46,15 @@ const navEntries = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Universe</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalURL} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Universe 101" />
+    <meta property="og:title" content={`${title} · Universe`} />
+    <meta property="og:description" content={description ?? "Learn, explore and research the universe — a curated, source-backed guide from beginner to research level."} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
     <meta name="generator" content={Astro.generator} />
     <script is:inline>
       // Theme + motion preferences before first paint (no flash). The toggle

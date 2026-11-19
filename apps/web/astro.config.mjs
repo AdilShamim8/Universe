@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -35,8 +36,9 @@ function loadRedirects() {
 // Static-first build. No live external APIs, no SSR, no adapter: the site is
 // a deterministic artifact built from the approved registry projection.
 export default defineConfig({
-  site: "https://universe-platform.example",
+  site: "https://universe-101.vercel.app",
   output: "static",
+  integrations: [sitemap()],
   trailingSlash: "always",
   redirects: loadRedirects(),
   build: {
