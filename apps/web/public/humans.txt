@@ -1,0 +1,16 @@
+/* TEAM */
+	Maintainer: Universe 101 contributors (open source)
+	Site: https://github.com/AdilShamim8/Universe
+
+/* SITE */
+	Standards: HTML5, CSS, zero client-side frameworks
+	Components: Astro static build, Pagefind search index
+	Type: Space Grotesk, Inter, IBM Plex Mono (self-hosted, OFL)
+	Design: original cosmic identity — no third-party branding
+	Imagery: original SVG art only (era icons, emblems, charts)
+
+/* CONTENT */
+	Policy: docs/content-workflow.md
+	Science sources: NASA, ESA, arXiv, NSSDC, NOIRLab, LIGO —
+	every curated link individually verified at curation time
+	Original scientific explanations: pending qualified human review
