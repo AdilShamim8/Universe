@@ -52,7 +52,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
         <tbody>
           {planets.map((p) => (
             <tr>
-              <td><a href={p.page} rel="noopener">{p.name}</a></td>
+              <td><a href={`/explore/planets/${p.name.toLowerCase().replace(/\s+/g, "-")}/`}>{p.name}</a></td>
               <td>{p.type}</td>
               <td>{p.diameterKm?.toLocaleString("en-US") ?? "—"}</td>
               <td>{p.massE24kg ?? "—"}</td>
