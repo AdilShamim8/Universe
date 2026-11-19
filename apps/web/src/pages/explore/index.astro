@@ -36,7 +36,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <p>Numeric facts parsed directly from the NASA NSSDC Planetary Fact Sheet — not transcribed by hand.</p>
     </section>
     <PlanetBars planets={planets} />
-    <div class="data-table-wrap">
+    <div class="data-table-wrap" id="planet-table">
       <table class="data-table">
         <caption>Source: NASA NSSDC Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/)</caption>
         <thead>
@@ -77,7 +77,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <h2>Notable worlds beyond the solar system</h2>
       <p>A starting set of milestone exoplanets. Masses, radii, periods and distances queried live from the NASA Exoplanet Archive.</p>
     </section>
-    <div class="data-table-wrap">
+    <div class="data-table-wrap" id="exo-table">
       <table class="data-table">
         <caption>Source: NASA Exoplanet Archive — TAP query of the ps table (2026-11-19)</caption>
         <thead>
@@ -148,7 +148,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <p>Each step of the cosmic ladder with its source. Where a single size isn't meaningful, the note explains the measure used.</p>
     </section>
     <ScaleStrip items={scale} />
-    <ol class="timeline-events">
+    <ol class="timeline-events" id="scale-list">
       {scale.map((s) => (
         <li class="timeline-event">
           <h3>{s.name}</h3>
