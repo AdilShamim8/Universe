@@ -52,9 +52,15 @@ const learnSubjects = field.learnFirst
       <h2>Landmark and recent papers</h2>
       <p>Every arXiv identifier was verified to resolve to the titled paper at curation time.</p>
     </section>
-    <div class="card-grid">
+    <div class="filter-bar" role="group" aria-label="Sort papers">
+      <button class="filter-btn paper-sort" data-sort="curated" aria-pressed="true">as curated</button>
+      <button class="filter-btn paper-sort" data-sort="year-desc" aria-pressed="false">newest first</button>
+      <button class="filter-btn paper-sort" data-sort="year-asc" aria-pressed="false">oldest first</button>
+    </div>
+    <noscript><p class="muted">Sorting needs JavaScript — the curated order is shown.</p></noscript>
+    <div class="card-grid papers-grid" data-field={field.id}>
       {field.papers.map((p) => (
-        <article class="card">
+        <article class="card" data-year={p.year}>
           <h3><a href={p.url} rel="noopener">{p.title}</a></h3>
           <p>{p.why}</p>
           <div class="card-meta">
@@ -65,6 +71,34 @@ const learnSubjects = field.learnFirst
         </article>
       ))}
     </div>
+
+    <script>
+      // Progressive enhancement: sort paper cards by year without a reload.
+      const bar = document.querySelector('[aria-label="Sort papers"]');
+      const grid = document.querySelector(".papers-grid");
+      if (bar && grid) {
+        bar.addEventListener("click", (e) => {
+          const btn = e.target.closest(".paper-sort");
+          if (!btn) return;
+          for (const b of bar.querySelectorAll(".paper-sort")) {
+            b.setAttribute("aria-pressed", String(b === btn));
+          }
+          const cards = [...grid.querySelectorAll(".card")];
+          if (btn.dataset.sort === "curated") {
+            // restore original DOM order
+            cards.sort((a, b) =>
+              Number(a.dataset.orig ?? 0) - Number(b.dataset.orig ?? 0));
+          } else {
+            const dir = btn.dataset.sort === "year-desc" ? -1 : 1;
+            cards.sort((a, b) => dir * (Number(a.dataset.year) - Number(b.dataset.year)));
+          }
+          for (const c of cards) grid.appendChild(c);
+        });
+        for (const [i, c] of [...grid.querySelectorAll(".card")].entries()) {
+          c.dataset.orig = String(i);
+        }
+      }
+    </script>
 
     <section class="section-head">
       <span class="section-kicker">Data &amp; tools</span>
