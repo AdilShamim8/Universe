@@ -178,6 +178,7 @@ export interface Planet {
 export interface Mission {
   name: string;
   year: number;
+  decade: string;
   agency: string;
   status: string;
   summary: string;

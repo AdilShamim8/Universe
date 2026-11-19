@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import ScaleStrip from "../../components/ScaleStrip.astro";
 import PlanetBars from "../../components/PlanetBars.astro";
+import MissionTimeline from "../../components/MissionTimeline.astro";
 import { loadExplore } from "../../lib/curated";
 
 const { data: explore } = loadExplore();
@@ -95,6 +96,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <span class="section-kicker">Mission explorer</span>
       <h2>{missions.length} missions, {activeMissions.length} still flying</h2>
     </section>
+    <MissionTimeline missions={missions} />
     <div class="card-grid">
       {missions.map((m) => (
         <article class="card">

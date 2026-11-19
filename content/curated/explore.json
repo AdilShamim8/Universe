@@ -4,7 +4,7 @@
   "description": "Planetary facts parsed live from the NASA NSSDC Planetary Fact Sheet; missions and scale objects with source URLs.",
   "verification": {
    "method": "Parsed programmatically from https://nssdc.gsfc.nasa.gov/planetary/factsheet/ on 2026-11-18; mission/scale URLs curl-verified 200",
-   "verifiedOn": "2026-11-18",
+   "verifiedOn": "2026-11-19",
    "passRate": "all numeric values machine-parsed from source"
   }
  },
@@ -348,7 +348,8 @@
     "agency": "NASA",
     "status": "completed",
     "summary": "First crewed landing on the Moon.",
-    "url": "https://www.nasa.gov/mission/apollo-11/"
+    "url": "https://www.nasa.gov/mission/apollo-11/",
+    "decade": "1960s"
    },
    {
     "name": "Voyager 1 & 2",
@@ -356,7 +357,8 @@
     "agency": "NASA",
     "status": "active",
     "summary": "Outer-planet tour now in interstellar space.",
-    "url": "https://science.nasa.gov/mission/voyager/"
+    "url": "https://science.nasa.gov/mission/voyager/",
+    "decade": "1970s"
    },
    {
     "name": "Hubble Space Telescope",
@@ -364,7 +366,8 @@
     "agency": "NASA/ESA",
     "status": "active",
     "summary": "Landmark observatory in Earth orbit for over three decades.",
-    "url": "https://science.nasa.gov/mission/hubble/"
+    "url": "https://science.nasa.gov/mission/hubble/",
+    "decade": "1990s"
    },
    {
     "name": "Galileo",
@@ -372,7 +375,8 @@
     "agency": "NASA",
     "status": "completed",
     "summary": "First spacecraft to orbit Jupiter.",
-    "url": "https://science.nasa.gov/mission/galileo/"
+    "url": "https://science.nasa.gov/mission/galileo/",
+    "decade": "1980s"
    },
    {
     "name": "Cassini-Huygens",
@@ -380,7 +384,8 @@
     "agency": "NASA/ESA/ASI",
     "status": "completed",
     "summary": "13-year exploration of the Saturn system.",
-    "url": "https://science.nasa.gov/mission/cassini/"
+    "url": "https://science.nasa.gov/mission/cassini/",
+    "decade": "1990s"
    },
    {
     "name": "International Space Station",
@@ -388,7 +393,8 @@
     "agency": "International",
     "status": "active",
     "summary": "Continuously crewed orbital laboratory.",
-    "url": "https://www.nasa.gov/station/"
+    "url": "https://www.nasa.gov/station/",
+    "decade": "1990s"
    },
    {
     "name": "Chandra X-ray Observatory",
@@ -396,7 +402,8 @@
     "agency": "NASA",
     "status": "active",
     "summary": "Flagship X-ray observatory.",
-    "url": "https://science.nasa.gov/mission/chandra/"
+    "url": "https://science.nasa.gov/mission/chandra/",
+    "decade": "1990s"
    },
    {
     "name": "Kepler",
@@ -404,7 +411,8 @@
     "agency": "NASA",
     "status": "completed",
     "summary": "First dedicated exoplanet-hunting telescope.",
-    "url": "https://science.nasa.gov/mission/kepler/"
+    "url": "https://science.nasa.gov/mission/kepler/",
+    "decade": "2000s"
    },
    {
     "name": "New Horizons",
@@ -412,7 +420,8 @@
     "agency": "NASA",
     "status": "active",
     "summary": "First mission to Pluto and the Kuiper Belt.",
-    "url": "https://science.nasa.gov/mission/new-horizons/"
+    "url": "https://science.nasa.gov/mission/new-horizons/",
+    "decade": "2000s"
    },
    {
     "name": "Parker Solar Probe",
@@ -420,7 +429,8 @@
     "agency": "NASA",
     "status": "active",
     "summary": "Closest-ever spacecraft to the Sun.",
-    "url": "https://science.nasa.gov/mission/parker-solar-probe/"
+    "url": "https://science.nasa.gov/mission/parker-solar-probe/",
+    "decade": "2010s"
    },
    {
     "name": "Perseverance",
@@ -428,7 +438,8 @@
     "agency": "NASA",
     "status": "active",
     "summary": "Mars rover caching samples for return to Earth.",
-    "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    "url": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "decade": "2020s"
    },
    {
     "name": "James Webb Space Telescope",
@@ -436,7 +447,8 @@
     "agency": "NASA/ESA/CSA",
     "status": "active",
     "summary": "Largest telescope ever launched; infrared flagship.",
-    "url": "https://science.nasa.gov/mission/webb/"
+    "url": "https://science.nasa.gov/mission/webb/",
+    "decade": "2020s"
    },
    {
     "name": "JUICE",
@@ -444,7 +456,8 @@
     "agency": "ESA",
     "status": "active",
     "summary": "European mission to Jupiter's icy moons.",
-    "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice"
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+    "decade": "2020s"
    },
    {
     "name": "Euclid",
@@ -452,7 +465,8 @@
     "agency": "ESA",
     "status": "active",
     "summary": "Dark-energy and dark-matter mapping survey mission.",
-    "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid",
+    "decade": "2020s"
    },
    {
     "name": "Dragonfly",
@@ -460,7 +474,8 @@
     "status": "planned",
     "agency": "NASA",
     "summary": "Planned rotorcraft lander for Titan.",
-    "url": "https://science.nasa.gov/mission/dragonfly/"
+    "url": "https://science.nasa.gov/mission/dragonfly/",
+    "decade": "2020s"
    }
   ],
   "scale": [
