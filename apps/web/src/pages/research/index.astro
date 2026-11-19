@@ -1,4 +1,45 @@
 ---
-import SectionPage from "../../components/SectionPage.astro";
+import Base from "../../layouts/Base.astro";
+import { loadResearch } from "../../lib/curated";
+
+const { data: fields } = loadResearch();
+const totalPapers = fields.reduce((n, f) => n + f.papers.length, 0);
 ---
-<SectionPage route="/research/" title="Research Frontier" summary="Open scientific questions, surveys, reproducible projects." />
+<Base
+  title="Research Frontier"
+  description={`A navigable research directory — ${fields.length} fields, ${totalPapers} verified papers, open datasets and live questions.`}
+  current="/research/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">Open questions · verified papers · open data</p>
+    <h1 class="hero-title">The research frontier</h1>
+    <p class="hero-lede">
+      What active research fields are working on right now: official priorities, published open
+      questions, landmark papers (every arXiv ID verified), open datasets, institutions and tools.
+      No fabricated gaps — everything traces to its source.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/research/cosmology/">Start with Cosmology</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    <section class="section-head">
+      <span class="section-kicker">Fields</span>
+      <h2>Browse by field</h2>
+    </section>
+    <div class="card-grid">
+      {fields.map((f) => (
+        <article class="card">
+          <h3><a href={`/research/${f.id}/`}>{f.name}</a></h3>
+          <p>{f.summary}</p>
+          <div class="card-meta">
+            <span>{f.papers.length} papers</span>
+            <span>{f.datasets.length} datasets</span>
+            <span>{f.tools.length} tools</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,14 @@
+200 https://www.khanacademy.org/science/physics/cosmology-and-astronomy/xc7a94d8dd007f3d9:dcosmology-and-astronomy/x7c0fbce2:scale-of-earth-sun-closest-stars-and-galaxies
+200 https://science.nasa.gov/mission/hubble/
+200 https://science.nasa.gov/mission/webb/
+200 https://science.nasa.gov/mission/hubble/multimedia/
+000 https://esahubble.org/images/
+200 https://science.nasa.gov/solar-system/
+200 https://science.nasa.gov/universe/stars/
+200 https://science.nasa.gov/universe/galaxies/
+200 https://science.nasa.gov/universe/black-holes/
+404 https://science.nasa.gov/universe/dark-matter/dark-matter-what-is-it/
+404 https://science.nasa.gov/learn/what-does-a-nasa-astronomer-do/
+200 https://www.nasa.gov/learning-resources/
+200 https://science.nasa.gov/earth/
+404 https://science.nasa.gov/solar-system/planets/earth/earth-by-the-numbers/

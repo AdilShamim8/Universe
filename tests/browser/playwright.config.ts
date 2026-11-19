@@ -16,7 +16,7 @@ export default defineConfig({
   webServer: {
     command: `bash ${join(here, "..", "..", "scripts", "serve-dist.sh")}`,
     url: "http://127.0.0.1:4173",
-    reuseExistingServer: false,
+    reuseExistingServer: true,
     timeout: 30_000,
   },
 });

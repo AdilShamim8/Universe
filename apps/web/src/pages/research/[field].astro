@@ -1,0 +1,121 @@
+---
+import Base from "../../layouts/Base.astro";
+import { loadResearch, type ResearchField } from "../../lib/curated";
+
+export function getStaticPaths() {
+  const { data: fields } = loadResearch();
+  return fields.map((f) => ({ params: { field: f.id }, props: { field: f } }));
+}
+
+const { field } = Astro.props as { field: ResearchField };
+const { data: academy } = (await import("../../lib/curated")).loadAcademy();
+const learnSubjects = field.learnFirst
+  .map((id) => academy.find((s) => s.id === id))
+  .filter(Boolean);
+---
+<Base
+  title={field.name}
+  description={field.summary}
+  current="/research/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">Research field</p>
+    <h1 class="hero-title">{field.name}</h1>
+    <p class="hero-lede">{field.summary}</p>
+  </section>
+
+  <div class="container-pad">
+    <section class="section-head">
+      <span class="section-kicker">Priorities</span>
+      <h2>Official research priorities</h2>
+    </section>
+    {field.priorities.map((p) => (
+      <blockquote class="card" style="margin-block-end: var(--space-4);">
+        <p>{p.text}</p>
+        <div class="source-line">Source: <a href={p.source.url} rel="noopener">{p.source.label}</a></div>
+      </blockquote>
+    ))}
+
+    <section class="section-head">
+      <span class="section-kicker">Open questions</span>
+      <h2>Published open questions</h2>
+    </section>
+    {field.openQuestions.map((q) => (
+      <blockquote class="card" style="margin-block-end: var(--space-4);">
+        <p>{q.text}</p>
+        <div class="source-line">Source: <a href={q.source.url} rel="noopener">{q.source.label}</a></div>
+      </blockquote>
+    ))}
+
+    <section class="section-head">
+      <span class="section-kicker">Papers</span>
+      <h2>Landmark and recent papers</h2>
+      <p>Every arXiv identifier was verified to resolve to the titled paper at curation time.</p>
+    </section>
+    <div class="card-grid">
+      {field.papers.map((p) => (
+        <article class="card">
+          <h3><a href={p.url} rel="noopener">{p.title}</a></h3>
+          <p>{p.why}</p>
+          <div class="card-meta">
+            <span>{p.authors}</span>
+            <span>{p.year}</span>
+            <span>arXiv:{p.arxiv}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head">
+      <span class="section-kicker">Data &amp; tools</span>
+      <h2>Open datasets</h2>
+    </section>
+    <div class="card-grid">
+      {field.datasets.map((d) => (
+        <article class="card">
+          <h3><a href={d.url} rel="noopener">{d.name}</a></h3>
+          <p>{d.description}</p>
+          <div class="card-meta"><span>{d.operator}</span></div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head">
+      <h2>Institutions</h2>
+    </section>
+    <div class="card-grid">
+      {field.institutions.map((i) => (
+        <article class="card">
+          <h3><a href={i.url} rel="noopener">{i.name}</a></h3>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head">
+      <h2>Tools &amp; methods</h2>
+    </section>
+    <div class="card-grid">
+      {field.tools.map((t) => (
+        <article class="card">
+          <h3><a href={t.url} rel="noopener">{t.name}</a></h3>
+          {t.description && <p>{t.description}</p>}
+        </article>
+      ))}
+    </div>
+
+    {learnSubjects.length > 0 && (
+      <section class="section-head">
+        <span class="section-kicker">Learn first</span>
+        <h2>Educational prerequisites</h2>
+        <div class="card-grid">
+          {learnSubjects.map((s) => (
+            <article class="card">
+              <h3><a href={`/academy/${s!.id}/`}>{s!.title}</a></h3>
+              <p>{s!.overview}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>
