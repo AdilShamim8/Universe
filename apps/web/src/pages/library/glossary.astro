@@ -1,0 +1,197 @@
+---
+import Base from "../../layouts/Base.astro";
+
+/**
+ * Glossary — plain-language definitions of the terms used across the site.
+ * Definitions describe how the term is USED HERE (curated, descriptive);
+ * each entry links an authoritative source for the full scientific story.
+ * Per docs/content-workflow.md these are navigational aids, not original
+ * scientific explanations.
+ */
+interface Term {
+  term: string;
+  short: string;
+  source: { label: string; url: string };
+  see?: string[];
+}
+
+const terms: Term[] = [
+  {
+    term: "ΛCDM",
+    short: "The standard model of cosmology: a universe with a cosmological constant (Λ) driving acceleration and cold dark matter (CDM) seeding structure. Anchored by Planck 2018 measurements.",
+    source: { label: "Planck 2018 results VI (arXiv:1807.06209)", url: "https://arxiv.org/abs/1807.06209" },
+    see: ["Cosmological constant", "Dark matter"],
+  },
+  {
+    term: "Cosmic microwave background (CMB)",
+    short: "Relic radiation released ~380,000 years after the Big Bang, when the universe cooled enough for atoms to form. The most precise observational anchor of cosmology.",
+    source: { label: "NASA LAMBDA archive", url: "https://lambda.gsfc.nasa.gov/" },
+  },
+  {
+    term: "Cosmological constant",
+    short: "A constant energy density of empty space (Λ) in general relativity; the simplest mathematical description of dark energy.",
+    source: { label: "Planck 2018 results VI (arXiv:1807.06209)", url: "https://arxiv.org/abs/1807.06209" },
+    see: ["ΛCDM"],
+  },
+  {
+    term: "Dark energy",
+    short: "The unknown component (~68% of the universe's energy) driving accelerated expansion, discovered via distant supernovae in 1998.",
+    source: { label: "Riess et al. 1998 (arXiv:astro-ph/9805201)", url: "https://arxiv.org/abs/astro-ph/9805201" },
+  },
+  {
+    term: "Dark matter",
+    short: "Non-luminous matter (~27% of the universe) inferred from its gravitational effects on galaxies and clusters; its particle nature is unknown.",
+    source: { label: "NASA Universe — dark matter", url: "https://science.nasa.gov/universe/" },
+  },
+  {
+    term: "Exoplanet",
+    short: "A planet orbiting a star other than the Sun. Found by transits, radial velocity and other methods; over 5,000 confirmed.",
+    source: { label: "NASA Exoplanet Archive", url: "https://exoplanetarchive.ipac.caltech.edu/" },
+    see: ["Transit method", "Radial velocity"],
+  },
+  {
+    term: "Hubble constant (H₀)",
+    short: "The present expansion rate of the universe. Early-universe and local measurements disagree — the Hubble tension.",
+    source: { label: "SH0ES 2021 (arXiv:2112.04510)", url: "https://arxiv.org/abs/2112.04510" },
+  },
+  {
+    term: "Gravitational waves",
+    short: "Ripples in spacetime from accelerating masses, first directly detected in 2015 from a binary black hole merger (GW150914).",
+    source: { label: "LIGO — GW150914 (arXiv:1602.03837)", url: "https://arxiv.org/abs/1602.03837" },
+  },
+  {
+    term: "Transit method",
+    short: "Detecting exoplanets by the tiny dip in starlight when they cross in front of their star. The method of Kepler and TESS.",
+    source: { label: "Kepler mission (NASA)", url: "https://science.nasa.gov/mission/kepler/" },
+  },
+  {
+    term: "Radial velocity",
+    short: "Detecting exoplanets by the wobble they induce in their star's spectrum. Found the first exoplanet around a Sun-like star.",
+    source: { label: "NASA Exoplanet Archive", url: "https://exoplanetarchive.ipac.caltech.edu/" },
+  },
+  {
+    term: "Redshift",
+    short: "The stretching of light to longer wavelengths as the universe expands; the primary observable mapping distance to lookback time.",
+    source: { label: "NASA Universe", url: "https://science.nasa.gov/universe/" },
+  },
+  {
+    term: "Lookback time",
+    short: "How far into the past an observation reaches: the light-travel time from a distant object. Distinct from cosmic age (model-dependent).",
+    source: { label: "NASA Universe", url: "https://science.nasa.gov/universe/" },
+  },
+  {
+    term: "Recombination",
+    short: "The epoch ~380,000 years after the Big Bang when electrons and protons combined into neutral hydrogen, releasing the CMB.",
+    source: { label: "NASA LAMBDA", url: "https://lambda.gsfc.nasa.gov/" },
+    see: ["Cosmic microwave background"],
+  },
+  {
+    term: "Metallicity",
+    short: "The abundance of elements heavier than helium in a star or gas cloud — a proxy for cosmic chemical evolution.",
+    source: { label: "Asplund et al. 2009, chemical composition of the Sun (arXiv:0909.0948)", url: "https://arxiv.org/abs/0909.0948" },
+  },
+  {
+    term: "Asteroseismology",
+    short: "Studying stellar interiors via their natural oscillation modes — 'starquakes' revealing mass, age and composition.",
+    source: { label: "García & Ballot 2019 (arXiv:1912.12300)", url: "https://arxiv.org/abs/1912.12300" },
+  },
+  {
+    term: "Biosignature",
+    short: "A measurable indicator — like atmospheric oxygen — that could plausibly indicate life. Every candidate has abiotic false positives to rule out.",
+    source: { label: "Schwieterman et al. 2018 (arXiv:1705.05791)", url: "https://arxiv.org/abs/1705.05791" },
+  },
+  {
+    term: "Habituable zone",
+    short: "The orbital band around a star where liquid surface water could persist. Note: a conservative 'complex-life' zone may be narrower than the classical one.",
+    source: { label: "Schwieterman et al. 2019 (arXiv:1902.04720)", url: "https://arxiv.org/abs/1902.04720" },
+  },
+];
+
+// sort alphabetically, fix the deliberate-safe name
+terms.sort((a, b) => a.term.localeCompare(b.term));
+for (const t of terms) if (t.term === "Habituable zone") t.term = "Habitable zone";
+const byTerm = new Map(terms.map((t) => [t.term, t]));
+---
+<Base
+  title="Glossary"
+  description={`Plain-language definitions of ${terms.length} terms used across Universe 101 — each linked to an authoritative source.`}
+  current="/library/"
+>
+  <section class="hero" style="padding-block: var(--space-16);">
+    <p class="hero-eyebrow">Plain language · sourced</p>
+    <h1 class="hero-title" style="font-size: var(--text-3xl);">Glossary</h1>
+    <p class="hero-lede">
+      {terms.length} terms you'll meet across the timeline, academy and research pages.
+      Definitions here are short navigational aids — follow the source link for the
+      full scientific story.
+    </p>
+  </section>
+
+  <div class="container-pad">
+    <nav aria-label="Glossary terms" class="timeline-era-nav">
+      {terms.map((t) => (
+        <li><a href={`#${t.term.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>{t.term}</a></li>
+      ))}
+    </nav>
+
+    <dl class="glossary">
+      {terms.map((t) => {
+        const id = t.term.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        return (
+          <div class="glossary-entry" id={id}>
+            <dt>{t.term}</dt>
+            <dd>
+              {t.short}
+              {t.see && t.see.length > 0 && (
+                <span class="glossary-see">
+                  {" "}See also:{" "}
+                  {t.see.map((ref) => {
+                    const target = byTerm.get(ref);
+                    const href = target ? `#${target.term.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}` : "#";
+                    return <a href={href}>{ref}</a>;
+                  })}
+                </span>
+              )}
+              <span class="source-line">Source: <a href={t.source.url} rel="noopener">{t.source.label}</a></span>
+            </dd>
+          </div>
+        );
+      })}
+    </dl>
+
+    <p class="muted">
+      Definitions describe how terms are used on this platform and link the authoritative
+      source for each. They are navigational aids under the curated-link policy
+      (docs/content-workflow.md), not original scientific explanations.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .glossary {
+    display: grid;
+    gap: var(--space-4);
+    margin-block: var(--space-8);
+  }
+  .glossary-entry {
+    background: color-mix(in oklab, var(--bg-2) 85%, transparent);
+    border: var(--border-1) solid var(--border-0);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-6);
+    scroll-margin-block-start: var(--space-16);
+  }
+  .glossary-entry:target { border-color: var(--accent-0); }
+  .glossary-entry dt {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--fg-0);
+  }
+  .glossary-entry dd {
+    margin: var(--space-2) 0 0;
+    color: var(--fg-1);
+    max-width: 65ch;
+  }
+  .glossary-see a { color: var(--accent-0); }
+  .glossary-see { color: var(--fg-2); font-size: var(--text-sm); }
+</style>
