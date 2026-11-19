@@ -4,7 +4,7 @@
   "description": "Research fields with papers (arXiv-verified with title cross-check), datasets, institutions, tools.",
   "verification": {
    "method": "arXiv abstract pages scraped for citation_title/citation_author/citation_date; non-arXiv URLs curl-verified 200",
-   "verifiedOn": "2026-11-18",
+   "verifiedOn": "2026-11-19",
    "papersVerified": 46,
    "passRate": "46/46 arXiv IDs verified with matching titles"
   }
@@ -370,7 +370,7 @@
    "tools": [
     {
      "name": "MESA",
-     "url": "https://mesaproject.github.io/"
+     "url": "https://docs.mesastar.org/"
     },
     {
      "name": "Astropy",

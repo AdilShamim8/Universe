@@ -4,7 +4,7 @@
   "description": "Cosmic history events, each carrying an authoritative source URL.",
   "verification": {
    "method": "HTTP GET via curl; only 200 accepted; events without verifiable sources dropped",
-   "verifiedOn": "2026-11-18",
+   "verifiedOn": "2026-11-19",
    "sourcesVerified": 60,
    "passRate": "60/60 = 100%"
   }
@@ -1171,12 +1171,7 @@
        "label": "NASA Science: Deep impact and the mass extinction of species 66 million years ago",
        "url": "https://science.nasa.gov/earth/deep-impact-and-the-mass-extinction-of-species-65-million-years-ago"
       },
-      "links": [
-       {
-        "label": "Smithsonian Magazine: Dinosaur-killing asteroid impact — a timeline of destruction",
-        "url": "https://www.smithsonianmag.com/science-nature/dinosaur-killing-asteroid-impact-chicxulub-crater-timeline-destruction-180973075"
-       }
-      ]
+      "links": []
      },
      {
       "id": "human-origins-hominins",
