@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import ScaleStrip from "../../components/ScaleStrip.astro";
+import PlanetBars from "../../components/PlanetBars.astro";
 import { loadExplore } from "../../lib/curated";
 
 const { data: explore } = loadExplore();
@@ -33,6 +34,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <h2>The planets, side by side</h2>
       <p>Numeric facts parsed directly from the NASA NSSDC Planetary Fact Sheet — not transcribed by hand.</p>
     </section>
+    <PlanetBars planets={planets} />
     <div class="data-table-wrap">
       <table class="data-table">
         <caption>Source: NASA NSSDC Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/)</caption>
