@@ -67,12 +67,12 @@ test.describe("academy", () => {
 test.describe("explore", () => {
   test("planet table has 10 bodies with numeric facts", async ({ page }) => {
     await page.goto("/explore/");
-    const table = page.locator("#solar-system ~ .data-table-wrap table");
+    const table = page.locator("#solar-system + .data-table-wrap table");
     expect(await table.locator("tbody tr").count()).toBe(10);
     const earthRow = table.locator("tbody tr", { hasText: "Earth" });
     await expect(earthRow).toContainText("12,756");
     // exoplanet table: 8 rows with discovery methods
-    const exo = page.locator("#exoplanets ~ .data-table-wrap table");
+    const exo = page.locator("#exoplanets + .data-table-wrap table");
     expect(await exo.locator("tbody tr").count()).toBe(8);
     await expect(exo).toContainText("Radial Velocity");
     await expect(exo).toContainText("Transit");
@@ -82,7 +82,7 @@ test.describe("explore", () => {
     await page.goto("/explore/");
     expect(await page.locator(".mtl-items .mtl-card", { hasText: /Apollo|Voyager|Hubble|Galileo|Cassini|Station|Chandra|Kepler|Horizons|Parker|Perseverance|Webb|JUICE|Euclid|Dragonfly/ }).count()).toBeGreaterThanOrEqual(14);
     // scale ladder: every item renders a size (km value or explanatory note)
-    const scaleItems = page.locator("#scale ~ ol.timeline-event li");
+    const scaleItems = page.locator("#scale ~ ol.timeline-event > li");
     expect(await scaleItems.count()).toBe(10);
     for (let i = 0; i < 10; i++) {
       const t = await scaleItems.nth(i).locator(".event-time").textContent();
@@ -166,7 +166,7 @@ test.describe("explore visualizations", () => {
     await page.goto("/explore/");
     const aria = await page.locator("svg.planetbars").getAttribute("aria-label");
     expect(aria).toContain("Jupiter");
-    expect(aria).toContain("Jupiter 1,398,400 km");
+    expect(aria).toContain("Jupiter 142,984 km");
   });
 
   test("planet table links into detail pages", async ({ page }) => {
