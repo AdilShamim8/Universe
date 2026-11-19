@@ -1,0 +1,1905 @@
+{
+ "provenance": {
+  "kind": "curated-learning-pathways",
+  "description": "Learning pathways composed of external educational resources.",
+  "verification": {
+   "method": "HTTP GET via curl following redirects; only 200 accepted",
+   "verifiedOn": "2026-11-18",
+   "resourcesVerified": 157,
+   "passRate": "97 unique URLs, 97/97 = 100% on final re-check"
+  }
+ },
+ "data": [
+  {
+   "id": "introduction-to-astronomy",
+   "title": "Introduction to Astronomy",
+   "overview": "A guided tour of the universe as astronomers understand it today, from the Earth-Moon system and naked-eye skywatching to planets, stars, galaxies and the Big Bang. It builds the vocabulary, scale intuition and observing habits that every other astronomy subject assumes. Because it uses everyday language and backyard observations, it is the standard entry point for curious beginners.",
+   "levels": [
+    "L0",
+    "L1"
+   ],
+   "prerequisites": [],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L0",
+     "title": "The Big Picture: What Astronomy Studies",
+     "goal": "Describe, in plain language, what professional astronomers investigate and how the universe is organized from planets to galaxy clusters.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 1: Science and the Universe: A Brief Tour — read this chapter first"
+      },
+      {
+       "title": "The Universe: Overview",
+       "url": "https://science.nasa.gov/universe/overview/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Plain-language tour of what the universe contains"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Start with the 'Scale of Earth, sun, closest stars and galaxies' unit"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L0",
+     "title": "Learning the Sky Above You",
+     "goal": "Find constellations, planets and the Moon from your own backyard and explain the daily and yearly motions you see.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 2: Observing the Sky: The Birth of Astronomy; Ch. 4: Earth, Moon, and Sky"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Units on seasons, moon phases and eclipses"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L0",
+     "title": "A Brief History: From Star Charts to Telescopes",
+     "goal": "Summarize how Copernicus, Galileo, Kepler and Newton turned astronomy into a modern physical science.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 3: Orbits and Gravity — sections on Kepler and Newton"
+      },
+      {
+       "title": "The Mechanical Universe",
+       "url": "https://www.youtube.com/playlist?list=PL8_xPU5epJddRABXqJ5h5G0dk-XGtA5cZ",
+       "type": "video",
+       "provider": "Caltech (YouTube)",
+       "note": "Episodes on Kepler's laws and Newton's synthesis"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L1",
+     "title": "Light, Telescopes and How We Know",
+     "goal": "Explain in one paragraph why almost everything we know about space arrives as light collected by telescopes.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 5: Radiation and Spectra; Ch. 6: Astronomical Instruments"
+      },
+      {
+       "title": "Telescopes 101",
+       "url": "https://science.nasa.gov/universe/telescopes-101/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "How telescopes across the spectrum work"
+      },
+      {
+       "title": "Sensing the Universe",
+       "url": "https://science.nasa.gov/universe/sensing-the-universe/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Beyond visible light: the full electromagnetic spectrum"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L1",
+     "title": "A Whistle-Stop Tour of the Solar System, Stars and Galaxies",
+     "goal": "Sketch the main members of the solar system, the life cycle of stars and the hierarchy of galaxies without mathematics.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 7: Other Worlds: An Introduction to the Solar System; Ch. 22-24 (stars); Ch. 25-26 (galaxies)"
+      },
+      {
+       "title": "Our Solar System",
+       "url": "https://science.nasa.gov/solar-system/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Browse planet, moon, asteroid and comet fact pages"
+      },
+      {
+       "title": "The Universe: Quick Reads",
+       "url": "https://science.nasa.gov/universe/stories/quick-reads/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Short articles on stars, galaxies and the Big Bang"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L1",
+     "title": "Capstone: Your First Guided Tour of the Cosmos",
+     "goal": "Watch a full university-level overview course and follow along, connecting each lecture to what you have read.",
+     "resources": [
+      {
+       "title": "ASTR 160: Frontiers and Controversies in Astrophysics",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Video lectures and transcripts; focuses on planets, black holes and cosmology debates"
+      },
+      {
+       "title": "8.282J Introduction to Astronomy",
+       "url": "https://ocw.mit.edu/courses/8-282j-introduction-to-astronomy-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Lecture notes and problem sets from a gentle MIT survey course"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "solar-system",
+    "stars-and-stellar-evolution",
+    "mathematics-and-physics-foundations"
+   ]
+  },
+  {
+   "id": "mathematics-and-physics-foundations",
+   "title": "Mathematics and Physics Foundations",
+   "overview": "The calculus, algebra and classical physics toolkit on which all quantitative astronomy rests: mechanics, gravitation, electromagnetism, waves and probability. Astronomy at the intermediate level and above is applied physics, so a firm grip on these subjects is the single biggest predictor of success. This pathway consolidates them with an astronomical flavor where possible.",
+   "levels": [
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L1",
+     "title": "Algebra and Functions Refresher",
+     "goal": "Manipulate equations, exponents, logarithms and units fluently enough to follow any popular-level formula in astronomy.",
+     "resources": [
+      {
+       "title": "College Algebra 2e",
+       "url": "https://openstax.org/details/books/college-algebra-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 1-6 if you need a full refresher"
+      },
+      {
+       "title": "Precalculus",
+       "url": "https://openstax.org/details/books/precalculus",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Focus on exponentials, logarithms and trigonometry"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L1",
+     "title": "Single-Variable Calculus",
+     "goal": "Differentiate and integrate the elementary functions that appear in orbits, luminosity and radiation formulas.",
+     "resources": [
+      {
+       "title": "Calculus Volume 1",
+       "url": "https://openstax.org/details/books/calculus-volume-1",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 1-6 for derivatives and integrals"
+      },
+      {
+       "title": "Calculus 1",
+       "url": "https://www.khanacademy.org/math/calculus-1",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Worked examples alongside the textbook"
+      },
+      {
+       "title": "18.01SC Single Variable Calculus",
+       "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Full problem-solving course; use as backbone if you want rigor"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L2",
+     "title": "Classical Mechanics and Gravitation",
+     "goal": "Apply Newton's laws and the law of gravitation to orbits, tides and escape velocities.",
+     "resources": [
+      {
+       "title": "University Physics Volume 1",
+       "url": "https://openstax.org/details/books/university-physics-volume-1",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 2-8 (mechanics), Ch. 13 (gravitation)"
+      },
+      {
+       "title": "8.01SC Classical Mechanics",
+       "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "The famous scholar course with problem sets"
+      },
+      {
+       "title": "The Mechanical Universe",
+       "url": "https://www.youtube.com/playlist?list=PL8_xPU5epJddRABXqJ5h5G0dk-XGtA5cZ",
+       "type": "video",
+       "provider": "Caltech (YouTube)",
+       "note": "Episode collection accompanying first-semester physics"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L2",
+     "title": "Multivariable Calculus and Linear Algebra",
+     "goal": "Handle vectors, partial derivatives and matrices, the language of fields, coordinate transformations and data fitting.",
+     "resources": [
+      {
+       "title": "Calculus Volume 3",
+       "url": "https://openstax.org/details/books/calculus-volume-3",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Vectors, partial derivatives, multiple integrals"
+      },
+      {
+       "title": "Linear Algebra",
+       "url": "https://openstax.org/details/books/linear-algebra",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Matrices, eigenvalues and their applications"
+      },
+      {
+       "title": "18.06SC Linear Algebra",
+       "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Gilbert Strang's course; lectures 1-10 are the core"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L2",
+     "title": "Electricity, Magnetism and Waves",
+     "goal": "Explain how electromagnetic waves carry information across the universe and how spectra encode physical conditions.",
+     "resources": [
+      {
+       "title": "University Physics Volume 2",
+       "url": "https://openstax.org/details/books/university-physics-volume-2",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 15-16 (waves), the electromagnetism chapters"
+      },
+      {
+       "title": "8.02 Physics II: Electricity and Magnetism",
+       "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Spring 2019 course with lecture notes"
+      },
+      {
+       "title": "8.03SC Physics III: Vibrations and Waves",
+       "url": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Resonance and wave phenomena; useful for instrumentation"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L3",
+     "title": "Differential Equations and Probability",
+     "goal": "Set up simple differential equations for stellar structure and orbits, and reason statistically about measurements and errors.",
+     "resources": [
+      {
+       "title": "Differential Equations",
+       "url": "https://openstax.org/details/books/differential-equations",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "First- and second-order ODEs"
+      },
+      {
+       "title": "18.03SC Differential Equations",
+       "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "The core MIT course with recitation videos"
+      },
+      {
+       "title": "Introduction to Probability and Statistics",
+       "url": "https://openstax.org/details/books/statistics",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Probability, distributions and inference"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L4",
+     "title": "Thermal and Statistical Physics for Astronomy",
+     "goal": "Use temperature, blackbody radiation and statistical reasoning quantitatively — the basis of stellar atmospheres and cosmology.",
+     "resources": [
+      {
+       "title": "8.044 Statistical Physics I",
+       "url": "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Undergraduate statistical mechanics with problem sets"
+      },
+      {
+       "title": "University Physics Volume 3",
+       "url": "https://openstax.org/details/books/university-physics-volume-3",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Chapters on radiation and quantum physics"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "stars-and-stellar-evolution",
+    "galaxies",
+    "black-holes",
+    "research-methods"
+   ]
+  },
+  {
+   "id": "solar-system",
+   "title": "The Solar System",
+   "overview": "A comparative survey of the Sun's family: terrestrial planets, giant planets, moons, rings, asteroids, comets and dwarf planets, plus how the system formed and how it compares with exoplanet systems. Solar system science blends geology, chemistry, atmospheres and orbital dynamics, and it anchors the search for habitable worlds elsewhere.",
+   "levels": [
+    "L0",
+    "L1",
+    "L2",
+    "L3"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L0",
+     "title": "Members of the Sun's Family",
+     "goal": "Name the planets, major moons and small-body populations and order them by distance from the Sun.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 7: Other Worlds: An Introduction to the Solar System"
+      },
+      {
+       "title": "Our Solar System",
+       "url": "https://science.nasa.gov/solar-system/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Planet-by-planet fact pages"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "The 'geology of the universe' units"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L1",
+     "title": "Earth, the Moon and Mercury: Cratered Worlds",
+     "goal": "Read craters, maria and surfaces as historical records of impacts and geological change.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 8: Earth as a Planet; Ch. 9: Cratered Worlds"
+      },
+      {
+       "title": "Moon Facts",
+       "url": "https://science.nasa.gov/solar-system/moons/facts/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Earth's Moon among the solar system's moons"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L1",
+     "title": "Venus, Mars and the Habitable Zone",
+     "goal": "Compare the atmospheres and histories of Earth's sibling planets and explain why they evolved so differently.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 10: Earthlike Planets: Venus and Mars"
+      },
+      {
+       "title": "Earth",
+       "url": "https://science.nasa.gov/earth/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Earth as the baseline for planetary comparison"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L2",
+     "title": "Giants, Rings and Icy Moons",
+     "goal": "Describe the structure of Jupiter and Saturn, their ring systems, and the ocean moons that may host life.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 11: The Giant Planets; Ch. 12: Rings, Moons, and Pluto"
+      },
+      {
+       "title": "Ocean Worlds",
+       "url": "https://science.nasa.gov/solar-system/ocean-worlds/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Europa, Enceladus and other subsurface oceans"
+      },
+      {
+       "title": "Dwarf Planets",
+       "url": "https://science.nasa.gov/dwarf-planets/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Pluto and friends"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L2",
+     "title": "Small Bodies and Solar System Formation",
+     "goal": "Connect asteroids, comets and meteorites to the nebular hypothesis for the origin of the solar system.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 13: Comets and Asteroids: Debris of the Solar System; Ch. 14: Cosmic Samples and the Origin of the Solar System"
+      },
+      {
+       "title": "Asteroids Facts",
+       "url": "https://science.nasa.gov/solar-system/asteroids/facts/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "The asteroid belt and near-Earth objects"
+      },
+      {
+       "title": "Comets Facts",
+       "url": "https://science.nasa.gov/solar-system/comets/facts/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Comet anatomy and famous visitors"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L3",
+     "title": "Planetary Science at University Level",
+     "goal": "Work through graduate-style comparative planetology: interiors, atmospheres and formation physics.",
+     "resources": [
+      {
+       "title": "12.400 The Solar System",
+       "url": "https://ocw.mit.edu/courses/12-400-the-solar-system-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Full course on solar system physics and dynamics"
+      },
+      {
+       "title": "12.002 Physics and Chemistry of the Terrestrial Planets",
+       "url": "https://ocw.mit.edu/courses/12-002-physics-and-chemistry-of-the-terrestrial-planets-fall-2008/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Formation and evolution of rocky planets"
+      },
+      {
+       "title": "12.001 Introduction to Geology",
+       "url": "https://ocw.mit.edu/courses/12-001-introduction-to-geology-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Background for reading planetary surfaces"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L3",
+     "title": "Hands-On: Observing Planets Yourself",
+     "goal": "Plan and carry out your own telescopic observations of planets and their motions.",
+     "resources": [
+      {
+       "title": "12.409 Hands-On Astronomy: Observing Stars and Planets",
+       "url": "https://ocw.mit.edu/courses/12-409-hands-on-astronomy-observing-stars-and-planets-spring-2002/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Practical observing course"
+      },
+      {
+       "title": "Our Solar System",
+       "url": "https://science.nasa.gov/solar-system/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Planet pages to plan observing targets"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "astrobiology",
+    "space-exploration",
+    "stars-and-stellar-evolution"
+   ]
+  },
+  {
+   "id": "stars-and-stellar-evolution",
+   "title": "Stars and Stellar Evolution",
+   "overview": "How stars form from interstellar clouds, shine by nuclear fusion, age, and die as white dwarfs, neutron stars or black holes. Stars make almost every chemical element in the periodic table and their lives set the clock for galaxies, so this subject is the backbone of astrophysics. It progresses from observational properties to quantitative stellar structure.",
+   "levels": [
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L1",
+     "title": "Starlight: Colors, Brightness and Spectra",
+     "goal": "Interpret a star's color, luminosity class and spectral lines to infer its temperature and composition.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 17: Analyzing Starlight"
+      },
+      {
+       "title": "Types of Stars",
+       "url": "https://science.nasa.gov/universe/stars/types/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "How stars are classified"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L1",
+     "title": "Measuring the Stars",
+     "goal": "Explain the distance ladder — parallax, standard candles — and take a census of stellar neighbors.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 18: The Stars: A Celestial Census; Ch. 19: Celestial Distances"
+      },
+      {
+       "title": "Multiple Star Systems",
+       "url": "https://science.nasa.gov/universe/stars/multiple-star-systems/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Binaries and multiples in the stellar census"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L2",
+     "title": "The Sun as a Star",
+     "goal": "Describe the Sun's structure, energy source and activity cycle, and connect it to space weather on Earth.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 15: The Sun: A Garden-Variety Star; Ch. 16: The Sun: A Nuclear Powerhouse"
+      },
+      {
+       "title": "8.284 Modern Astrophysics",
+       "url": "https://ocw.mit.edu/courses/8-284-modern-astrophysics-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Undergrad course with solar and stellar topics"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L2",
+     "title": "Interstellar Matter and Star Birth",
+     "goal": "Explain how gas and dust clouds collapse into stars and how planets form alongside them.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 20: Between the Stars: Gas and Dust in Space; Ch. 21: The Birth of Stars and the Discovery of Planets outside the Solar System"
+      },
+      {
+       "title": "Planetary Systems",
+       "url": "https://science.nasa.gov/universe/stars/planetary-system/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Planet formation around other stars"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L2",
+     "title": "Lives and Deaths of Stars",
+     "goal": "Trace a one-solar-mass and a high-mass star from main sequence to remnant, including supernovae.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 22: Stars from Adolescence to Old Age; Ch. 23: The Death of Stars"
+      },
+      {
+       "title": "Cosmic Origin of the Chemical Elements",
+       "url": "https://ocw.mit.edu/courses/res-8-007-cosmic-origin-of-the-chemical-elements-fall-2019/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Where the elements come from"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L3",
+     "title": "Quantitative Stellar Structure and Atmospheres",
+     "goal": "Set up the equations of stellar structure and interpret the Hertzsprung-Russell diagram quantitatively.",
+     "resources": [
+      {
+       "title": "8.901 Astrophysics I",
+       "url": "https://ocw.mit.edu/courses/8-901-astrophysics-i-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Problem sets on stellar structure and radiative transfer"
+      },
+      {
+       "title": "8.284 Modern Astrophysics",
+       "url": "https://ocw.mit.edu/courses/8-284-modern-astrophysics-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Use as a gentler parallel text"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L4",
+     "title": "Stellar Remnants and Endpoints",
+     "goal": "Analyze white dwarfs, neutron stars and pulsars with real physics, at early-graduate depth.",
+     "resources": [
+      {
+       "title": "8.902 Astrophysics II",
+       "url": "https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2023/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Fall 2023 edition; includes compact objects and radiative processes"
+      },
+      {
+       "title": "8.902 Astrophysics II (Fall 2004)",
+       "url": "https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2004/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Alternate edition with detailed lecture notes"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "black-holes",
+    "galaxies",
+    "astrobiology"
+   ]
+  },
+  {
+   "id": "galaxies",
+   "title": "Galaxies",
+   "overview": "The study of galaxies — our Milky Way, spiral and elliptical systems, active galactic nuclei and quasars, and galaxy evolution across cosmic time. Galaxies are the building blocks of the universe and the arenas where star formation, dark matter and black-hole feedback interact, making them a central topic of modern astronomy.",
+   "levels": [
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy",
+    "stars-and-stellar-evolution"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L1",
+     "title": "Our Home: The Milky Way",
+     "goal": "Describe the structure of the Milky Way and our place in it.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 25: The Milky Way Galaxy"
+      },
+      {
+       "title": "Galaxies",
+       "url": "https://science.nasa.gov/universe/galaxies/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Introductory galaxy pages"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L1",
+     "title": "A Universe of Galaxies",
+     "goal": "Explain Hubble's classification of galaxy types and how distances to galaxies are measured.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 26: Galaxies"
+      },
+      {
+       "title": "Types of Galaxies",
+       "url": "https://science.nasa.gov/universe/galaxies/types/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Spirals, ellipticals and irregulars"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L2",
+     "title": "Active Galaxies and Quasars",
+     "goal": "Explain the unified model of active galactic nuclei and the role of supermassive black holes.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 27: Active Galaxies, Quasars, and Supermassive Black Holes"
+      },
+      {
+       "title": "Chandra X-ray Observatory",
+       "url": "https://chandra.harvard.edu/",
+       "type": "reference",
+       "provider": "Harvard-Smithsonian Center for Astrophysics",
+       "note": "Mission site with AGN and quasar science"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L2",
+     "title": "Galaxy Evolution and Large-Scale Structure",
+     "goal": "Describe how galaxies form, merge and cluster into the cosmic web.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 28: The Evolution and Distribution of Galaxies"
+      },
+      {
+       "title": "Large-Scale Structures",
+       "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Galaxy clusters and superclusters"
+      },
+      {
+       "title": "Galaxy Evolution",
+       "url": "https://science.nasa.gov/universe/galaxies/evolution/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Deep-field evidence for galaxy change over time"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L3",
+     "title": "Classify Real Galaxies: Citizen Science",
+     "goal": "Contribute genuine morphological classifications to Galaxy Zoo and understand why human eyes are still needed.",
+     "resources": [
+      {
+       "title": "Galaxy Zoo",
+       "url": "https://www.zooniverse.org/projects/zookeeper/galaxy-zoo",
+       "type": "interactive",
+       "provider": "Zooniverse",
+       "note": "The classic galaxy-classification citizen-science project"
+      },
+      {
+       "title": "Zooniverse Projects",
+       "url": "https://www.zooniverse.org/projects",
+       "type": "interactive",
+       "provider": "Zooniverse",
+       "note": "Browse other astronomy projects once you are trained"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L3",
+     "title": "Galaxies and Cosmology at University Level",
+     "goal": "Work through university-level treatments of galaxy content, dynamics and high-redshift observations.",
+     "resources": [
+      {
+       "title": "8.902 Astrophysics II",
+       "url": "https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2023/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Fall 2023; interstellar medium and extragalactic topics"
+      },
+      {
+       "title": "ASTR 160: Frontiers and Controversies in Astrophysics",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Lectures on dark matter evidence from galaxies and clusters"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L4",
+     "title": "The Milky Way and External Galaxies in Depth",
+     "goal": "Analyze the interstellar medium, stellar populations and dynamics of galaxies at graduate depth.",
+     "resources": [
+      {
+       "title": "8.902 Astrophysics II (Fall 2004)",
+       "url": "https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2004/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Full lecture notes on ISM and galaxies"
+      },
+      {
+       "title": "8.286 The Early Universe",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Later lectures cover structure and galaxy formation"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "cosmology",
+    "black-holes",
+    "dark-matter-and-dark-energy"
+   ]
+  },
+  {
+   "id": "black-holes",
+   "title": "Black Holes",
+   "overview": "Black holes — stellar remnants and supermassive anchors of galaxies — are the most extreme objects in physics, where gravity dominates everything. The subject covers their formation, the relativity needed to understand them, observational evidence from X-ray binaries to the Event Horizon Telescope, and their role in galaxy evolution. It demands solid physics preparation and rewards it with the deepest insights in astrophysics.",
+   "levels": [
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+   ],
+   "prerequisites": [
+    "stars-and-stellar-evolution",
+    "mathematics-and-physics-foundations"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L2",
+     "title": "Black Holes in Newtonian and Popular Language",
+     "goal": "Explain escape velocity, the event horizon idea and how a black hole differs from a star using everyday concepts.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 24: Black Holes and Curved Spacetime"
+      },
+      {
+       "title": "Black Holes",
+       "url": "https://science.nasa.gov/universe/black-holes/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "NASA's black hole portal"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L2",
+     "title": "Types and How We Find Them",
+     "goal": "Distinguish stellar-mass, intermediate and supermassive black holes and name the main lines of evidence.",
+     "resources": [
+      {
+       "title": "Types of Black Holes",
+       "url": "https://science.nasa.gov/universe/black-holes/types/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Mass-based classification"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Black hole and neutron star videos"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L3",
+     "title": "Special Relativity First",
+     "goal": "Use time dilation, length contraction and relativistic dynamics confidently before entering curved spacetime.",
+     "resources": [
+      {
+       "title": "8.20 Introduction to Special Relativity",
+       "url": "https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2021/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Short IAP course — the ideal on-ramp"
+      },
+      {
+       "title": "8.033 Relativity",
+       "url": "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Fuller treatment if you want more"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L3",
+     "title": "Exploring Black Holes (Undergraduate GR)",
+     "goal": "Compute orbits and light bending around black holes with the Schwarzschild metric.",
+     "resources": [
+      {
+       "title": "8.224 Exploring Black Holes: General Relativity & Astrophysics",
+       "url": "https://ocw.mit.edu/courses/8-224-exploring-black-holes-general-relativity-astrophysics-spring-2003/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Designed for undergraduates; study materials included"
+      },
+      {
+       "title": "ASTR 160: Frontiers and Controversies",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Lectures on black hole evidence for context"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L4",
+     "title": "General Relativity Proper",
+     "goal": "Work with the Einstein field equations and their key black hole solutions.",
+     "resources": [
+      {
+       "title": "8.962 General Relativity",
+       "url": "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Graduate course, Spring 2020 edition"
+      },
+      {
+       "title": "8.033 Relativity",
+       "url": "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Additional relativity problem sets"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L4",
+     "title": "Astrophysical Black Holes",
+     "goal": "Connect the theory to X-ray binaries, tidal disruption events, gravitational waves and AGN feedback.",
+     "resources": [
+      {
+       "title": "8.902 Astrophysics II",
+       "url": "https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2023/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Compact objects and high-energy astrophysics"
+      },
+      {
+       "title": "Chandra X-ray Observatory",
+       "url": "https://chandra.harvard.edu/",
+       "type": "reference",
+       "provider": "Harvard-Smithsonian Center for Astrophysics",
+       "note": "Observational black hole results"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L5",
+     "title": "Frontier Seminars",
+     "goal": "Follow current research problems in black hole physics at the level of graduate seminars.",
+     "resources": [
+      {
+       "title": "8.286 The Early Universe",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Alan Guth's course; includes primordial black holes and horizons"
+      },
+      {
+       "title": "Yale ASTR 160",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Debate-style lectures on black hole evidence"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "galaxies",
+    "cosmology",
+    "research-methods"
+   ]
+  },
+  {
+   "id": "cosmology",
+   "title": "Cosmology",
+   "overview": "The origin, content, dynamics and fate of the universe as a whole: the Big Bang, expansion, the cosmic microwave background, nucleosynthesis and structure formation. Cosmology ties together every other subject — stellar physics, galaxies and particle physics — into a single narrative of cosmic history, and it is where precision measurement meets deep theory.",
+   "levels": [
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy",
+    "galaxies",
+    "mathematics-and-physics-foundations"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L2",
+     "title": "The Expanding Universe in Plain Language",
+     "goal": "Explain the Big Bang, Hubble's law and the cosmic microwave background without equations.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 29: The Big Bang"
+      },
+      {
+       "title": "The Big Bang",
+       "url": "https://science.nasa.gov/universe/the-big-bang/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "NASA's overview of the evidence"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Big Bang and CMB video units"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L2",
+     "title": "Cosmology: A Guided Lecture Tour",
+     "goal": "Follow complete university lectures on cosmology aimed at non-specialists.",
+     "resources": [
+      {
+       "title": "Lecture Collection: Cosmology",
+       "url": "https://www.youtube.com/playlist?list=PLpGHT1n4-mAuVGJ2E1uF9GSwLsx7p1xtm",
+       "type": "video",
+       "provider": "Stanford (YouTube)",
+       "note": "Leonard Susskind's official Stanford lecture collection"
+      },
+      {
+       "title": "Cosmology (2013) - Leonard Susskind",
+       "url": "https://www.youtube.com/playlist?list=PLvh0vlLitZ7c8Avsn6gUaWX05uD5cedO-",
+       "type": "video",
+       "provider": "Stanford (YouTube)",
+       "note": "The 2013 Stanford continuing-studies series"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L3",
+     "title": "The Early Universe",
+     "goal": "Work through inflation, nucleosynthesis and the CMB with real physics.",
+     "resources": [
+      {
+       "title": "8.286 The Early Universe",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Alan Guth's celebrated course; video lectures included"
+      },
+      {
+       "title": "8.286 Lecture Videos",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/video_galleries/lecture-videos/",
+       "type": "video",
+       "provider": "MIT OpenCourseWare",
+       "note": "The complete video gallery for the course"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L3",
+     "title": "Distances, Redshifts and Cosmic Numbers",
+     "goal": "Explain how cosmological parameters are measured and why distances are hard.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 29 plus Ch. 26 distance material"
+      },
+      {
+       "title": "ASTR 160: Frontiers and Controversies",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Lectures on measuring the universe"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L4",
+     "title": "Relativistic Cosmology",
+     "goal": "Derive and use the Robertson-Walker metric and the Friedmann equations.",
+     "resources": [
+      {
+       "title": "8.962 General Relativity",
+       "url": "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Cosmology modules within the GR course"
+      },
+      {
+       "title": "8.942 Cosmology",
+       "url": "https://ocw.mit.edu/courses/8-942-cosmology-fall-2001/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Dedicated graduate cosmology course (Fall 2001)"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L5",
+     "title": "Frontiers: Inflation and Particle Cosmology",
+     "goal": "Engage with current research topics such as inflationary models and baryogenesis.",
+     "resources": [
+      {
+       "title": "8.286 The Early Universe",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Advanced lectures on inflation and quantum origins"
+      },
+      {
+       "title": "Cosmology (2013) - Leonard Susskind",
+       "url": "https://www.youtube.com/playlist?list=PLvh0vlLitZ7c8Avsn6gUaWX05uD5cedO-",
+       "type": "video",
+       "provider": "Stanford (YouTube)",
+       "note": "Companion lectures at seminar pace"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "dark-matter-and-dark-energy",
+    "galaxies",
+    "research-methods"
+   ]
+  },
+  {
+   "id": "dark-matter-and-dark-energy",
+   "title": "Dark Matter and Dark Energy",
+   "overview": "Roughly 95 percent of the universe is made of substances we cannot see directly: dark matter holding galaxies together and dark energy driving accelerating expansion. This subject examines the observational evidence — rotation curves, clusters, gravitational lensing, supernovae, the CMB — and the leading candidate explanations. It is the clearest signal that physics is incomplete.",
+   "levels": [
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "prerequisites": [
+    "cosmology",
+    "galaxies"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L2",
+     "title": "The Evidence for Dark Matter",
+     "goal": "Summarize galaxy rotation curves and cluster observations that require unseen mass.",
+     "resources": [
+      {
+       "title": "Dark Matter",
+       "url": "https://science.nasa.gov/universe/dark-matter/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "What it is and how we know"
+      },
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 25 and 27 sections on dark matter evidence"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L2",
+     "title": "The Discovery of Dark Energy",
+     "goal": "Explain how distant supernovae revealed the accelerating expansion of the universe.",
+     "resources": [
+      {
+       "title": "Dark Energy",
+       "url": "https://science.nasa.gov/dark-energy/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "The acceleration discovery and its meaning"
+      },
+      {
+       "title": "The Big Bang",
+       "url": "https://science.nasa.gov/universe/the-big-bang/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Context within modern cosmology"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L2",
+     "title": "Textbook Treatment: Matter-Energy Budget",
+     "goal": "State the composition of the universe and what each component does.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 29: The Big Bang — model-of-the-universe sections"
+      },
+      {
+       "title": "Building Blocks of the Universe",
+       "url": "https://science.nasa.gov/universe/overview/building-blocks/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Matter, energy and the cosmic recipe"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L3",
+     "title": "University Courses on the Debate",
+     "goal": "Follow university-level arguments over dark matter and dark energy evidence.",
+     "resources": [
+      {
+       "title": "ASTR 160: Frontiers and Controversies",
+       "url": "https://oyc.yale.edu/astronomy/astr-160",
+       "type": "course",
+       "provider": "Yale Open Courses",
+       "note": "Charles Bailyn's lectures on dark matter and dark energy"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/xc7a94d8dd007f3d9:dcosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Supplementary video explanations"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L4",
+     "title": "Dark Matter in Cosmological Theory",
+     "goal": "Analyze how dark matter and dark energy enter the Friedmann equations and structure formation.",
+     "resources": [
+      {
+       "title": "8.286 The Early Universe",
+       "url": "https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Dark matter and structure formation lectures"
+      },
+      {
+       "title": "8.942 Cosmology",
+       "url": "https://ocw.mit.edu/courses/8-942-cosmology-fall-2001/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Graduate treatment of matter-energy content"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "cosmology",
+    "research-methods",
+    "galaxies"
+   ]
+  },
+  {
+   "id": "astrobiology",
+   "title": "Astrobiology",
+   "overview": "The search for life beyond Earth: habitable zones, ocean worlds, biosignatures, extremophiles and the origin of life itself. It draws on astronomy, biology, chemistry and geology, and it frames one of the biggest questions in science — are we alone? Missions to Mars, Europa and Enceladus, and exoplanet atmosphere studies, all feed into it.",
+   "levels": [
+    "L1",
+    "L2",
+    "L3"
+   ],
+   "prerequisites": [
+    "solar-system"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L1",
+     "title": "The Cosmic Context for Life",
+     "goal": "Outline the conditions that made Earth habitable and how the universe provides the raw ingredients.",
+     "resources": [
+      {
+       "title": "Astronomy 2e (OpenStax)",
+       "url": "https://openstax.org/details/books/astronomy-2e",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Ch. 30: Life in the Universe"
+      },
+      {
+       "title": "The Search for Life",
+       "url": "https://science.nasa.gov/universe/search-for-life/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "NASA's astrobiology hub"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L2",
+     "title": "Life in Extreme Places",
+     "goal": "Explain how extremophiles widen the habitable zone and what they imply for Mars and icy moons.",
+     "resources": [
+      {
+       "title": "Biology",
+       "url": "https://www.khanacademy.org/science/biology",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Cell biology and evolution foundations"
+      },
+      {
+       "title": "Ocean Worlds",
+       "url": "https://science.nasa.gov/solar-system/ocean-worlds/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Europa, Enceladus and subsurface oceans"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L2",
+     "title": "Exoplanets and the Habitable Zone",
+     "goal": "Describe how exoplanets are found and which ones might support liquid water.",
+     "resources": [
+      {
+       "title": "What Is an Exoplanet?",
+       "url": "https://science.nasa.gov/exoplanets/what-is-an-exoplanet/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Definitions and first examples"
+      },
+      {
+       "title": "How We Find and Characterize Exoplanets",
+       "url": "https://science.nasa.gov/exoplanets/how-we-find-and-characterize/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Transits, radial velocities and atmospheres"
+      },
+      {
+       "title": "Why We Search",
+       "url": "https://science.nasa.gov/exoplanets/why-we-search/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "The motivations behind exoplanet science"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L3",
+     "title": "Planetary Habitability at University Level",
+     "goal": "Assess planetary environments with the tools used in university courses: atmospheres, climates and geochemical cycles.",
+     "resources": [
+      {
+       "title": "12.003 Atmosphere, Ocean and Climate Dynamics",
+       "url": "https://ocw.mit.edu/courses/12-003-atmosphere-ocean-and-climate-dynamics-fall-2008/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Climate physics applicable to planetary atmospheres"
+      },
+      {
+       "title": "12.425 Extrasolar Planets: Physics and Detection Techniques",
+       "url": "https://ocw.mit.edu/courses/12-425-extrasolar-planets-physics-and-detection-techniques-fall-2007/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "How exoplanet science is actually done"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L3",
+     "title": "Building Habitable Worlds and Reading Biosignatures",
+     "goal": "Connect planet formation chemistry to the search for atmospheric signs of life.",
+     "resources": [
+      {
+       "title": "12.472 Building Earth-like Planets: From Nebular Gas to Ocean Worlds",
+       "url": "https://ocw.mit.edu/courses/12-472-building-earth-like-planets-from-nebular-gas-to-ocean-worlds-fall-2008/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Geochemistry of planet building"
+      },
+      {
+       "title": "12.007 Geobiology",
+       "url": "https://ocw.mit.edu/courses/12-007-geobiology-spring-2013/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "How life and Earth co-evolved"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "space-exploration",
+    "research-methods",
+    "cosmology"
+   ]
+  },
+  {
+   "id": "space-exploration",
+   "title": "Space Exploration",
+   "overview": "The history, technology and science of spaceflight: rockets and orbits, robotic missions to planets and comets, telescopes in space and the human return to the Moon. Understanding how missions are designed and flown turns astronomy from passive observation into active investigation of the solar system and beyond.",
+   "levels": [
+    "L0",
+    "L1",
+    "L2",
+    "L3"
+   ],
+   "prerequisites": [
+    "introduction-to-astronomy"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L0",
+     "title": "The Space Age Begins",
+     "goal": "Narrate the milestones from Sputnik to the ISS and explain why orbits work.",
+     "resources": [
+      {
+       "title": "Humans in Space",
+       "url": "https://science.nasa.gov/humans-in-space/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Human spaceflight programs"
+      },
+      {
+       "title": "Cosmology and Astronomy",
+       "url": "https://www.khanacademy.org/science/physics/cosmology-and-astronomy",
+       "type": "course",
+       "provider": "Khan Academy",
+       "note": "Units on space history and exploration"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L1",
+     "title": "Great Observatories: Hubble and Webb",
+     "goal": "Describe what the Hubble and James Webb Space Telescopes do and their landmark discoveries.",
+     "resources": [
+      {
+       "title": "Hubble Mission",
+       "url": "https://science.nasa.gov/mission/hubble/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Mission overview and discoveries"
+      },
+      {
+       "title": "Webb Mission",
+       "url": "https://science.nasa.gov/mission/webb/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "The infrared flagship"
+      },
+      {
+       "title": "HubbleSite",
+       "url": "https://hubblesite.org/",
+       "type": "reference",
+       "provider": "Space Telescope Science Institute",
+       "note": "News and imagery"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L1",
+     "title": "Robotic Explorers of the Solar System",
+     "goal": "Match major missions to their targets and science goals, from Apollo to New Horizons.",
+     "resources": [
+      {
+       "title": "Our Solar System",
+       "url": "https://science.nasa.gov/solar-system/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "Mission-by-mission coverage on each world's page"
+      },
+      {
+       "title": "ESA Space Science",
+       "url": "https://www.esa.int/Science_Exploration/Space_Science/",
+       "type": "reference",
+       "provider": "European Space Agency",
+       "note": "European missions across the solar system"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L2",
+     "title": "Back to the Moon: Artemis and Beyond",
+     "goal": "Explain the goals of the Artemis program and the engineering challenges of sustained lunar presence.",
+     "resources": [
+      {
+       "title": "Artemis",
+       "url": "https://science.nasa.gov/mission/artemis/",
+       "type": "reference",
+       "provider": "NASA",
+       "note": "The return-to-the-Moon program"
+      },
+      {
+       "title": "ESA Human and Robotic Exploration",
+       "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration",
+       "type": "reference",
+       "provider": "European Space Agency",
+       "note": "International partners' perspective"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L2",
+     "title": "Doing Space Science Yourself",
+     "goal": "Join a real citizen-science or amateur observing program and contribute data.",
+     "resources": [
+      {
+       "title": "NASA Citizen Science",
+       "url": "https://science.nasa.gov/citizen-science/",
+       "type": "interactive",
+       "provider": "NASA",
+       "note": "Active projects you can join today"
+      },
+      {
+       "title": "Zooniverse Projects",
+       "url": "https://www.zooniverse.org/projects",
+       "type": "interactive",
+       "provider": "Zooniverse",
+       "note": "Classification projects across the sciences"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L3",
+     "title": "The Engineering Behind the Science",
+     "goal": "Explain orbit mechanics, spacecraft systems and mission design at the level of an MIT seminar.",
+     "resources": [
+      {
+       "title": "12.409 Hands-On Astronomy: Observing Stars and Planets",
+       "url": "https://ocw.mit.edu/courses/12-409-hands-on-astronomy-observing-stars-and-planets-spring-2002/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Instrumentation and observing practice"
+      },
+      {
+       "title": "ESA Education",
+       "url": "https://www.esa.int/Education",
+       "type": "course",
+       "provider": "European Space Agency",
+       "note": "Classroom materials on space technology"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "research-methods",
+    "solar-system",
+    "astrobiology"
+   ]
+  },
+  {
+   "id": "research-methods",
+   "title": "Research Methods in Astronomy",
+   "overview": "How professional astronomy is actually done: proposing and carrying out observations, reducing and analyzing data, writing code with Astropy and NumPy, statistics and error analysis, and communicating results. This is the bridge from coursework to contributing science, whether in graduate school or through citizen science and amateur research.",
+   "levels": [
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+   ],
+   "prerequisites": [
+    "mathematics-and-physics-foundations",
+    "introduction-to-astronomy"
+   ],
+   "pathway": [
+    {
+     "step": 1,
+     "level": "L2",
+     "title": "Programming for Science: Python First Steps",
+     "goal": "Write basic Python scripts to load, manipulate and plot data tables.",
+     "resources": [
+      {
+       "title": "6.0001 Introduction to Computer Science and Programming in Python",
+       "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "The classic MIT intro; lectures and problem sets"
+      },
+      {
+       "title": "NumPy: The Absolute Basics for Beginners",
+       "url": "https://numpy.org/learn/",
+       "type": "reference",
+       "provider": "NumPy",
+       "note": "Arrays are the atoms of scientific Python"
+      }
+     ]
+    },
+    {
+     "step": 2,
+     "level": "L2",
+     "title": "Data Literacy: Probability, Statistics and Error",
+     "goal": "Apply distributions, confidence intervals and error propagation to measurements.",
+     "resources": [
+      {
+       "title": "Introduction to Probability and Statistics",
+       "url": "https://openstax.org/details/books/statistics",
+       "type": "textbook",
+       "provider": "OpenStax",
+       "note": "Work the inference chapters"
+      },
+      {
+       "title": "18.05 Introduction to Probability and Statistics",
+       "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Includes Bayesian methods used in astronomy"
+      }
+     ]
+    },
+    {
+     "step": 3,
+     "level": "L3",
+     "title": "Astropy: The Community Toolkit",
+     "goal": "Use Astropy for coordinates, units, times, tables and FITS files in real scripts.",
+     "resources": [
+      {
+       "title": "Learn Astropy: Tutorials",
+       "url": "https://learn.astropy.org/",
+       "type": "exercise",
+       "provider": "Astropy",
+       "note": "Official tutorial series"
+      },
+      {
+       "title": "Astropy Coordinates Documentation",
+       "url": "https://docs.astropy.org/en/stable/coordinates/",
+       "type": "reference",
+       "provider": "Astropy",
+       "note": "Sky positions done right"
+      }
+     ]
+    },
+    {
+     "step": 4,
+     "level": "L3",
+     "title": "Fitting Models to Data",
+     "goal": "Fit curves and distributions to noisy astronomical data and judge the fit quality.",
+     "resources": [
+      {
+       "title": "Astropy Modeling and Fitting",
+       "url": "https://docs.astropy.org/en/stable/modeling/fitting.html",
+       "type": "reference",
+       "provider": "Astropy",
+       "note": "Model fitting framework"
+      },
+      {
+       "title": "SciPy",
+       "url": "https://www.scipy.org/",
+       "type": "reference",
+       "provider": "SciPy",
+       "note": "Optimization and statistics routines"
+      }
+     ]
+    },
+    {
+     "step": 5,
+     "level": "L3",
+     "title": "Learning from Real Data-Rich Courses",
+     "goal": "Complete a university course built around data analysis projects.",
+     "resources": [
+      {
+       "title": "6.0002 Introduction to Computational Thinking and Data Science",
+       "url": "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Direct follow-on to 6.0001"
+      },
+      {
+       "title": "15.071 The Analytics Edge",
+       "url": "https://ocw.mit.edu/courses/15-071-the-analytics-edge-spring-2017/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Data analysis with real datasets"
+      }
+     ]
+    },
+    {
+     "step": 6,
+     "level": "L4",
+     "title": "Citizen Science and Collaborative Research",
+     "goal": "Contribute to and critically evaluate citizen-science projects as research training.",
+     "resources": [
+      {
+       "title": "About Zooniverse",
+       "url": "https://www.zooniverse.org/about",
+       "type": "reference",
+       "provider": "Zooniverse",
+       "note": "How the platform and its peer review work"
+      },
+      {
+       "title": "NASA Citizen Science",
+       "url": "https://science.nasa.gov/citizen-science/",
+       "type": "interactive",
+       "provider": "NASA",
+       "note": "Projects with published results"
+      },
+      {
+       "title": "Zooniverse Projects",
+       "url": "https://www.zooniverse.org/projects",
+       "type": "interactive",
+       "provider": "Zooniverse",
+       "note": "Pick a project matching your interests"
+      }
+     ]
+    },
+    {
+     "step": 7,
+     "level": "L5",
+     "title": "Toward Publishable Work",
+     "goal": "Assemble the observing, coding and statistics toolkit to carry out a small research project end-to-end.",
+     "resources": [
+      {
+       "title": "8.282J Introduction to Astronomy",
+       "url": "https://ocw.mit.edu/courses/8-282j-introduction-to-astronomy-spring-2006/",
+       "type": "course",
+       "provider": "MIT OpenCourseWare",
+       "note": "Includes a real observing project"
+      },
+      {
+       "title": "Astropy Learn",
+       "url": "https://learn.astropy.org/",
+       "type": "exercise",
+       "provider": "Astropy",
+       "note": "Advanced tutorials on spectra and images"
+      }
+     ]
+    }
+   ],
+   "next": [
+    "stars-and-stellar-evolution",
+    "galaxies",
+    "cosmology"
+   ]
+  }
+ ]
+}

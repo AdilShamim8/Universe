@@ -1,0 +1,91 @@
+---
+import Base from "../../layouts/Base.astro";
+import { loadAcademy, type AcademySubject } from "../../lib/curated";
+
+export function getStaticPaths() {
+  const { data: academy } = loadAcademy();
+  return academy.map((s) => ({ params: { subject: s.id }, props: { subject: s } }));
+}
+
+const { subject } = Astro.props as { subject: AcademySubject };
+const { data: academy } = loadAcademy();
+const prereqTitles = subject.prerequisites
+  .map((id) => academy.find((s) => s.id === id))
+  .filter(Boolean);
+const nextSubjects = subject.next
+  .map((id) => academy.find((s) => s.id === id))
+  .filter(Boolean) as AcademySubject[];
+---
+<Base
+  title={subject.title}
+  description={subject.overview}
+  current="/academy/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">{subject.levels.join(" · ")}</p>
+    <h1 class="hero-title">{subject.title}</h1>
+    <p class="hero-lede">{subject.overview}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#pathway">Begin the pathway</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    {prereqTitles.length > 0 && (
+      <section class="section-head">
+        <span class="section-kicker">Prerequisites</span>
+        <h2>Study these first</h2>
+        <div class="card-grid">
+          {prereqTitles.map((p) => (
+            <article class="card">
+              <h3><a href={`/academy/${p!.id}/`}>{p!.title}</a></h3>
+              <p>{p!.overview}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="section-head" id="pathway">
+      <span class="section-kicker">Learning pathway</span>
+      <h2>{subject.pathway.length} steps to mastery</h2>
+      <p>Each step lists what to study, where to find it, and the goal you should reach before moving on.</p>
+    </section>
+    <ol class="pathway">
+      {subject.pathway.map((step) => (
+        <li class="pathway-step">
+          <h3>{step.title}</h3>
+          <p class="step-goal"><span class={`chip chip-${step.level.toLowerCase()}`}>{step.level}</span> {step.goal}</p>
+          <ul class="resource-list">
+            {step.resources.map((r) => (
+              <li>
+                <a href={r.url} rel="noopener">{r.title}</a>
+                <span class="res-provider"> · {r.provider}{r.note ? ` · ${r.note}` : ""}</span>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ol>
+
+    {nextSubjects.length > 0 && (
+      <section class="section-head">
+        <span class="section-kicker">What's next</span>
+        <h2>Continue your journey</h2>
+        <div class="card-grid">
+          {nextSubjects.map((n) => (
+            <article class="card">
+              <h3><a href={`/academy/${n.id}/`}>{n.title}</a></h3>
+              <p>{n.overview}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <p class="muted">
+      Resources are external links to authoritative providers, individually verified at curation
+      time. This platform does not host or relicense their content — see each site's terms.
+    </p>
+  </div>
+</Base>

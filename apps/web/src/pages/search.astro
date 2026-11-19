@@ -1,38 +1,21 @@
 ---
 import Base from "../layouts/Base.astro";
-import { emptyState } from "@universe/ui";
-import { loadSiteModel } from "../lib/site-data";
-
-const { data } = loadSiteModel();
-const searchableCount =
-  data.concepts.length + data.lessons.length + data.claims.length +
-  data.sources.length + data.researchQuestions.length + data.events.length;
 ---
-<Base title="Search" description="Search reviewed records across the platform." current="/explore/" noindex={searchableCount === 0}>
-  <h1>Search</h1>
-  <p>
-    Full-text search over approved records, powered by
-    <a href="https://pagefind.app/">Pagefind</a> at build time. Drafts, fixtures, and
-    quarantined candidates are structurally excluded from the index — they never reach
-    the build output that Pagefind scans.
-  </p>
-
-  {searchableCount === 0 ? (
-  <Fragment set:html={emptyState(
-    "Nothing to search yet",
-    "The search index contains zero approved records, so search is disabled rather than pretending to find things. It activates automatically once reviewed records exist.",
-    { awaitingReview: true },
-  )} />
-) : (
-    <div class="search-box">
-      <input type="search" id="search" class="search-input" placeholder={`Search ${searchableCount} approved records…`} aria-label="Search approved records" />
-      <button type="button" id="search-btn" class="theme-toggle">Search</button>
+<Base title="Search" description="Search the platform — history events, learning pathways, resources and research fields." current="/explore/">
+  <div class="container-pad">
+    <section class="hero" style="padding-block: var(--space-16);">
+      <p class="hero-eyebrow">Full-text search</p>
+      <h1 class="hero-title" style="font-size: var(--text-3xl);">Search</h1>
+      <p class="hero-lede">
+        Search across timeline events, learning pathways, library resources and research fields.
+        Powered by Pagefind at build time — every public page is indexed.
+      </p>
+    </section>
+    <div class="search-box" style="max-width: 42rem; margin-inline: auto;">
+      <input type="search" id="search" class="search-input" placeholder="Search the universe…" aria-label="Search the platform" />
     </div>
-  )}
+    <div id="search-results" class="search-results" aria-live="polite" style="max-width: 42rem; margin-inline: auto;"></div>
 
-  <div id="search-results" class="search-results" aria-live="polite"></div>
-
-  {searchableCount > 0 && (
     <script is:inline>
       // Pagefind loads only when an index exists (built post-astro-build).
       (async function () {
@@ -47,18 +30,27 @@ const searchableCount =
             const top = search.results.slice(0, 10);
             const items = await Promise.all(top.map((r) => r.data()));
             results.innerHTML = items.length === 0
-              ? "<p>No approved records match.</p>"
-              : "<ul class=\"section-grid\">" + items.map((d) =>
-                  `<li><a href="${d.url}"><div class="section-card-title">${d.meta.title}</div></a></li>`
+              ? "<p>No pages match that search.</p>"
+              : "<ul class=\"search-result-list\">" + items.map((d) =>
+                  `<li><a href="${d.url}">${d.meta.title}</a></li>`
                 ).join("") + "</ul>";
           }
           input.addEventListener("input", debounce(run, 200));
-          function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
+          function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
         } catch (e) {
           document.getElementById("search-results").innerHTML =
             "<p>Search index unavailable.</p>";
         }
       })();
     </script>
-  )}
+    <style>
+      .search-result-list { list-style: none; padding: 0; display: grid; gap: var(--space-2); }
+      .search-result-list a {
+        display: block; padding: var(--space-3) var(--space-4);
+        background: var(--bg-2); border: var(--border-1) solid var(--border-0);
+        border-radius: var(--radius-md); color: var(--fg-0); text-decoration: none;
+      }
+      .search-result-list a:hover { border-color: var(--accent-0); }
+    </style>
+  </div>
 </Base>

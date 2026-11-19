@@ -1,0 +1,1715 @@
+{
+  "model": {
+    "name": "ΛCDM",
+    "reference": "Planck 2018 results (arXiv:1807.06209)",
+    "ageGyr": 13.797,
+    "ageUncertaintyGyr": 0.023
+  },
+  "eras": [
+    {
+      "id": "early-universe",
+      "title": "The Early Universe",
+      "summary": "From the initial singularity to roughly one second after the Big Bang: the Planck epoch in which quantum gravity dominates, cosmic inflation, and the quark-gluon plasma of the electroweak and quark epochs. Physics below the Planck time is not yet observable.",
+      "order": 1,
+      "events": [
+        {
+          "id": "initial-singularity-planck-epoch",
+          "title": "The universe begins — Planck epoch",
+          "time": {
+            "value": 0,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "t = 0 (start of cosmic time)",
+          "summary": "Standard cosmology traces the expanding universe back to an initial hot, dense state. In the first ~10^-43 seconds (the Planck epoch) the universe was so hot and dense that gravity, the other forces, and quantum effects are expected to have been unified; a complete theory of quantum gravity is needed to describe it. This t=0 point is a boundary of the model, not an observed event.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": [
+            {
+              "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+              "url": "https://arxiv.org/abs/1807.06209"
+            }
+          ]
+        },
+        {
+          "id": "inflation-epoch",
+          "title": "Cosmic inflation stretches the universe",
+          "time": {
+            "value": 1e-36,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~10^-36 to ~10^-32 seconds after the Big Bang",
+          "summary": "Inflation is a period of exponential expansion proposed to explain the universe's large-scale flatness, homogeneity, and the origin of structure. NASA's WMAP overview describes the earliest probeable moment as a period of inflation that produced a burst of exponential growth. Quantum fluctuations stretched during inflation became the seeds of all later galaxies.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: The Big Bang",
+              "url": "https://science.nasa.gov/universe/the-big-bang/"
+            }
+          ]
+        },
+        {
+          "id": "baryogenesis",
+          "title": "Matter wins over antimatter",
+          "time": {
+            "value": 1e-12,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "within the first microsecond",
+          "summary": "As the universe cooled through the electroweak scale, a small asymmetry left roughly one extra matter particle per billion matter-antimatter pairs. Annihilation then destroyed nearly all antimatter, leaving the matter that makes up everything we observe today. The exact mechanism (baryogenesis) is still an active research topic.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "electroweak-symmetry-breaking",
+          "title": "Forces split — electroweak symmetry breaking",
+          "time": {
+            "value": 1e-12,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~10^-12 seconds after the Big Bang",
+          "summary": "The Higgs field acquired its vacuum value, splitting the single electroweak force into the distinct electromagnetic and weak nuclear forces and giving particles their masses. After this transition the universe's particle content began to resemble the one we measure in laboratories today.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "quark-epoch-qgp",
+          "title": "Quark epoch — a universe of quark-gluon plasma",
+          "time": {
+            "value": 1e-06,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~10^-6 to ~1 second after the Big Bang",
+          "summary": "For most of its first second the universe was too hot for protons and neutrons to exist bound; free quarks and gluons filled a quark-gluon plasma. As the temperature fell below roughly ten trillion kelvin, quarks became confined into hadrons, ending the epoch. Experiments at particle colliders recreate tiny droplets of this plasma.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "planck-2018-age-measurement",
+          "title": "The measured age of the universe: 13.797 Gyr",
+          "time": {
+            "value": 0,
+            "unit": "seconds after the Big Bang",
+            "precision": "measured",
+            "uncertainty": "total age 13.797 ± 0.023 Gyr (Planck 2018)"
+          },
+          "display": "t = 0, 13.797 billion years ago (measured)",
+          "summary": "The Planck satellite's 2018 cosmic microwave background analysis pins the age of the universe at 13.797 ± 0.023 billion years in the flat ΛCDM model. This anchors every lookback time on this timeline. The measurement combines Planck temperature and polarization spectra with baseline cosmological assumptions.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+            "url": "https://arxiv.org/abs/1807.06209"
+          },
+          "links": [
+            {
+              "label": "NASA WMAP mission overview",
+              "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expansion-particle-formation",
+      "title": "Particle Formation and the First Nuclei",
+      "summary": "From about one second to ten minutes after the Big Bang: protons and neutrons form, neutrinos decouple, electrons and positrons annihilate, and Big Bang nucleosynthesis fixes the cosmic abundance of hydrogen and helium.",
+      "order": 2,
+      "events": [
+        {
+          "id": "hadron-formation",
+          "title": "Protons and neutrons form",
+          "time": {
+            "value": 1e-06,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~1 microsecond after the Big Bang",
+          "summary": "As the quark-gluon plasma cooled below the confinement threshold, quarks bound into permanent hadrons — the protons and neutrons that still constitute all ordinary nuclei. Their relic number density, set by the matter-antimatter asymmetry, determines the baryon density measured later by the CMB.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "neutrino-decoupling",
+          "title": "Neutrinos decouple — the cosmic neutrino background",
+          "time": {
+            "value": 1,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~1 second after the Big Bang",
+          "summary": "At about one second the universe became transparent to neutrinos, which streamed free as a relic background still permeating space today at a temperature near 1.95 K. The neutrino background slightly influences the expansion rate during nucleosynthesis, which is why primordial helium is sensitive to neutrino physics.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "electron-positron-annihilation",
+          "title": "Electron-positron annihilation heats photons",
+          "time": {
+            "value": 10,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~10 seconds after the Big Bang",
+          "summary": "Once the temperature dropped below the electron mass, most electrons and positrons annihilated into photons. The small excess of electrons survived, and the annihilation transferred energy to the photon background, setting the photon-to-neutrino temperature ratio of about 1.4 that cosmologists use today.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "big-bang-nucleosynthesis",
+          "title": "Big Bang nucleosynthesis forges helium",
+          "time": {
+            "value": 180,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~3 to ~20 minutes after the Big Bang",
+          "summary": "Once the universe was a few minutes old and cool enough for deuterium to survive, rapid nuclear reactions converted about a quarter of the universe's baryonic mass into helium-4, with trace deuterium, helium-3, and lithium-7. The observed abundances of these light elements are a key pillar of Big Bang cosmology, a test highlighted on NASA's WMAP cosmology pages.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+              "url": "https://arxiv.org/abs/1807.06209"
+            }
+          ]
+        },
+        {
+          "id": "primordial-abundance-frozen",
+          "title": "The primordial mix freezes out",
+          "time": {
+            "value": 1200,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~20 minutes after the Big Bang",
+          "summary": "After roughly twenty minutes the universe became too cool and diffuse for further nuclear fusion, fixing the primordial composition at roughly 75% hydrogen and 25% helium by mass. No new heavy elements would form until the first stars fused helium and hydrogen into carbon and beyond hundreds of millions of years later.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": []
+        },
+        {
+          "id": "bbn-baryon-density-test",
+          "title": "BBN abundances as a cosmology test",
+          "time": {
+            "value": 600,
+            "unit": "seconds after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~3-20 minutes after the Big Bang (inferred abundances)",
+          "summary": "The predicted light-element abundances depend on the baryon density and the neutron lifetime, so astronomical measurements of primordial deuterium and helium provide an independent cross-check of the baryon density derived from CMB anisotropies. NASA's WMAP overview lists Big Bang nucleosynthesis among the classic tests that the hot Big Bang model passes.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA LAMBDA archive",
+              "url": "https://lambda.gsfc.nasa.gov/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recombination-cmb",
+      "title": "Recombination and the Cosmic Microwave Background",
+      "summary": "About 380,000 years after the Big Bang the universe cooled enough for neutral atoms to form, releasing the cosmic microwave background — the oldest light we can observe — and beginning the cosmic dark ages.",
+      "order": 3,
+      "events": [
+        {
+          "id": "recombination-neutral-atoms",
+          "title": "Recombination — first neutral atoms",
+          "time": {
+            "value": 380000,
+            "unit": "years after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~380,000 years after the Big Bang",
+          "summary": "When the temperature fell to about 3,000 K, electrons and protons combined into neutral hydrogen, removing the main scattering agent for photons. NASA's WMAP overview places the release of the microwave radiation at roughly 375,000-380,000 years after the Big Bang. The transition marks the shift from an opaque plasma to a transparent universe.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: The Big Bang",
+              "url": "https://science.nasa.gov/universe/the-big-bang/"
+            }
+          ]
+        },
+        {
+          "id": "photon-decoupling-last-scattering",
+          "title": "Photons decouple — the surface of last scattering",
+          "time": {
+            "value": 380000,
+            "unit": "years after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~380,000 years after the Big Bang",
+          "summary": "The freed photons streamed away in straight lines and still fill the universe today as the cosmic microwave background, redshifted to 2.725 K. These photons last interacted with matter at the 'surface of last scattering', so CMB maps are literally baby pictures of the universe.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: The Big Bang",
+              "url": "https://science.nasa.gov/universe/the-big-bang/"
+            }
+          ]
+        },
+        {
+          "id": "cmb-temperature-anisotropies",
+          "title": "The seeds of structure in the CMB",
+          "time": {
+            "value": 380000,
+            "unit": "years after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~380,000 years after the Big Bang",
+          "summary": "The CMB is uniform to about one part in 100,000 — tiny temperature ripples of roughly 0.0002 K that record the density fluctuations of the early universe. NASA's WMAP page gives the example of one sky direction at 2.7251 K versus another at 2.7249 K. These anisotropies, first mapped by COBE in 1992, grew into today's galaxies and clusters.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA COBE mission page",
+              "url": "https://science.nasa.gov/mission/cobe/"
+            }
+          ]
+        },
+        {
+          "id": "planck-2018-cmb-parameters",
+          "title": "Planck 2018 measures the universe from the CMB",
+          "time": {
+            "value": 380000,
+            "unit": "years after the Big Bang",
+            "precision": "measured",
+            "uncertainty": "age 13.797 ± 0.023 Gyr (Planck 2018)"
+          },
+          "display": "~380,000 years after the Big Bang (measured)",
+          "summary": "The Planck satellite's final 2018 analysis of the CMB temperature and polarization determined the cosmological parameters of the flat ΛCDM model: age 13.797 ± 0.023 Gyr, Hubble constant H0 = 67.4 ± 0.5 km/s/Mpc, and matter density Ωm = 0.315 ± 0.007. It is the reference dataset for this timeline.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+            "url": "https://arxiv.org/abs/1807.06209"
+          },
+          "links": [
+            {
+              "label": "NASA WMAP mission overview",
+              "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+            }
+          ]
+        },
+        {
+          "id": "dark-ages-begin",
+          "title": "The cosmic dark ages begin",
+          "time": {
+            "value": 400000,
+            "unit": "years after the Big Bang",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "from ~400,000 years after the Big Bang",
+          "summary": "With no stars yet formed, the universe entered a long era of darkness lit only by the fading CMB, filled with neutral hydrogen and helium gas. During this period gravity slowly amplified the density contrast seeded by inflation, preparing the collapse of the first gas clouds.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Webb: The Early Universe",
+            "url": "https://science.nasa.gov/mission/webb/early-universe/"
+          },
+          "links": []
+        },
+        {
+          "id": "cobe-differential-microwave-radiometer",
+          "title": "COBE discovers CMB anisotropy (1992)",
+          "time": {
+            "value": 1992,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1992 (observational discovery)",
+          "summary": "NASA's Cosmic Background Explorer measured the CMB spectrum as a near-perfect blackbody and in 1992 detected its temperature anisotropies, work honored with the 2006 Nobel Prize in Physics. The discovery turned cosmology into a precision science and opened the road later followed by WMAP and Planck.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA COBE mission page",
+            "url": "https://science.nasa.gov/mission/cobe/"
+          },
+          "links": [
+            {
+              "label": "NASA WMAP mission overview",
+              "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-stars",
+      "title": "Cosmic Dawn — the First Stars",
+      "summary": "Roughly 100 to 400 million years after the Big Bang, gravity collapsed the first gas clouds into massive, metal-free Population III stars — the 'cosmic dawn'. Their ultraviolet light began reionizing the universe and their fusion and supernovae created the first elements heavier than helium.",
+      "order": 4,
+      "events": [
+        {
+          "id": "first-dark-matter-halos",
+          "title": "Dark matter halos gather the first gas",
+          "time": {
+            "value": 13.7,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~100 Myr after the Big Bang",
+          "summary": "Cold dark matter, unaffected by radiation pressure, began collapsing into halos well before ordinary gas could. These halos supplied the gravitational wells into which hydrogen and helium later fell to make the first star-forming clouds. The pattern of halo formation was imprinted by the density ripples measured in the CMB.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Large-scale structures of the universe",
+              "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+            }
+          ]
+        },
+        {
+          "id": "population-iii-first-stars",
+          "title": "The first stars ignite (Population III)",
+          "time": {
+            "value": 13.65,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~100-250 Myr after the Big Bang",
+          "summary": "The first stars formed from pristine gas with almost no heavy elements. NASA's Big Bang overview notes the universe's first stars were 30 to 300 times more massive than our Sun and millions of times brighter. No Population III star has been observed directly yet; Webb is searching for their signatures.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": [
+            {
+              "label": "NASA Webb: The Early Universe",
+              "url": "https://science.nasa.gov/mission/webb/early-universe/"
+            }
+          ]
+        },
+        {
+          "id": "reionization-begins",
+          "title": "Reionization begins",
+          "time": {
+            "value": 13.6,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~200 Myr after the Big Bang",
+          "summary": "Ultraviolet light from the first stars and galaxies stripped electrons off the neutral hydrogen that filled the dark ages, starting the epoch of reionization. Planck's polarization measurements indicate the process was roughly half complete by about 500 Myr and finished around one billion years after the Big Bang.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+            "url": "https://arxiv.org/abs/1807.06209"
+          },
+          "links": [
+            {
+              "label": "NASA Webb: The Early Universe",
+              "url": "https://science.nasa.gov/mission/webb/early-universe/"
+            }
+          ]
+        },
+        {
+          "id": "first-supernovae-first-metals",
+          "title": "First supernovae seed the cosmos with metals",
+          "time": {
+            "value": 13.6,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~250 Myr after the Big Bang",
+          "summary": "The first massive stars lived only a few million years before exploding as supernovae, forging carbon, oxygen, and heavier elements and blasting them into surrounding gas. This enrichment allowed the next generations of stars to be smaller, cooler, and longer-lived — the path to stars like the Sun and planets made of rock and metal.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "heaviest-first-stars-collapse-to-black-holes",
+          "title": "First black holes form",
+          "time": {
+            "value": 13.55,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~250-400 Myr after the Big Bang",
+          "summary": "Some of the earliest, most massive stars collapsed directly into black holes, possible ancestors of the supermassive black holes found at the centers of galaxies, including the one imaged in galaxy M87 in 2019. How black holes grew so massive so quickly remains one of Webb's central early-universe questions.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Webb: The Early Universe",
+            "url": "https://science.nasa.gov/mission/webb/early-universe/"
+          },
+          "links": []
+        },
+        {
+          "id": "gamma-ray-burst-cosmic-dawn-observations",
+          "title": "Webb and other telescopes probe cosmic dawn",
+          "time": {
+            "value": 13.6,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "cosmic dawn, ~100-400 Myr after the Big Bang (observed at redshift >10)",
+          "summary": "Because light takes time to travel, telescopes observing the most distant galaxies literally watch the cosmic dawn era. NASA's Webb early-universe page describes how Webb detects infrared light from the first stars and galaxies, redshifted from the ultraviolet by cosmic expansion.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Webb: The Early Universe",
+            "url": "https://science.nasa.gov/mission/webb/early-universe/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: The Big Bang",
+              "url": "https://science.nasa.gov/universe/the-big-bang/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-galaxies",
+      "title": "The First Galaxies",
+      "summary": "Between roughly 400 million and one billion years after the Big Bang, small gas clouds merged into the first true galaxies, which assembled through repeated mergers into the larger spirals and ellipticals of the later universe.",
+      "order": 5,
+      "events": [
+        {
+          "id": "first-galaxy-assembly",
+          "title": "The first galaxies assemble",
+          "time": {
+            "value": 13.4,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~400 Myr after the Big Bang",
+          "summary": "NASA's galaxy evolution overview explains that the first galaxies were smaller and more irregular than today's, forming within dark matter halos by accreting gas and merging with one another. Over billions of years these building blocks assembled into the large galaxies of the present day.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Galaxy evolution",
+            "url": "https://science.nasa.gov/universe/galaxies/evolution/"
+          },
+          "links": [
+            {
+              "label": "NASA Webb: The Early Universe",
+              "url": "https://science.nasa.gov/mission/webb/early-universe/"
+            }
+          ]
+        },
+        {
+          "id": "reionization-completes",
+          "title": "The universe becomes transparent again",
+          "time": {
+            "value": 12.8,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~1 Gyr after the Big Bang",
+          "summary": "By about one billion years after the Big Bang, ionized bubbles from countless early galaxies had overlapped and reionized essentially all diffuse hydrogen. Planck 2018 constrained the midpoint of this process from CMB polarization, placing the reionization era firmly in the first billion years of cosmic history.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+            "url": "https://arxiv.org/abs/1807.06209"
+          },
+          "links": [
+            {
+              "label": "NASA Webb: The Early Universe",
+              "url": "https://science.nasa.gov/mission/webb/early-universe/"
+            }
+          ]
+        },
+        {
+          "id": "webb-early-massive-galaxies",
+          "title": "Surprisingly massive early galaxies",
+          "time": {
+            "value": 13.3,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~350-500 Myr after the Big Bang (redshift ~10-13)",
+          "summary": "In its first months of science, Webb spotted galaxies that appeared surprisingly massive and mature for such early times, as described in the 2022 Webb news release on early-universe discoveries. These observations are refining — and stressing — models of how quickly galaxies could assemble after the Big Bang.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Webb telescope news release: early galaxies (2022)",
+            "url": "https://webbtelescope.org/contents/news-releases/2022/news-2022-066"
+          },
+          "links": [
+            {
+              "label": "NASA Webb: The Early Universe",
+              "url": "https://science.nasa.gov/mission/webb/early-universe/"
+            }
+          ]
+        },
+        {
+          "id": "galaxy-merging-buildup",
+          "title": "Galaxies grow by collision",
+          "time": {
+            "value": 13.0,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~0.8-1 Gyr after the Big Bang",
+          "summary": "Early galaxies were crowded close together and collided frequently. NASA's galaxy evolution overview describes how interactions and mergers triggered bursts of star formation and transformed galaxy shapes over time. The Milky Way itself is a product of many such mergers.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Galaxy evolution",
+            "url": "https://science.nasa.gov/universe/galaxies/evolution/"
+          },
+          "links": []
+        },
+        {
+          "id": "milky-way-oldest-stars",
+          "title": "The Milky Way's oldest stars form",
+          "time": {
+            "value": 13.0,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.5 Gyr (stellar ages)"
+          },
+          "display": "within ~1 Gyr of the Big Bang",
+          "summary": "Some of the Milky Way's most ancient stars, found today in its halo and in globular clusters, formed in the first billion years of cosmic history. Their detailed chemical fingerprints record the enrichment history of our own galaxy from its earliest star-forming episodes.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Galaxies",
+            "url": "https://science.nasa.gov/universe/galaxies/"
+          },
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "structure-formation",
+      "title": "Large-Scale Structure and Galaxy Clusters",
+      "summary": "From roughly 1 to 6 billion years after the Big Bang, gravity drew galaxies into groups, clusters, filaments, and voids — the cosmic web — while dark energy later began accelerating the expansion of the universe.",
+      "order": 6,
+      "events": [
+        {
+          "id": "cosmic-web-shape",
+          "title": "The cosmic web takes shape",
+          "time": {
+            "value": 12.0,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~2 Gyr after the Big Bang",
+          "summary": "NASA's large-scale structures page describes how galaxies are not scattered randomly but lie along filaments and sheets surrounding vast voids, together forming the cosmic web. This pattern grew from the tiny density fluctuations imprinted on the CMB, amplified by gravity acting over billions of years.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Large-scale structures of the universe",
+            "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+          },
+          "links": [
+            {
+              "label": "NASA WMAP mission overview",
+              "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+            }
+          ]
+        },
+        {
+          "id": "galaxy-clusters-form",
+          "title": "Galaxy clusters assemble",
+          "time": {
+            "value": 10.0,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~1-6 Gyr after the Big Bang",
+          "summary": "The largest bound structures in the universe — clusters containing hundreds to thousands of galaxies wrapped in hot X-ray gas — assembled over billions of years. Their masses, measured by lensing and X-ray emission, are dominated by dark matter, and their abundance tests the growth of structure predicted by the ΛCDM model.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Large-scale structures of the universe",
+            "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+          },
+          "links": []
+        },
+        {
+          "id": "peak-cosmic-star-formation",
+          "title": "Peak of cosmic star formation",
+          "time": {
+            "value": 10.0,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±1 Gyr (various surveys)"
+          },
+          "display": "~3-4 Gyr after the Big Bang ('cosmic noon')",
+          "summary": "Surveys consistently find that the universal star-formation rate peaked roughly ten billion years ago, a period often called cosmic noon, and has declined since. Galaxies converted their gas into stars fastest when the universe was a few billion years old and still rich in cold gas.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Galaxy evolution",
+            "url": "https://science.nasa.gov/universe/galaxies/evolution/"
+          },
+          "links": []
+        },
+        {
+          "id": "quasar-epoch",
+          "title": "The quasar heyday",
+          "time": {
+            "value": 10.0,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~2-4 Gyr after the Big Bang",
+          "summary": "Supermassive black holes grew most actively in the first few billion years, shining as quasars visible across the universe. NASA's black-holes pages note that the most distant quasars, seen as they were within a billion years of the Big Bang, challenge theories of how quickly black holes can grow.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Large-scale structures of the universe",
+            "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+          },
+          "links": []
+        },
+        {
+          "id": "dark-energy-acceleration",
+          "title": "Dark energy begins accelerating expansion",
+          "time": {
+            "value": 6.0,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±1 Gyr"
+          },
+          "display": "~6 Gyr after the Big Bang (acceleration onset in ΛCDM)",
+          "summary": "NASA's WMAP overview explains that the universe's expansion gradually slowed under gravity for several billion years, then began speeding up again as the repulsive effect of dark energy dominated. Planck 2018 finds dark energy contributing about 69% of the universe's total energy density today.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA WMAP mission overview",
+            "url": "https://science.nasa.gov/mission/wmap/wmap-overview/"
+          },
+          "links": [
+            {
+              "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+              "url": "https://arxiv.org/abs/1807.06209"
+            }
+          ]
+        },
+        {
+          "id": "local-group-environment",
+          "title": "The Local Group as a structure laboratory",
+          "time": {
+            "value": 5.0,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "structure ongoing, ~5 Gyr ago to present",
+          "summary": "Our own cosmic neighborhood — the Milky Way, Andromeda (M31), and dozens of smaller galaxies — is a small galaxy group on the outskirts of the Laniakea supercluster. NASA's large-scale structures page uses such nearby groupings to illustrate how gravity binds galaxies into the web's knots and filaments.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: Large-scale structures of the universe",
+            "url": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Galaxies",
+              "url": "https://science.nasa.gov/universe/galaxies/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solar-system-formation",
+      "title": "Formation of the Solar System",
+      "summary": "About 4.6 billion years ago a cloud of gas and dust enriched by earlier generations of stars collapsed into a rotating disk, forming the Sun at its center and the planets from the leftover material.",
+      "order": 7,
+      "events": [
+        {
+          "id": "solar-nebula-collapse",
+          "title": "The solar nebula collapses",
+          "time": {
+            "value": 4.6,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr (oldest solids, CAIs)"
+          },
+          "display": "~4.6 billion years ago",
+          "summary": "NASA's solar system formation overview describes how our solar system began about 4.6 billion years ago when a dense region of a giant molecular cloud collapsed, likely triggered by a nearby supernova shockwave. Because the cloud was rotating, it flattened into a protoplanetary disk with the young Sun growing at the center.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Solar system formation",
+            "url": "https://science.nasa.gov/solar-system/overview/solar-system-formation/"
+          },
+          "links": [
+            {
+              "label": "NASA Solar System overview",
+              "url": "https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/"
+            }
+          ]
+        },
+        {
+          "id": "sun-ignition",
+          "title": "The Sun ignites fusion",
+          "time": {
+            "value": 4.6,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "~4.6 billion years ago",
+          "summary": "As the protosun gathered mass, its core temperature rose until hydrogen fusion began, making it a true star. NASA's Sun facts page lists the Sun's age as about 4.6 billion years, roughly a third the age of the universe.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Sun facts",
+            "url": "https://science.nasa.gov/sun/facts/"
+          },
+          "links": []
+        },
+        {
+          "id": "planetesimal-formation",
+          "title": "Planets coalesce from the disk",
+          "time": {
+            "value": 4.57,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "first ~10-100 Myr of the solar system",
+          "summary": "Dust grains in the disk stuck together into pebbles, then planetesimals, and finally protoplanets. Rocky planets formed near the Sun where only metals and silicates could condense, while beyond the frost line ices accumulated to build the giant planets. NASA's overview counts eight planets and a vast belt of leftover asteroids.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Solar system formation",
+            "url": "https://science.nasa.gov/solar-system/overview/solar-system-formation/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Asteroids",
+              "url": "https://science.nasa.gov/solar-system/asteroids/"
+            }
+          ]
+        },
+        {
+          "id": "jupiter-gas-giant-formation",
+          "title": "Jupiter and the giant planets form",
+          "time": {
+            "value": 4.55,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "within the first ~10 Myr of the solar system",
+          "summary": "Jupiter, the solar system's largest planet, grew from a solid core that swept up huge amounts of disk gas, becoming the dominant gravitational influence on the rest of planet formation. Its early migration is thought to have shaped the orbits of the other planets and the structure of the asteroid belt.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Solar System overview",
+            "url": "https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/"
+          },
+          "links": []
+        },
+        {
+          "id": "leftover-debris-asteroids-comets",
+          "title": "Leftovers: asteroids and comets",
+          "time": {
+            "value": 4.5,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "since ~4.5 billion years ago",
+          "summary": "Not all disk material became planets: countless rocky bodies survived in the asteroid belt and icy bodies in the Kuiper Belt and beyond. NASA's asteroids and comets pages describe these leftovers as surviving remnants from the era of planet formation that still occasionally collide with planets today.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Asteroids",
+            "url": "https://science.nasa.gov/solar-system/asteroids/"
+          },
+          "links": [
+            {
+              "label": "NASA Solar System overview",
+              "url": "https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "earth-geological-history",
+      "title": "Earth's Geological History",
+      "summary": "From the Moon-forming giant impact about 4.5 billion years ago through the growth of oceans, atmosphere, and moving tectonic plates, the young Earth was transformed from a molten world into a habitable planet.",
+      "order": 8,
+      "events": [
+        {
+          "id": "moon-forming-impact",
+          "title": "Giant impact creates the Moon",
+          "time": {
+            "value": 4.5,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": null
+          },
+          "display": "~4.5 billion years ago",
+          "summary": "NASA's Moon formation page explains that about 4.5 billion years ago something — perhaps a single Mars-sized object, perhaps a series of impacts — collided with the young Earth. Debris from that collision coalesced into the Moon, which stabilized Earth's axial tilt and has influenced tides ever since.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Moon formation",
+            "url": "https://science.nasa.gov/moon/formation/"
+          },
+          "links": []
+        },
+        {
+          "id": "magma-ocean-solidifies",
+          "title": "Earth cools — the magma ocean solidifies",
+          "time": {
+            "value": 4.5,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "Hadean eon, ~4.5 billion years ago",
+          "summary": "The early Earth was largely molten, covered by a global magma ocean repeatedly disturbed by impacts. NASA's astrobiology material on the early Earth describes how the planet then differentiated, with heavy iron sinking to form the core and lighter rock floating up to form the mantle and crust.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Astrobiology: Earth right after it formed",
+            "url": "https://science.nasa.gov/astrobiology/learning-resources/alp/earth-right-after-it-formed"
+          },
+          "links": [
+            {
+              "label": "NASA Earth Observatory: Planet Earth",
+              "url": "https://earthobservatory.nasa.gov/features/PlanetEarth"
+            }
+          ]
+        },
+        {
+          "id": "oceans-atmosphere-form",
+          "title": "Oceans and atmosphere develop",
+          "time": {
+            "value": 4.4,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "~4.4-4.0 billion years ago",
+          "summary": "As the surface cooled below the boiling point of water, steam condensed into rain that filled ocean basins, while volcanic outgassing and incoming comets built up the early atmosphere. NASA's Earth Observatory describes the ocean as covering about 70% of Earth's surface and holding 97% of its water.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Earth Observatory: The ocean",
+            "url": "https://earthobservatory.nasa.gov/features/Ocean"
+          },
+          "links": [
+            {
+              "label": "NASA Earth Observatory: The atmosphere",
+              "url": "https://earthobservatory.nasa.gov/features/Atmosphere"
+            }
+          ]
+        },
+        {
+          "id": "late-heavy-bombardment",
+          "title": "The Late Heavy Bombardment",
+          "time": {
+            "value": 4.1,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "~4.1-3.8 billion years ago",
+          "summary": "NASA's Moon page describes a proposed period, roughly 4.1 to 3.8 billion years ago, when the inner solar system experienced a heightened rate of large impacts. Many lunar basins date from this window, and Earth would have been struck far more often; the timing and even the definition of the bombardment remain debated.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: What is the Late Heavy Bombardment?",
+            "url": "https://science.nasa.gov/moon/lunar-craters/what-is-the-late-heavy-bombardment"
+          },
+          "links": []
+        },
+        {
+          "id": "plate-tectonics-begin",
+          "title": "Plate tectonics shape the crust",
+          "time": {
+            "value": 3.0,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.5 Gyr (onset debated)"
+          },
+          "display": "by ~3 billion years ago (onset debated)",
+          "summary": "Earth's outer shell is broken into rigid plates that move atop the mantle, a process documented in the USGS publication This Dynamic Earth. Tectonics recycles the crust, builds mountains, and regulates long-term climate through the carbon cycle, helping keep Earth habitable over billions of years.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "USGS: This Dynamic Earth — the story of plate tectonics",
+            "url": "https://pubs.usgs.gov/gip/dynamic/dynamic.html"
+          },
+          "links": [
+            {
+              "label": "NASA Earth Observatory: Plate tectonics",
+              "url": "https://earthobservatory.nasa.gov/features/tectonics"
+            }
+          ]
+        },
+        {
+          "id": "continents-assemble-break-apart",
+          "title": "Supercontinents assemble and break apart",
+          "time": {
+            "value": 1.8,
+            "unit": "Gyr ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "recurring through geologic time (e.g., Rodinia ~1.1 Gyr ago)",
+          "summary": "Drifting plates have repeatedly gathered the continents into single landmasses and split them apart again — the geologic time scale compiled by UC Berkeley's Museum of Paleontology charts these cycles. Each reorganization redirected ocean currents and climate, influencing the environments in which life evolved.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "UC Berkeley (UCMP): Geologic time scale tour",
+            "url": "https://ucmp.berkeley.edu/education/explorations/tours/geotime/guide/geologictimescale.html"
+          },
+          "links": [
+            {
+              "label": "NASA Earth Observatory: Plate tectonics",
+              "url": "https://earthobservatory.nasa.gov/features/tectonics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evolution-of-life",
+      "title": "Evolution of Life on Earth",
+      "summary": "Life emerged on Earth by at least 3.5 billion years ago and perhaps earlier. Key milestones include oxygen-producing photosynthesis and the Great Oxidation Event, complex multicellular life, the Cambrian explosion, and the asteroid impact that ended the age of non-avian dinosaurs 66 million years ago.",
+      "order": 9,
+      "events": [
+        {
+          "id": "earliest-life-evidence",
+          "title": "Earliest evidence of life",
+          "time": {
+            "value": 3.7,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr or more; oldest widely accepted fossils ~3.5 Gyr"
+          },
+          "display": "by ~3.7 billion years ago (contested); robust fossils by ~3.5 billion",
+          "summary": "Evidence for ancient microbial life includes stromatolites and chemical signatures in rocks from Greenland and Australia. NASA's astrobiology articles discuss evidence for early life reaching back at least 3.7 billion years, though the oldest finds remain scientifically contested, making the exact origin date one of the great open questions.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Astrobiology: How hot were the oceans when life first evolved?",
+            "url": "https://astrobiology.nasa.gov/nai/articles/2017/6/5/how-hot-were-the-oceans-when-life-first-evolved/index.html"
+          },
+          "links": [
+            {
+              "label": "NASA Astrobiology: Our Alien Earth",
+              "url": "https://science.nasa.gov/astrobiology/multimedia/our-alien-earth/"
+            }
+          ]
+        },
+        {
+          "id": "photosynthesis-oxygen-production-begins",
+          "title": "Oxygenic photosynthesis evolves",
+          "time": {
+            "value": 3.0,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.3 Gyr"
+          },
+          "display": "~3 billion years ago",
+          "summary": "Cyanobacteria evolved the ability to split water for hydrogen, releasing oxygen as a byproduct. For hundreds of millions of years this oxygen was absorbed by dissolved iron and rock, until the oceans and seafloor were saturated — the banded iron formations studied in NASA astrobiology research record part of this transition.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Astrobiology: Clues of Earth's early rise of oxygen",
+            "url": "https://astrobiology.nasa.gov/nai/articles/2019/3/5/clues-of-earths-early-rise-of-oxygen/index.html"
+          },
+          "links": []
+        },
+        {
+          "id": "great-oxidation-event",
+          "title": "The Great Oxidation Event",
+          "time": {
+            "value": 2.4,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.1 Gyr"
+          },
+          "display": "~2.4 billion years ago",
+          "summary": "About 2.4 billion years ago atmospheric oxygen rose from trace levels to a few percent of the atmosphere — the Great Oxidation Event. NASA's astrobiology articles describe the event as recorded in chemical clues from rocks of that age; it triggered widespread iron deposition and was catastrophic for much of the anaerobic biosphere while enabling aerobic metabolism.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Astrobiology: Clues of Earth's early rise of oxygen",
+            "url": "https://astrobiology.nasa.gov/nai/articles/2019/3/5/clues-of-earths-early-rise-of-oxygen/index.html"
+          },
+          "links": [
+            {
+              "label": "UC Berkeley (UCMP): Geologic time scale tour",
+              "url": "https://ucmp.berkeley.edu/education/explorations/tours/geotime/guide/geologictimescale.html"
+            }
+          ]
+        },
+        {
+          "id": "complex-cells-and-multicellular-life",
+          "title": "Complex cells and multicellular life",
+          "time": {
+            "value": 1.8,
+            "unit": "Gyr ago",
+            "precision": "estimated",
+            "uncertainty": "±0.3 Gyr"
+          },
+          "display": "~1.8-0.8 billion years ago",
+          "summary": "Eukaryotic cells — cells with nuclei and organelles — appear in the fossil record by roughly 1.8 billion years ago, followed later by the first multicellular organisms. UC Berkeley's geologic time tour places these transitions in the Proterozoic eon, setting the stage for all complex life including animals and plants.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "UC Berkeley (UCMP): Geologic time scale tour",
+            "url": "https://ucmp.berkeley.edu/education/explorations/tours/geotime/guide/geologictimescale.html"
+          },
+          "links": [
+            {
+              "label": "NASA Earth explore: Life on Earth",
+              "url": "https://science.nasa.gov/earth/explore/life-on-earth/"
+            }
+          ]
+        },
+        {
+          "id": "cambrian-explosion",
+          "title": "The Cambrian explosion",
+          "time": {
+            "value": 538000000,
+            "unit": "years ago",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "~538 million years ago",
+          "summary": "At the start of the Cambrian period, the fossil record shows a rapid diversification of animal body plans — the ancestors of nearly all major animal groups alive today. The UC Berkeley geologic time scale marks the beginning of the Phanerozoic eon and Cambrian period at about 538-541 million years ago.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "UC Berkeley (UCMP): Geologic time scale tour",
+            "url": "https://ucmp.berkeley.edu/education/explorations/tours/geotime/guide/geologictimescale.html"
+          },
+          "links": []
+        },
+        {
+          "id": "kpg-impact-extinction",
+          "title": "Asteroid impact ends the age of dinosaurs (K-Pg)",
+          "time": {
+            "value": 66000000,
+            "unit": "years ago",
+            "precision": "measured",
+            "uncertainty": "±0.04 Myr (radiometric dating)"
+          },
+          "display": "66 million years ago",
+          "summary": "An asteroid roughly 10 kilometers wide struck Earth 66 million years ago, leaving the Chicxulub crater in Mexico and triggering the mass extinction that ended the reign of non-avian dinosaurs, as detailed by NASA and Smithsonian accounts of the impact. The disaster cleared the way for mammals — and eventually humans — to dominate the land.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Deep impact and the mass extinction of species 66 million years ago",
+            "url": "https://science.nasa.gov/earth/deep-impact-and-the-mass-extinction-of-species-65-million-years-ago"
+          },
+          "links": [
+            {
+              "label": "Smithsonian Magazine: Dinosaur-killing asteroid impact — a timeline of destruction",
+              "url": "https://www.smithsonianmag.com/science-nature/dinosaur-killing-asteroid-impact-chicxulub-crater-timeline-destruction-180973075"
+            }
+          ]
+        },
+        {
+          "id": "human-origins-hominins",
+          "title": "The human lineage diverges",
+          "time": {
+            "value": 7000000,
+            "unit": "years ago",
+            "precision": "estimated",
+            "uncertainty": "±1 Myr (molecular and fossil estimates)"
+          },
+          "display": "~6-7 million years ago",
+          "summary": "The human lineage split from the chimpanzee lineage roughly six to seven million years ago, and the Smithsonian's Human Origins Program documents the fossil evidence for the evolution of bipedal walking and larger brains over the millions of years that followed. This is the biological prelude to the story of human civilization and astronomy.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "Smithsonian Human Origins Program: Evidence",
+            "url": "https://humanorigins.si.edu/evidence"
+          },
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "human-civilization-discovery",
+      "title": "Humanity Discovers the Universe",
+      "summary": "From the first recorded astronomical observations to the 20th-century discoveries that revealed the true scale and history of the cosmos, humanity gradually replaced an Earth-centered picture with the expanding universe of modern cosmology.",
+      "order": 10,
+      "events": [
+        {
+          "id": "early-astronomical-records",
+          "title": "Early humans record the sky",
+          "time": {
+            "value": -5000,
+            "unit": "CE",
+            "precision": "approximate",
+            "uncertainty": null
+          },
+          "display": "before ~3000 BCE",
+          "summary": "Prehistoric peoples tracked the Sun, Moon, and stars for timekeeping, agriculture, and navigation, leaving monuments aligned to celestial events. Written astronomical records — eclipse logs, planet tables, star catalogs — began with the Babylonians, Egyptians, and Chinese by roughly the third millennium BCE, founding the observational tradition astronomy still uses.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA History Office",
+            "url": "https://www.nasa.gov/history/"
+          },
+          "links": []
+        },
+        {
+          "id": "copernicus-heliocentric-1543",
+          "title": "Copernicus publishes the heliocentric model (1543)",
+          "time": {
+            "value": 1543,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1543",
+          "summary": "Nicolaus Copernicus published 'De revolutionibus orbium coelestium' in 1543, arguing that Earth and the planets circle the Sun rather than the reverse. NASA's StarChild biography notes the revolutionary 1543 publication; the idea began the slow displacement of Earth from the center of the cosmos.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA StarChild: Nicolaus Copernicus",
+            "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level2/copernicus.html"
+          },
+          "links": []
+        },
+        {
+          "id": "galileo-telescopic-discoveries-1610",
+          "title": "Galileo turns the telescope on the sky (1610)",
+          "time": {
+            "value": 1610,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1610",
+          "summary": "Beginning observations in 1609 and publishing in 1610, Galileo was the first to record telescopic astronomy: mountains on the Moon, sunspots, the phases of Venus, and four moons orbiting Jupiter — NASA's StarChild and science pages recount these discoveries. The Galilean moons showed that not everything orbits Earth, supporting the Copernican model.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Galileo's observations of the Moon, Jupiter, Venus and the Sun",
+            "url": "https://science.nasa.gov/solar-system/galileos-observations-of-the-moon-jupiter-venus-and-the-sun"
+          },
+          "links": [
+            {
+              "label": "NASA StarChild: Galileo Galilei",
+              "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level2/galileo.html"
+            }
+          ]
+        },
+        {
+          "id": "newton-principia-1687",
+          "title": "Newton publishes the Principia (1687)",
+          "time": {
+            "value": 1687,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1687",
+          "summary": "Isaac Newton's 'Philosophiae Naturalis Principia Mathematica' (1687) united terrestrial and celestial mechanics under universal gravitation, explaining Kepler's laws of planetary motion. The same physics still guides spacecraft trajectories and the orbital calculations behind NASA's missions.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA StarChild: Isaac Newton",
+            "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/whos_who_level2/newton.html"
+          },
+          "links": []
+        },
+        {
+          "id": "herschel-discovers-uranus-1781",
+          "title": "Herschel discovers Uranus (1781)",
+          "time": {
+            "value": 1781,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "March 13, 1781",
+          "summary": "On March 13, 1781, William Herschel spotted a new object he first took for a comet; it proved to be Uranus, the first planet discovered with a telescope, as NASA's retrospective describes. The discovery doubled the known radius of the solar system overnight and showed the sky held objects no one had imagined.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: 240 years ago, William Herschel identifies Uranus as the seventh planet",
+            "url": "https://science.nasa.gov/missions/hubble/240-years-ago-astronomer-william-herschel-identifies-uranus-as-the-seventh-planet"
+          },
+          "links": []
+        },
+        {
+          "id": "bessel-stellar-parallax-1838",
+          "title": "Bessel measures the first stellar parallax (1838)",
+          "time": {
+            "value": 1838,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1838",
+          "summary": "Friedrich Bessel published the first reliable measurement of a star's parallax, an annual shift of 61 Cygni showing it lies about 10 light-years away, as ESA's astrometry history recounts. Parallax finally gave astronomers a firm rung on the cosmic distance ladder and proved the stars are truly remote suns.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "ESA Gaia: A history of astrometry — the race to measure parallax",
+            "url": "https://sci.esa.int/web/gaia/-/53197-seeing-and-measuring-farther"
+          },
+          "links": []
+        },
+        {
+          "id": "hubble-expanding-universe-1929",
+          "title": "Hubble shows the universe is expanding (1929)",
+          "time": {
+            "value": 1929,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1929",
+          "summary": "Edwin Hubble's 1929 paper correlated galaxy distances with their recession velocities: the farther a galaxy, the faster it recedes — the observational basis of the expanding universe, documented in NASA's Cosmic Times archive. Hubble's law, as restated with modern calibration, underpins all Big Bang cosmology.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Cosmic Times (1929): Universe expanding",
+            "url": "https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/online_edition/1929/expanding.html"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Edwin Hubble",
+              "url": "https://science.nasa.gov/people/edwin-hubble"
+            },
+            {
+              "label": "NASA APOD: Hubble's 1929 diagram of the expanding universe",
+              "url": "https://apod.nasa.gov/apod/ap150323.html"
+            }
+          ]
+        },
+        {
+          "id": "penzias-wilson-cmb-1965",
+          "title": "Penzias and Wilson detect the Big Bang's echo (1965)",
+          "time": {
+            "value": 1965,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "1965",
+          "summary": "Arno Penzias and Robert Wilson stumbled on a persistent microwave hiss in their antenna that proved to be the cosmic microwave background, the cooled relic radiation of the Big Bang, as told in NASA's Cosmic Times account. The 1965 discovery, earning the 1978 Nobel Prize, converted the Big Bang from contested hypothesis into the standard model of cosmology.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Cosmic Times (1965): Mysterious radio noise",
+            "url": "https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/online_edition/1965/murmur.html"
+          },
+          "links": [
+            {
+              "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+              "url": "https://arxiv.org/abs/1807.06209"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space-exploration",
+      "title": "The Space Age",
+      "summary": "From Sputnik's 1957 launch to today's gravitational-wave observatories and planetary defense tests, humanity developed the tools to visit other worlds and observe the universe across the entire electromagnetic spectrum.",
+      "order": 11,
+      "events": [
+        {
+          "id": "sputnik-1-1957",
+          "title": "Sputnik 1 — the space age opens (1957)",
+          "time": {
+            "value": 1957,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "October 4, 1957",
+          "summary": "The Soviet Union launched Sputnik 1, the first artificial satellite, on October 4, 1957 — the opening entry in NASA's Sputnik chronology. The 83.6-kg beeping sphere startled the world, triggered the creation of NASA in 1958, and opened the space age.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA History Office: Sputnik chronology (October 4, 1957)",
+            "url": "https://history.nasa.gov/sputnik/chronology.html"
+          },
+          "links": []
+        },
+        {
+          "id": "apollo-11-moon-landing-1969",
+          "title": "Apollo 11 lands humans on the Moon (1969)",
+          "time": {
+            "value": 1969,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "July 1969",
+          "summary": "Apollo 11 carried Neil Armstrong and Buzz Aldrin to the lunar surface in July 1969, with Michael Collins orbiting above — the first time humans stood on another world. NASA's Apollo 11 mission pages document the eight-day flight that fulfilled President Kennedy's 1961 challenge.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA: Apollo 11 mission page",
+            "url": "https://www.nasa.gov/mission/apollo-11/"
+          },
+          "links": []
+        },
+        {
+          "id": "voyager-launches-1977",
+          "title": "Voyagers 1 and 2 launch (1977)",
+          "time": {
+            "value": 1977,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "August-September 1977",
+          "summary": "NASA launched Voyager 2 in August 1977 and Voyager 1 that September on a grand tour of the outer planets. Both craft later crossed into interstellar space — Voyager 1 in 2012 — and remain the most distant human-made objects, as NASA's mission overview recounts.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Voyager mission overview",
+            "url": "https://science.nasa.gov/mission/voyager/mission-overview/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Voyager interstellar mission",
+              "url": "https://science.nasa.gov/mission/voyager/interstellar-mission"
+            }
+          ]
+        },
+        {
+          "id": "hubble-launch-1990",
+          "title": "Hubble Space Telescope launches (1990)",
+          "time": {
+            "value": 1990,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "April 1990",
+          "summary": "Deployed from the space shuttle Discovery in April 1990, Hubble orbits above Earth's blurring atmosphere and has delivered over three decades of discovery, from measuring the universe's expansion rate to imaging the deep fields. Its observations underpin the distance ladder that anchors modern cosmology.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Hubble Space Telescope mission",
+            "url": "https://science.nasa.gov/mission/hubble/"
+          },
+          "links": []
+        },
+        {
+          "id": "iss-assembly-first-crew",
+          "title": "International Space Station assembled and crewed (1998-2000)",
+          "time": {
+            "value": 1998,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "assembly began November 1998; first crew November 2000",
+          "summary": "Space station assembly began in orbit in November 1998 with the Zarya and Unity modules, and the Expedition 1 crew arrived in November 2000, beginning an unbroken human presence in space that continues today. NASA history pages document both milestones.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA History: 25 years ago, partners begin space station assembly",
+            "url": "https://www.nasa.gov/history/25-years-ago-nasa-partners-begin-space-station-assembly"
+          },
+          "links": [
+            {
+              "label": "NASA History: Expedition 1 crew launches to the ISS",
+              "url": "https://www.nasa.gov/history/space-station-20th-expedition-1-crew-launches-to-the-international-space-station"
+            }
+          ]
+        },
+        {
+          "id": "kepler-launch-2009",
+          "title": "Kepler hunts Earth-size planets (2009)",
+          "time": {
+            "value": 2009,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "March 2009",
+          "summary": "NASA's Kepler space telescope launched in March 2009 and stared at a patch of 150,000 stars, detecting planets by the tiny dips they cause in starlight. Kepler established that small planets are astonishingly common, finding over 2,600 confirmed worlds before its retirement in 2018.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Kepler mission",
+            "url": "https://science.nasa.gov/mission/kepler/"
+          },
+          "links": [
+            {
+              "label": "NASA Exoplanet Exploration: Discovery beyond our solar system",
+              "url": "https://exoplanets.nasa.gov/discovery/"
+            }
+          ]
+        },
+        {
+          "id": "ligo-first-detection-2015",
+          "title": "LIGO hears gravitational waves (2015)",
+          "time": {
+            "value": 2015,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "September 14, 2015 (announced February 11, 2016)",
+          "summary": "On September 14, 2015, LIGO's twin detectors measured ripples in spacetime from two merging black holes more than a billion light-years away, announced on February 11, 2016. The detection opened gravitational-wave astronomy and earned the 2017 Nobel Prize in Physics.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "LIGO Caltech: Detection of gravitational waves (news, Feb 11, 2016)",
+            "url": "https://www.ligo.caltech.edu/news/ligo20160211"
+          },
+          "links": []
+        },
+        {
+          "id": "eht-black-hole-image-2019",
+          "title": "First image of a black hole (2019)",
+          "time": {
+            "value": 2019,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "April 2019",
+          "summary": "The Event Horizon Telescope, a planet-scale network of radio dishes, released humanity's first image of a black hole in April 2019: the shadow of the supermassive black hole in galaxy M87. The NRAO gallery page documents the landmark achievement, confirming Einstein's predictions in the strong-field regime.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NRAO: Astronomers capture first image of a black hole (2019)",
+            "url": "https://public.nrao.edu/gallery/astronomers-capture-first-image-of-a-black-hole"
+          },
+          "links": []
+        },
+        {
+          "id": "jwst-launch-2021",
+          "title": "James Webb Space Telescope launches (2021)",
+          "time": {
+            "value": 2021,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "December 25, 2021",
+          "summary": "Webb, the largest space telescope ever built, launched on December 25, 2021 and began science at the infrared L2 vantage point in mid-2022. It now observes the earliest galaxies, exoplanet atmospheres, and star-forming regions that visible-light telescopes cannot penetrate.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: James Webb Space Telescope mission",
+            "url": "https://science.nasa.gov/mission/webb/"
+          },
+          "links": []
+        },
+        {
+          "id": "dart-asteroid-deflection-2022",
+          "title": "DART redirects an asteroid (2022)",
+          "time": {
+            "value": 2022,
+            "unit": "CE",
+            "precision": "exact-date",
+            "uncertainty": null
+          },
+          "display": "September 26, 2022",
+          "summary": "On September 26, 2022, NASA's DART spacecraft deliberately struck the asteroid moonlet Dimorphos, changing its orbital period — humanity's first test of planetary defense, as NASA's DART pages document. The impact also scattered debris that briefly gave the asteroid a comet-like tail.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: DART mission",
+            "url": "https://science.nasa.gov/mission/dart/"
+          },
+          "links": [
+            {
+              "label": "NASA: DART mission changed orbit of asteroid Dimorphos",
+              "url": "https://www.nasa.gov/missions/dart/nasas-dart-mission-changed-orbit-of-asteroid-didymos-around-sun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-future",
+      "title": "The Far Future (Model-Dependent Projections)",
+      "summary": "These events are projections based on stellar evolution models and orbital simulations, not observations. Each is clearly labeled with its assumptions; the timing depends on the model used and carries real uncertainty.",
+      "order": 12,
+      "events": [
+        {
+          "id": "sun-increasing-luminosity",
+          "title": "The Sun slowly brightens (projected)",
+          "time": {
+            "value": 1000000000,
+            "unit": "years from now",
+            "precision": "estimated",
+            "uncertainty": "model-dependent (stellar evolution)"
+          },
+          "display": "over the next ~1 billion years (projection)",
+          "summary": "Stellar evolution models indicate the Sun grows about 10% more luminous every billion years as hydrogen accumulates in its core. NASA's Sun facts and star life-cycle pages describe this gradual brightening; over the next billion years it is expected to complicate Earth's long-term climate. This is a physical projection, not an observation.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Sun facts",
+            "url": "https://science.nasa.gov/sun/facts/"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Types of stars",
+              "url": "https://science.nasa.gov/universe/stars/types/"
+            }
+          ]
+        },
+        {
+          "id": "sun-red-giant-phase",
+          "title": "The Sun becomes a red giant (projected)",
+          "time": {
+            "value": 5000000000,
+            "unit": "years from now",
+            "precision": "estimated",
+            "uncertainty": "model-dependent (stellar evolution)"
+          },
+          "display": "in roughly 5 billion years (projection)",
+          "summary": "When core hydrogen is exhausted, the Sun is expected to swell into a red giant, engulfing the inner planets and possibly Earth, as described in NASA's life-and-death-of-stars material. The timing follows from standard stellar evolution models for a Sun-like star.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Life and death of stars (exoplanet chapter)",
+            "url": "https://science.nasa.gov/exoplanets/resources/life-and-death/chapter-7"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Types of stars",
+              "url": "https://science.nasa.gov/universe/stars/types/"
+            }
+          ]
+        },
+        {
+          "id": "milky-way-andromeda-merger",
+          "title": "Milky Way–Andromeda merger (projected)",
+          "time": {
+            "value": 4500000000,
+            "unit": "years from now",
+            "precision": "estimated",
+            "uncertainty": "model-dependent; recent work questions whether it occurs"
+          },
+          "display": "in about 4-5 billion years (projection)",
+          "summary": "NASA's Hubble-based simulations project the Milky Way and Andromeda galaxies will collide and merge in roughly four to five billion years, eventually forming a single large elliptical galaxy. Note: NASA reports newer analyses cast doubt on the collision being certain — this event is a simulation-based projection, not a prediction of record.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Crash of the Titans — Milky Way and Andromeda collision",
+            "url": "https://science.nasa.gov/asset/hubble/crash-of-the-titans-milky-way-and-andromeda-collision"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Hubble casts doubt on certainty of galactic collision",
+              "url": "https://science.nasa.gov/missions/hubble/apocalypse-when-hubble-casts-doubt-on-certainty-of-galactic-collision"
+            },
+            {
+              "label": "NASA Science: Andromeda galaxy",
+              "url": "https://science.nasa.gov/universe/galaxies/andromeda/"
+            }
+          ]
+        },
+        {
+          "id": "sun-white-dwarf",
+          "title": "The Sun ends as a white dwarf (projected)",
+          "time": {
+            "value": 8000000000,
+            "unit": "years from now",
+            "precision": "estimated",
+            "uncertainty": "model-dependent (stellar evolution)"
+          },
+          "display": "in roughly 8 billion years (projection)",
+          "summary": "After its red giant stages, the Sun is expected to shed its outer layers as a planetary nebula and leave behind a white dwarf — an Earth-sized ember of carbon and oxygen that will cool for trillions of years. NASA's star life-cycle pages outline this standard fate for Sun-like stars.",
+          "cosmologicalModel": null,
+          "source": {
+            "label": "NASA Science: Life and death of stars (exoplanet chapter)",
+            "url": "https://science.nasa.gov/exoplanets/resources/life-and-death/chapter-7"
+          },
+          "links": [
+            {
+              "label": "NASA Science: Sun facts",
+              "url": "https://science.nasa.gov/sun/facts/"
+            }
+          ]
+        },
+        {
+          "id": "stellar-universe-fades",
+          "title": "The era of star formation winds down (projected)",
+          "time": {
+            "value": 100000000000,
+            "unit": "years from now",
+            "precision": "approximate",
+            "uncertainty": "model-dependent"
+          },
+          "display": "over the next ~1-100 trillion years (projection)",
+          "summary": "Galaxies will exhaust their gas and star formation will decline toward zero, leaving an increasingly dim universe of long-lived red dwarfs and stellar remnants, as outlined in NASA's Big Bang and galaxy evolution overviews. All dates in this regime are extrapolations from stellar physics.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "NASA Science: The Big Bang",
+            "url": "https://science.nasa.gov/universe/the-big-bang/"
+          },
+          "links": []
+        },
+        {
+          "id": "accelerating-expansion-heat-death",
+          "title": "Continued accelerating expansion (projected)",
+          "time": {
+            "value": 100000000000,
+            "unit": "years from now",
+            "precision": "approximate",
+            "uncertainty": "model-dependent (assumes dark energy behaves as a cosmological constant)"
+          },
+          "display": "far future, timescale model-dependent (projection)",
+          "summary": "In the flat ΛCDM model constrained by Planck 2018, dark energy keeps driving accelerating expansion, so distant galaxies recede beyond our view over hundreds of billions of years. If dark energy behaves as a true cosmological constant, the long-term endpoint is a cold, dilute universe — a scenario that remains an open model-dependent question.",
+          "cosmologicalModel": "ΛCDM (Planck 2018)",
+          "source": {
+            "label": "Planck 2018 results. VI. Cosmological parameters (arXiv:1807.06209)",
+            "url": "https://arxiv.org/abs/1807.06209"
+          },
+          "links": [
+            {
+              "label": "NASA Science: The Big Bang",
+              "url": "https://science.nasa.gov/universe/the-big-bang/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

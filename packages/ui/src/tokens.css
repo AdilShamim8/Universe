@@ -1,27 +1,32 @@
 /*
- * universe-platform design tokens — dark-first, WCAG 2.2 AA targets.
+ * Universe design tokens v2 — cinematic cosmic theme.
  *
- * Colors follow a space-inspired original identity: deep ink backgrounds,
- * warm starlight accents. Light theme inverts neutrals while keeping accent
- * contrast. All pairs used for text meet or exceed 4.5:1 (normal) or 3:1
- * (large/UI) contrast; values chosen accordingly and checked manually.
- * No commercial or agency logos/branding are referenced.
+ * Dark-first, WCAG 2.2 AA. Deep space ink backgrounds with starlight
+ * accents; light theme inverts neutrals. All text pairs meet ≥4.5:1
+ * (normal) or ≥3:1 (large/UI). Self-hosted fonts (Space Grotesk for
+ * display, Inter for body, IBM Plex Mono for data) — no external
+ * font CDN requests.
  */
+
 :root {
   color-scheme: dark light;
 
-  /* Typography scale (fluid, rem-based; respects user font settings) */
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* Typography — self-hosted via @fontsource packages */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.375rem;
-  --text-2xl: 1.75rem;
-  --text-3xl: 2.25rem;
+  --text-2xl: clamp(1.6rem, 1.2rem + 1.6vw, 2.1rem);
+  --text-3xl: clamp(2rem, 1.4rem + 2.4vw, 2.8rem);
+  --text-hero: clamp(2.6rem, 1.6rem + 4.5vw, 4.6rem);
   --leading-normal: 1.65;
-  --leading-tight: 1.25;
+  --leading-tight: 1.18;
+  --tracking-wide: 0.08em;
 
   /* Spacing (4px base) */
   --space-1: 0.25rem;
@@ -32,41 +37,45 @@
   --space-8: 2rem;
   --space-12: 3rem;
   --space-16: 4rem;
+  --space-24: 6rem;
 
-  /* Layout */
   --measure: 70ch;
   --container: 72rem;
-  --radius-sm: 4px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
   --border-1: 1px;
 
-  /* Motion — restrained; reduced-motion handled in base.css */
-  --motion-fast: 120ms;
-  --motion-med: 240ms;
+  /* Motion — subtle; reduced-motion honored in base.css */
+  --motion-fast: 140ms;
+  --motion-med: 280ms;
+  --motion-slow: 6s; /* hero drift */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Dark (default) palette */
+/* Dark (default) — deep space palette */
 :root,
 [data-theme="dark"] {
-  --bg-0: #07080f; /* page */
-  --bg-1: #0d0f1a; /* raised panels */
-  --bg-2: #141827; /* cards */
-  --bg-inset: #0a0c15;
-  --fg-0: #eef1fa; /* primary text on bg-0/1/2 (≈15:1) */
-  --fg-1: #b6bdd3; /* secondary (≈7.5:1 on bg-0) */
-  --fg-2: #8a93ad; /* tertiary/meta (≈4.6:1 on bg-0) */
-  --accent-0: #8ab4ff; /* starlight blue (≈8:1 on bg-0) */
-  --accent-1: #c9a86a; /* warm gold (≈7:1 on bg-0) */
-  --accent-2: #7fd8c0; /* teal for evidence (≈8:1) */
+  --bg-0: #05060d;
+  --bg-1: #0b0d18;
+  --bg-2: #121524;
+  --bg-inset: #080a13;
+  --fg-0: #eef1fa;
+  --fg-1: #b6bdd3;
+  --fg-2: #8a93ad;
+  --accent-0: #8ab4ff; /* starlight blue */
+  --accent-1: #e3c07f; /* warm starlight gold */
+  --accent-2: #7fd8c0; /* nebula teal */
+  --accent-3: #d3a6e8; /* nebula violet */
   --danger-0: #ff9d9d;
   --warn-0: #ffd28a;
   --ok-0: #97e3b0;
-  --border-0: #262b3d;
-  --border-1c: #3a405a;
+  --border-0: #232840;
+  --border-1c: #363d59;
   --focus-ring: #a3c8ff;
   --shadow-1: 0 8px 32px rgb(0 0 0 / 0.5);
+  --hero-glow: radial-gradient(ellipse 80% 50% at 50% -10%, rgb(138 180 255 / 0.16), transparent 70%);
+  --starfield-opacity: 0.5;
 }
 
 /* Light palette */
@@ -81,6 +90,7 @@
   --accent-0: #1f4fc4;
   --accent-1: #7a5b16;
   --accent-2: #0d6a55;
+  --accent-3: #6b3fa0;
   --danger-0: #a11616;
   --warn-0: #8a5a00;
   --ok-0: #14683a;
@@ -88,4 +98,6 @@
   --border-1c: #b9c0d4;
   --focus-ring: #1f4fc4;
   --shadow-1: 0 8px 24px rgb(20 24 39 / 0.12);
+  --hero-glow: radial-gradient(ellipse 80% 50% at 50% -10%, rgb(31 79 196 / 0.08), transparent 70%);
+  --starfield-opacity: 0;
 }

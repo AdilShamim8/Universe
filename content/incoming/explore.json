@@ -1,0 +1,553 @@
+{
+ "planets": [
+  {
+   "name": "Mercury",
+   "massE24kg": 0.33,
+   "diameterKm": 4879.0,
+   "densityKgm3": 5429.0,
+   "gravityMs2": 3.7,
+   "escapeVelocityKms": 4.3,
+   "rotationPeriodHours": 1407.6,
+   "lengthOfDayHours": 4222.6,
+   "distanceFromSunE6km": 57.9,
+   "orbitalPeriodDays": 88.0,
+   "orbitalVelocityKms": 47.4,
+   "meanTemperatureC": 167.0,
+   "moons": 0.0,
+   "ringSystem": false,
+   "magneticField": true,
+   "description": "The smallest planet and closest to the Sun, an airless cratered world with extreme temperature swings.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "terrestrial planet"
+  },
+  {
+   "name": "Venus",
+   "massE24kg": 4.87,
+   "diameterKm": 12104.0,
+   "densityKgm3": 5243.0,
+   "gravityMs2": 8.9,
+   "escapeVelocityKms": 10.4,
+   "rotationPeriodHours": -5832.5,
+   "lengthOfDayHours": 2802.0,
+   "distanceFromSunE6km": 108.2,
+   "orbitalPeriodDays": 224.7,
+   "orbitalVelocityKms": 35.0,
+   "meanTemperatureC": 464.0,
+   "moons": 0.0,
+   "ringSystem": false,
+   "magneticField": false,
+   "description": "A runaway-greenhouse world with a dense CO2 atmosphere and the hottest surface of any planet.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "terrestrial planet"
+  },
+  {
+   "name": "Earth",
+   "massE24kg": 5.97,
+   "diameterKm": 12756.0,
+   "densityKgm3": 5514.0,
+   "gravityMs2": 9.8,
+   "escapeVelocityKms": 11.2,
+   "rotationPeriodHours": 23.9,
+   "lengthOfDayHours": 24.0,
+   "distanceFromSunE6km": 149.6,
+   "orbitalPeriodDays": 365.2,
+   "orbitalVelocityKms": 29.8,
+   "meanTemperatureC": 15.0,
+   "moons": 1.0,
+   "ringSystem": false,
+   "magneticField": true,
+   "description": "The only known planet with liquid surface water and life.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "terrestrial planet"
+  },
+  {
+   "name": "Moon",
+   "massE24kg": 0.073,
+   "diameterKm": 3475.0,
+   "densityKgm3": 3340.0,
+   "gravityMs2": 1.6,
+   "escapeVelocityKms": 2.4,
+   "rotationPeriodHours": 655.7,
+   "lengthOfDayHours": 708.7,
+   "distanceFromSunE6km": 0.384,
+   "orbitalPeriodDays": 27.3,
+   "orbitalVelocityKms": 1.0,
+   "meanTemperatureC": -20.0,
+   "moons": 0.0,
+   "ringSystem": false,
+   "magneticField": false,
+   "description": "Earth's only natural satellite, formed ~4.5 billion years ago.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "moon"
+  },
+  {
+   "name": "Mars",
+   "massE24kg": 0.642,
+   "diameterKm": 6792.0,
+   "densityKgm3": 3934.0,
+   "gravityMs2": 3.7,
+   "escapeVelocityKms": 5.0,
+   "rotationPeriodHours": 24.6,
+   "lengthOfDayHours": 24.7,
+   "distanceFromSunE6km": 228.0,
+   "orbitalPeriodDays": 687.0,
+   "orbitalVelocityKms": 24.1,
+   "meanTemperatureC": -65.0,
+   "moons": 2.0,
+   "ringSystem": false,
+   "magneticField": false,
+   "description": "A cold desert world that once had liquid water; the most explored planet after Earth.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "terrestrial planet"
+  },
+  {
+   "name": "Jupiter",
+   "massE24kg": 1898.0,
+   "diameterKm": 142984.0,
+   "densityKgm3": 1326.0,
+   "gravityMs2": 23.1,
+   "escapeVelocityKms": 59.5,
+   "rotationPeriodHours": 9.9,
+   "lengthOfDayHours": 9.9,
+   "distanceFromSunE6km": 778.5,
+   "orbitalPeriodDays": 4331.0,
+   "orbitalVelocityKms": 13.1,
+   "meanTemperatureC": -110.0,
+   "moons": 95.0,
+   "ringSystem": true,
+   "magneticField": true,
+   "description": "The largest planet, a gas giant with the Great Red Spot and dozens of moons.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "gas/ice giant"
+  },
+  {
+   "name": "Saturn",
+   "massE24kg": 568.0,
+   "diameterKm": 120536.0,
+   "densityKgm3": 687.0,
+   "gravityMs2": 9.0,
+   "escapeVelocityKms": 35.5,
+   "rotationPeriodHours": 10.7,
+   "lengthOfDayHours": 10.7,
+   "distanceFromSunE6km": 1432.0,
+   "orbitalPeriodDays": 10747.0,
+   "orbitalVelocityKms": 9.7,
+   "meanTemperatureC": -140.0,
+   "moons": 274.0,
+   "ringSystem": true,
+   "magneticField": true,
+   "description": "A gas giant famous for its extensive ring system.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "gas/ice giant"
+  },
+  {
+   "name": "Uranus",
+   "massE24kg": 86.8,
+   "diameterKm": 51118.0,
+   "densityKgm3": 1270.0,
+   "gravityMs2": 8.7,
+   "escapeVelocityKms": 21.3,
+   "rotationPeriodHours": -17.2,
+   "lengthOfDayHours": 17.2,
+   "distanceFromSunE6km": 2867.0,
+   "orbitalPeriodDays": 30589.0,
+   "orbitalVelocityKms": 6.8,
+   "meanTemperatureC": -195.0,
+   "moons": 28.0,
+   "ringSystem": true,
+   "magneticField": true,
+   "description": "An ice giant rotating on its side with a steep axial tilt.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "gas/ice giant"
+  },
+  {
+   "name": "Neptune",
+   "massE24kg": 102.0,
+   "diameterKm": 49528.0,
+   "densityKgm3": 1638.0,
+   "gravityMs2": 11.0,
+   "escapeVelocityKms": 23.5,
+   "rotationPeriodHours": 16.1,
+   "lengthOfDayHours": 16.1,
+   "distanceFromSunE6km": 4515.0,
+   "orbitalPeriodDays": 59800.0,
+   "orbitalVelocityKms": 5.4,
+   "meanTemperatureC": -200.0,
+   "moons": 16.0,
+   "ringSystem": true,
+   "magneticField": true,
+   "description": "The outermost planet, a windy ice giant.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "gas/ice giant"
+  },
+  {
+   "name": "Pluto",
+   "massE24kg": 0.013,
+   "diameterKm": 2376.0,
+   "densityKgm3": 1850.0,
+   "gravityMs2": 0.6,
+   "escapeVelocityKms": 1.2,
+   "rotationPeriodHours": -153.3,
+   "lengthOfDayHours": 153.3,
+   "distanceFromSunE6km": 5906.4,
+   "orbitalPeriodDays": 90560.0,
+   "orbitalVelocityKms": 4.7,
+   "meanTemperatureC": -225.0,
+   "moons": 5.0,
+   "ringSystem": false,
+   "magneticField": false,
+   "description": "A dwarf planet in the Kuiper Belt, explored by New Horizons in 2015.",
+   "source": {
+    "label": "NASA NSSDC Planetary Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   },
+   "page": "https://science.nasa.gov/solar-system/",
+   "type": "dwarf planet"
+  }
+ ],
+ "exoplanets": [
+  {
+   "name": "51 Pegasi b",
+   "discovered": 1995,
+   "type": "hot Jupiter",
+   "distanceLy": 50,
+   "notes": "First exoplanet found orbiting a Sun-like star; Nobel-cited discovery.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "HD 209458 b",
+   "discovered": 1999,
+   "type": "hot Jupiter",
+   "distanceLy": 157,
+   "notes": "First transiting exoplanet; first detection of an exoplanet atmosphere.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "Kepler-186f",
+   "discovered": 2014,
+   "type": "super-Earth",
+   "distanceLy": 579,
+   "notes": "First Earth-size planet found in the habitable zone of another star.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "TRAPPIST-1 e",
+   "discovered": 2017,
+   "type": "terrestrial",
+   "distanceLy": 40,
+   "notes": "One of seven Earth-sized worlds around an ultracool dwarf star.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "Proxima Centauri b",
+   "discovered": 2016,
+   "type": "super-Earth",
+   "distanceLy": 4.24,
+   "notes": "Closest known exoplanet to the Solar System.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "Kepler-452b",
+   "discovered": 2015,
+   "type": "super-Earth",
+   "distanceLy": 1800,
+   "notes": "'Earth's cousin' — a super-Earth in a habitable-zone orbit around a Sun-like star.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "WASP-12b",
+   "discovered": 2008,
+   "type": "hot Jupiter",
+   "distanceLy": 1400,
+   "notes": "A carbon-rich planet being consumed by its star.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  },
+  {
+   "name": "K2-18 b",
+   "discovered": 2015,
+   "type": "mini-Neptune",
+   "distanceLy": 124,
+   "notes": "Hycean candidate; JWST has detected methane and CO2 in its atmosphere.",
+   "source": {
+    "label": "NASA Exoplanet Archive",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/"
+   }
+  }
+ ],
+ "missions": [
+  {
+   "name": "Apollo 11",
+   "year": 1969,
+   "agency": "NASA",
+   "status": "completed",
+   "summary": "First crewed landing on the Moon.",
+   "url": "https://www.nasa.gov/mission/apollo-11/"
+  },
+  {
+   "name": "Voyager 1 & 2",
+   "year": 1977,
+   "agency": "NASA",
+   "status": "active",
+   "summary": "Outer-planet tour now in interstellar space.",
+   "url": "https://science.nasa.gov/mission/voyager/"
+  },
+  {
+   "name": "Hubble Space Telescope",
+   "year": 1990,
+   "agency": "NASA/ESA",
+   "status": "active",
+   "summary": "Landmark observatory in Earth orbit for over three decades.",
+   "url": "https://science.nasa.gov/mission/hubble/"
+  },
+  {
+   "name": "Galileo",
+   "year": 1989,
+   "agency": "NASA",
+   "status": "completed",
+   "summary": "First spacecraft to orbit Jupiter.",
+   "url": "https://science.nasa.gov/mission/galileo/"
+  },
+  {
+   "name": "Cassini-Huygens",
+   "year": 1997,
+   "agency": "NASA/ESA/ASI",
+   "status": "completed",
+   "summary": "13-year exploration of the Saturn system.",
+   "url": "https://science.nasa.gov/mission/cassini/"
+  },
+  {
+   "name": "International Space Station",
+   "year": 1998,
+   "agency": "International",
+   "status": "active",
+   "summary": "Continuously crewed orbital laboratory.",
+   "url": "https://www.nasa.gov/station/"
+  },
+  {
+   "name": "Chandra X-ray Observatory",
+   "year": 1999,
+   "agency": "NASA",
+   "status": "active",
+   "summary": "Flagship X-ray observatory.",
+   "url": "https://science.nasa.gov/mission/chandra/"
+  },
+  {
+   "name": "Kepler",
+   "year": 2009,
+   "agency": "NASA",
+   "status": "completed",
+   "summary": "First dedicated exoplanet-hunting telescope.",
+   "url": "https://science.nasa.gov/mission/kepler/"
+  },
+  {
+   "name": "New Horizons",
+   "year": 2006,
+   "agency": "NASA",
+   "status": "active",
+   "summary": "First mission to Pluto and the Kuiper Belt.",
+   "url": "https://science.nasa.gov/mission/new-horizons/"
+  },
+  {
+   "name": "Parker Solar Probe",
+   "year": 2018,
+   "agency": "NASA",
+   "status": "active",
+   "summary": "Closest-ever spacecraft to the Sun.",
+   "url": "https://science.nasa.gov/mission/parker-solar-probe/"
+  },
+  {
+   "name": "Perseverance",
+   "year": 2020,
+   "agency": "NASA",
+   "status": "active",
+   "summary": "Mars rover caching samples for return to Earth.",
+   "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+  },
+  {
+   "name": "James Webb Space Telescope",
+   "year": 2021,
+   "agency": "NASA/ESA/CSA",
+   "status": "active",
+   "summary": "Largest telescope ever launched; infrared flagship.",
+   "url": "https://science.nasa.gov/mission/webb/"
+  },
+  {
+   "name": "JUICE",
+   "year": 2023,
+   "agency": "ESA",
+   "status": "active",
+   "summary": "European mission to Jupiter's icy moons.",
+   "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice"
+  },
+  {
+   "name": "Euclid",
+   "year": 2023,
+   "agency": "ESA",
+   "status": "active",
+   "summary": "Dark-energy and dark-matter mapping survey mission.",
+   "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid"
+  },
+  {
+   "name": "Dragonfly",
+   "year": 2028,
+   "status": "planned",
+   "agency": "NASA",
+   "summary": "Planned rotorcraft lander for Titan.",
+   "url": "https://science.nasa.gov/mission/dragonfly/"
+  }
+ ],
+ "scale": [
+  {
+   "name": "Earth's Moon",
+   "sizeKm": 3475,
+   "type": "moon",
+   "source": {
+    "label": "NASA NSSDC Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   }
+  },
+  {
+   "name": "Earth",
+   "sizeKm": 12756,
+   "type": "planet",
+   "source": {
+    "label": "NASA NSSDC Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   }
+  },
+  {
+   "name": "Neptune",
+   "sizeKm": 49244,
+   "type": "planet",
+   "source": {
+    "label": "NASA NSSDC Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+   }
+  },
+  {
+   "name": "Sun",
+   "sizeKm": 1392700,
+   "type": "star",
+   "source": {
+    "label": "NASA Sun fact sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html"
+   }
+  },
+  {
+   "name": "Betelgeuse",
+   "sizeKm": null,
+   "sizeNote": "~764 solar radii (varies)",
+   "type": "red supergiant star",
+   "source": {
+    "label": "ESO Betelgeuse page",
+    "url": "https://www.eso.org/public/news/eso2204/"
+   }
+  },
+  {
+   "name": "Earth's orbit",
+   "sizeKm": 299200000,
+   "type": "orbital distance (1 AU diameter)",
+   "source": {
+    "label": "NASA",
+    "url": "https://science.nasa.gov/solar-system/"
+   }
+  },
+  {
+   "name": "Solar System (heliosphere)",
+   "sizeKm": null,
+   "sizeNote": "~120 AU across",
+   "type": "stellar neighborhood",
+   "source": {
+    "label": "NASA Voyager interstellar page",
+    "url": "https://science.nasa.gov/mission/voyager/"
+   }
+  },
+  {
+   "name": "Milky Way galaxy",
+   "sizeKm": null,
+   "sizeNote": "~87,400 light-years diameter (ESA/Gaia)",
+   "type": "galaxy",
+   "source": {
+    "label": "ESA Gaia Milky Way map",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia"
+   }
+  },
+  {
+   "name": "Local Group",
+   "sizeKm": null,
+   "sizeNote": "~10 million light-years across",
+   "type": "galaxy group",
+   "source": {
+    "label": "NASA Universe",
+    "url": "https://science.nasa.gov/universe/"
+   }
+  },
+  {
+   "name": "Observable universe",
+   "sizeKm": null,
+   "sizeNote": "~93 billion light-years across",
+   "type": "universe",
+   "source": {
+    "label": "NASA Universe",
+    "url": "https://science.nasa.gov/universe/"
+   }
+  }
+ ]
+}

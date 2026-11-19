@@ -1,4 +1,125 @@
 ---
-import SectionPage from "../../components/SectionPage.astro";
+import Base from "../../layouts/Base.astro";
+import { loadExplore } from "../../lib/curated";
+
+const { data: explore } = loadExplore();
+const { planets, exoplanets, missions, scale } = explore;
+const activeMissions = missions.filter((m) => m.status === "active");
 ---
-<SectionPage route="/explore/" title="Explore" summary="Searchable subjects, objects, and interactive visualizations." />
+<Base
+  title="Explore"
+  description="Solar system explorer, exoplanets, missions and the scale of the universe — built on real, sourced data."
+  current="/explore/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">Real data · no simulation theater</p>
+    <h1 class="hero-title">Explore the universe</h1>
+    <p class="hero-lede">
+      Compare every planet with facts parsed live from NASA's planetary fact sheet, meet famous
+      exoplanets, follow {missions.length} missions, and zoom from the Moon to the observable
+      universe. Everything is observational data or clearly-labeled illustration — no synthetic
+      science.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#solar-system">Tour the solar system</a>
+      <a class="btn btn-secondary" href="#scale">Zoom the universe</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    <section class="section-head" id="solar-system">
+      <span class="section-kicker">Solar system explorer</span>
+      <h2>The planets, side by side</h2>
+      <p>Numeric facts parsed directly from the NASA NSSDC Planetary Fact Sheet — not transcribed by hand.</p>
+    </section>
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <caption>Source: NASA NSSDC Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Body</th>
+            <th scope="col">Type</th>
+            <th scope="col">Diameter (km)</th>
+            <th scope="col">Mass (10²⁴ kg)</th>
+            <th scope="col">Gravity (m/s²)</th>
+            <th scope="col">Day (h)</th>
+            <th scope="col">Year (days)</th>
+            <th scope="col">Mean temp (°C)</th>
+            <th scope="col">Moons</th>
+            <th scope="col">Rings</th>
+          </tr>
+        </thead>
+        <tbody>
+          {planets.map((p) => (
+            <tr>
+              <td><a href={p.page} rel="noopener">{p.name}</a></td>
+              <td>{p.type}</td>
+              <td>{p.diameterKm?.toLocaleString("en-US") ?? "—"}</td>
+              <td>{p.massE24kg ?? "—"}</td>
+              <td>{p.gravityMs2 ?? "—"}</td>
+              <td>{p.rotationPeriodHours ? Math.abs(p.rotationPeriodHours) : "—"}</td>
+              <td>{p.orbitalPeriodDays?.toLocaleString("en-US") ?? "—"}</td>
+              <td>{p.meanTemperatureC ?? "—"}</td>
+              <td>{p.moons ?? "—"}</td>
+              <td>{p.ringSystem === null ? "—" : p.ringSystem ? "yes" : "no"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <section class="section-head" id="exoplanets">
+      <span class="section-kicker">Exoplanet explorer</span>
+      <h2>Notable worlds beyond the solar system</h2>
+      <p>A starting set of milestone exoplanets. Parameters via the NASA Exoplanet Archive.</p>
+    </section>
+    <div class="card-grid">
+      {exoplanets.map((e) => (
+        <article class="card">
+          <h3>{e.name}</h3>
+          <p>{e.notes}</p>
+          <div class="card-meta">
+            <span>{e.type}</span>
+            <span>{e.distanceLy} light-years</span>
+            <span>discovered {e.discovered}</span>
+          </div>
+          <div class="source-line">Source: <a href={e.source.url} rel="noopener">{e.source.label}</a></div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head" id="missions">
+      <span class="section-kicker">Mission explorer</span>
+      <h2>{missions.length} missions, {activeMissions.length} still flying</h2>
+    </section>
+    <div class="card-grid">
+      {missions.map((m) => (
+        <article class="card">
+          <h3><a href={m.url} rel="noopener">{m.name}</a></h3>
+          <p>{m.summary}</p>
+          <div class="card-meta">
+            <span>{m.year}</span>
+            <span>{m.agency}</span>
+            <span class={`chip ${m.status === "active" ? "chip-beginner" : "chip-intermediate"}`}>{m.status}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head" id="scale">
+      <span class="section-kicker">Scale of the universe</span>
+      <h2>From the Moon to the observable universe</h2>
+      <p>Each step of the cosmic ladder with its source. Where a single size isn't meaningful, the note explains the measure used.</p>
+    </section>
+    <ol class="timeline-events">
+      {scale.map((s) => (
+        <li class="timeline-event">
+          <h3>{s.name}</h3>
+          <span class="event-time">{s.sizeKm ? `${s.sizeKm.toLocaleString("en-US")} km` : s.sizeNote}</span>
+          <p>{s.type}</p>
+          <div class="source-line">Source: <a href={s.source.url} rel="noopener">{s.source.label}</a></div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>

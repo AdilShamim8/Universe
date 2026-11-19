@@ -1,4 +1,47 @@
 ---
-import SectionPage from "../../components/SectionPage.astro";
+import Base from "../../layouts/Base.astro";
+import { loadAcademy } from "../../lib/curated";
+
+const { data: academy } = loadAcademy();
+const totalSteps = academy.reduce((n, s) => n + s.pathway.length, 0);
+const totalResources = academy.reduce((n, s) => n + s.pathway.reduce((m, st) => m + st.resources.length, 0), 0);
 ---
-<SectionPage route="/academy/" title="Academy" summary="Structured lessons from basics through advanced mathematics." />
+<Base
+  title="Academy"
+  description={`Structured learning pathways from beginner to research level — ${academy.length} subjects, ${totalResources} verified resources.`}
+  current="/academy/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">L0 curious → L5 research</p>
+    <h1 class="hero-title">The Academy</h1>
+    <p class="hero-lede">
+      {academy.length} learning pathways, {totalSteps} steps, {totalResources} verified resources.
+      Every pathway tells you what to study, where to study it, what comes before, and what to
+      learn next — from free textbooks to graduate courses.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/academy/introduction-to-astronomy/">Start with Introduction to Astronomy</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    <section class="section-head">
+      <span class="section-kicker">All pathways</span>
+      <h2>Choose your subject</h2>
+      <p>Levels: L0 curious beginner · L1 foundational · L2 intermediate · L3 advanced undergrad · L4 graduate · L5 research.</p>
+    </section>
+    <div class="card-grid">
+      {academy.map((s) => (
+        <article class="card">
+          <h3><a href={`/academy/${s.id}/`}>{s.title}</a></h3>
+          <p>{s.overview}</p>
+          <div class="card-meta">
+            <span class="chip chip-intermediate">{s.levels[0]}–{s.levels[s.levels.length - 1]}</span>
+            <span>{s.pathway.length} steps</span>
+            {s.prerequisites.length === 0 ? <span class="chip chip-beginner">no prerequisites</span> : <span>prerequisites apply</span>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,929 @@
+[
+ {
+  "id": "cosmology",
+  "name": "Cosmology",
+  "summary": "Cosmology studies the origin, evolution and large-scale properties of the universe as a whole — its age, composition, geometry and expansion history. The concordance model is flat ΛCDM, anchored by the cosmic microwave background and large-scale structure.",
+  "priorities": [
+   {
+    "text": "Resolve the Hubble tension — the disagreement between early-universe (CMB-inferred) and late-universe (distance-ladder) measurements of the expansion rate.",
+    "source": {
+     "label": "NASA Astrophysics Division",
+     "url": "https://science.nasa.gov/astrophysics/"
+    }
+   },
+   {
+    "text": "Map dark energy and test whether general relativity holds on cosmological scales with next-generation surveys.",
+    "source": {
+     "label": "NASA Astrophysics Division",
+     "url": "https://science.nasa.gov/astrophysics/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "What is the physical nature of dark energy, and is it a cosmological constant?",
+    "source": {
+     "label": "Planck 2018 results. VI. Cosmological parameters",
+     "url": "https://arxiv.org/abs/1807.06209"
+    }
+   },
+   {
+    "text": "Why do early- and late-universe measurements of the Hubble constant disagree (the Hubble tension)?",
+    "source": {
+     "label": "A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team",
+     "url": "https://arxiv.org/abs/2112.04510"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Planck 2018 results. VI. Cosmological parameters",
+    "authors": "Planck Collaboration",
+    "year": 2018,
+    "arxiv": "1807.06209",
+    "url": "https://arxiv.org/abs/1807.06209",
+    "why": "Definitive CMB constraints on cosmological parameters in ΛCDM; the anchor of modern cosmology."
+   },
+   {
+    "title": "Measurements of Omega and Lambda from 42 High-Redshift Supernovae",
+    "authors": "Perlmutter, S. et al.",
+    "year": 1998,
+    "arxiv": "astro-ph/9812133",
+    "url": "https://arxiv.org/abs/astro-ph/9812133",
+    "why": "Supernova evidence for the accelerating universe; Nobel-cited discovery of dark energy."
+   },
+   {
+    "title": "Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant",
+    "authors": "Riess, Adam G. et al.",
+    "year": 1998,
+    "arxiv": "astro-ph/9805201",
+    "url": "https://arxiv.org/abs/astro-ph/9805201",
+    "why": "Independent supernova evidence for cosmic acceleration."
+   },
+   {
+    "title": "First Year Wilkinson Microwave Anisotropy Probe (WMAP) Observations: Determination of Cosmological Parameters",
+    "authors": "Spergel, D. N. et al.",
+    "year": 2003,
+    "arxiv": "astro-ph/0302209",
+    "url": "https://arxiv.org/abs/astro-ph/0302209",
+    "why": "First-year WMAP precision map of the CMB."
+   },
+   {
+    "title": "A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team",
+    "authors": "Riess, Adam G. et al.",
+    "year": 2021,
+    "arxiv": "2112.04510",
+    "url": "https://arxiv.org/abs/2112.04510",
+    "why": "1% local Hubble-constant measurement that sharpened the Hubble tension."
+   },
+   {
+    "title": "Dark Energy Survey Year 3 Results: Cosmological Constraints from Galaxy Clustering and Weak Lensing",
+    "authors": "DES Collaboration",
+    "year": 2021,
+    "arxiv": "2105.13549",
+    "url": "https://arxiv.org/abs/2105.13549",
+    "why": "Dark Energy Survey Year 3 cosmological constraints."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Planck Legacy Archive",
+    "operator": "ESA",
+    "url": "https://cosmos.esa.int/web/planck",
+    "description": "Public archive of the Planck mission's CMB data products."
+   },
+   {
+    "name": "SDSS DR18",
+    "operator": "Sloan Digital Sky Survey",
+    "url": "https://sdss.org/dr18/",
+    "description": "18th data release of the Sloan survey: spectra, imaging and derived catalogs."
+   },
+   {
+    "name": "LAMBDA",
+    "operator": "NASA",
+    "url": "https://lambda.gsfc.nasa.gov/",
+    "description": "Legacy Archive for Microwave Background Data Analysis."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "Kavli Institute for Cosmological Physics (KICP)",
+    "url": "https://kicp.uchicago.edu/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "Astropy",
+    "url": "https://www.astropy.org/"
+   },
+   {
+    "name": "CLASS",
+    "url": "https://github.com/lesgourg/class_public"
+   },
+   {
+    "name": "emcee",
+    "url": "https://emcee.readthedocs.io/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "mathematics-and-physics-foundations",
+   "cosmology"
+  ]
+ },
+ {
+  "id": "galaxies-and-structure",
+  "name": "Galaxies and large-scale structure",
+  "summary": "The study of galaxies — their formation, evolution, morphology and clustering — and of the cosmic web of dark matter and gas they trace. Combines deep surveys, spectroscopy and hydrodynamical simulations.",
+  "priorities": [
+   {
+    "text": "Understand how galaxies assemble across cosmic time, from the first galaxies to today.",
+    "source": {
+     "label": "NASA Universe",
+     "url": "https://science.nasa.gov/universe/"
+    }
+   },
+   {
+    "text": "Map the cosmic web and the dark-matter scaffolding through large imaging and spectroscopic surveys.",
+    "source": {
+     "label": "NASA Astrophysics Division",
+     "url": "https://science.nasa.gov/astrophysics/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "How do supermassive black holes and their host galaxies co-evolve?",
+    "source": {
+     "label": "Theoretical Challenges in Galaxy Formation",
+     "url": "https://arxiv.org/abs/1612.06891"
+    }
+   },
+   {
+    "text": "What sets the efficiency of star formation across cosmic time?",
+    "source": {
+     "label": "The Average Star Formation Histories of Galaxies in Dark Matter Halos from z=0-8",
+     "url": "https://arxiv.org/abs/1207.6105"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "The Sloan Digital Sky Survey: Technical Summary",
+    "authors": "York, D. G.",
+    "year": 2000,
+    "arxiv": "astro-ph/0006396",
+    "url": "https://arxiv.org/abs/astro-ph/0006396",
+    "why": "Technical summary of the Sloan Digital Sky Survey, the foundational galaxy survey."
+   },
+   {
+    "title": "Galaxy Zoo : Morphologies derived from visual inspection of galaxies from the Sloan Digital Sky Survey",
+    "authors": "Lintott, Chris J. et al.",
+    "year": 2008,
+    "arxiv": "0804.4483",
+    "url": "https://arxiv.org/abs/0804.4483",
+    "why": "Citizen-science morphological classification of ~900,000 SDSS galaxies."
+   },
+   {
+    "title": "Introducing the Illustris Project: Simulating the coevolution of dark and visible matter in the Universe",
+    "authors": "Vogelsberger, Mark et al.",
+    "year": 2014,
+    "arxiv": "1405.2921",
+    "url": "https://arxiv.org/abs/1405.2921",
+    "why": "Landmark hydrodynamical simulation of galaxy formation (Illustris)."
+   },
+   {
+    "title": "First Results from the TNG50 Simulation: The evolution of stellar and gaseous disks across cosmic time",
+    "authors": "Pillepich, Annalisa et al.",
+    "year": 2019,
+    "arxiv": "1902.05553",
+    "url": "https://arxiv.org/abs/1902.05553",
+    "why": "High-resolution simulation bridging galaxy and cosmological scales (TNG50)."
+   },
+   {
+    "title": "Gaia Early Data Release 3: Summary of the contents and survey properties",
+    "authors": "Gaia Collaboration",
+    "year": 2020,
+    "arxiv": "2012.01533",
+    "url": "https://arxiv.org/abs/2012.01533",
+    "why": "Gaia Early Data Release 3 — precision astrometry for Milky Way science."
+   },
+   {
+    "title": "The Early Data Release of the Dark Energy Spectroscopic Instrument",
+    "authors": "DESI Collaboration",
+    "year": 2023,
+    "arxiv": "2306.06308",
+    "url": "https://arxiv.org/abs/2306.06308",
+    "why": "Early data release of the Dark Energy Spectroscopic Instrument."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "SDSS DR18",
+    "operator": "Sloan Digital Sky Survey",
+    "url": "https://sdss.org/dr18/",
+    "description": "Spectra and imaging for millions of galaxies."
+   },
+   {
+    "name": "Gaia DR3 archive",
+    "operator": "ESA",
+    "url": "https://cosmos.esa.int/web/gaia/dr3",
+    "description": "Astrometry, photometry and spectra for ~1.8 billion sources."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "NSF NOIRLab",
+    "url": "https://noirlab.edu/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "Astropy",
+    "url": "https://www.astropy.org/"
+   },
+   {
+    "name": "galpy",
+    "url": "https://www.galpy.org/"
+   },
+   {
+    "name": "yt",
+    "url": "https://yt-project.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "galaxies",
+   "stars-and-stellar-evolution"
+  ]
+ },
+ {
+  "id": "stars-and-stellar-evolution",
+  "name": "Stars and stellar evolution",
+  "summary": "The physics of stars: formation, structure, nucleosynthesis, and endpoints as white dwarfs, neutron stars or black holes. Precision asteroseismology and large surveys have transformed the field.",
+  "priorities": [
+   {
+    "text": "Understand the life cycle of stars and the origin of the chemical elements.",
+    "source": {
+     "label": "NASA Universe",
+     "url": "https://science.nasa.gov/universe/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "How do rotation, mass loss and magnetic fields shape massive-star evolution?",
+    "source": {
+     "label": "Stellar models and isochrones from low-mass to massive stars including pre-main sequence phase with accretion",
+     "url": "https://arxiv.org/abs/1903.10550"
+    }
+   },
+   {
+    "text": "How can asteroseismology reveal stellar interiors across the HR diagram?",
+    "source": {
+     "label": "Probing the interior physics of stars through asteroseismology",
+     "url": "https://arxiv.org/abs/1912.12300"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Modules for Experiments in Stellar Astrophysics (MESA)",
+    "authors": "Paxton, Bill et al.",
+    "year": 2010,
+    "arxiv": "1009.1622",
+    "url": "https://arxiv.org/abs/1009.1622",
+    "why": "MESA stellar evolution code — the community standard for stellar modeling."
+   },
+   {
+    "title": "MESA Isochrones and Stellar Tracks (MIST). I: Solar-Scaled Models",
+    "authors": "Choi, Jieun et al.",
+    "year": 2016,
+    "arxiv": "1604.08592",
+    "url": "https://arxiv.org/abs/1604.08592",
+    "why": "MESA isochrones and stellar tracks (MIST) used throughout the literature."
+   },
+   {
+    "title": "Probing the interior physics of stars through asteroseismology",
+    "authors": "Aerts, C.",
+    "year": 2019,
+    "arxiv": "1912.12300",
+    "url": "https://arxiv.org/abs/1912.12300",
+    "why": "Review of asteroseismology as a probe of stellar interiors."
+   },
+   {
+    "title": "Stellar models and isochrones from low-mass to massive stars including pre-main sequence phase with accretion",
+    "authors": "Haemmerlé, L. et al.",
+    "year": 2019,
+    "arxiv": "1903.10550",
+    "url": "https://arxiv.org/abs/1903.10550",
+    "why": "Stellar models from low- to high-mass stars including pre-MS tracks."
+   },
+   {
+    "title": "The chemical composition of the Sun",
+    "authors": "Asplund, Martin et al.",
+    "year": 2009,
+    "arxiv": "0909.0948",
+    "url": "https://arxiv.org/abs/0909.0948",
+    "why": "The chemical composition of the Sun — reference abundances for the field."
+   },
+   {
+    "title": "Gaia Early Data Release 3: Summary of the contents and survey properties",
+    "authors": "Gaia Collaboration",
+    "year": 2020,
+    "arxiv": "2012.01533",
+    "url": "https://arxiv.org/abs/2012.01533",
+    "why": "Gaia EDR3: precision astrometry enabling Galactic stellar science."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "MAST",
+    "operator": "NASA STScI",
+    "url": "https://mast.stsci.edu/",
+    "description": "Barbara A. Mikulski Archive for Space Telescopes: Hubble, TESS, Kepler and more."
+   },
+   {
+    "name": "Gaia DR3 archive",
+    "operator": "ESA",
+    "url": "https://cosmos.esa.int/web/gaia/dr3",
+    "description": "Photometry and astrometry for stellar populations."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "Kavli Institute for Astronomy and Astrophysics, Peking University",
+    "url": "https://kiaa.pku.edu.cn/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "MESA",
+    "url": "https://mesaproject.github.io/"
+   },
+   {
+    "name": "Astropy",
+    "url": "https://www.astropy.org/"
+   },
+   {
+    "name": "galpy",
+    "url": "https://www.galpy.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "stars-and-stellar-evolution",
+   "mathematics-and-physics-foundations"
+  ]
+ },
+ {
+  "id": "black-holes",
+  "name": "Black holes",
+  "summary": "Black holes — regions where gravity is so strong nothing escapes — are studied through X-ray binaries, active galactic nuclei, gravitational waves and direct imaging. The 2010s brought the detection (GW150914) and imaging (EHT) revolutions.",
+  "priorities": [
+   {
+    "text": "Understand the physics of black holes and relativistic gravity, from stellar-mass mergers to supermassive anchors.",
+    "source": {
+     "label": "NASA Astrophysics Division",
+     "url": "https://science.nasa.gov/astrophysics/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "What happens to information that falls into a black hole (the information paradox)?",
+    "source": {
+     "label": "The information paradox: A pedagogical introduction",
+     "url": "https://arxiv.org/abs/0909.1038"
+    }
+   },
+   {
+    "text": "How do supermassive black holes form and grow in the early universe?",
+    "source": {
+     "label": "The information paradox: A pedagogical introduction",
+     "url": "https://arxiv.org/abs/0909.1038"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Observation of Gravitational Waves from a Binary Black Hole Merger",
+    "authors": "The LIGO Scientific Collaboration",
+    "year": 2016,
+    "arxiv": "1602.03837",
+    "url": "https://arxiv.org/abs/1602.03837",
+    "why": "First direct detection of gravitational waves from a binary black hole merger (GW150914)."
+   },
+   {
+    "title": "GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral",
+    "authors": "The LIGO Scientific Collaboration",
+    "year": 2017,
+    "arxiv": "1710.05832",
+    "url": "https://arxiv.org/abs/1710.05832",
+    "why": "GW170817: binary neutron star merger with multi-messenger counterparts."
+   },
+   {
+    "title": "First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole",
+    "authors": "The Event Horizon Telescope Collaboration",
+    "year": 2019,
+    "arxiv": "1906.11238",
+    "url": "https://arxiv.org/abs/1906.11238",
+    "why": "First image of a black hole shadow (M87*)."
+   },
+   {
+    "title": "First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way",
+    "authors": "The Event Horizon Telescope Collaboration",
+    "year": 2023,
+    "arxiv": "2311.08680",
+    "url": "https://arxiv.org/abs/2311.08680",
+    "why": "First image of Sagittarius A*, the Milky Way's central black hole."
+   },
+   {
+    "title": "Detection of the gravitational redshift in the orbit of the star S2 near the Galactic centre massive black hole",
+    "authors": "GRAVITY Collaboration",
+    "year": 2018,
+    "arxiv": "1807.09409",
+    "url": "https://arxiv.org/abs/1807.09409",
+    "why": "Gravitational redshift detected in the orbit of star S2 at the Galactic Center."
+   },
+   {
+    "title": "Tests of General Relativity with GWTC-3",
+    "authors": "The LIGO Scientific Collaboration",
+    "year": 2021,
+    "arxiv": "2112.06861",
+    "url": "https://arxiv.org/abs/2112.06861",
+    "why": "Tests of general relativity with the GWTC-3 catalog."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "GWOSC",
+    "operator": "LIGO/Virgo/KAGRA",
+    "url": "https://gwosc.org/",
+    "description": "Gravitational-wave open data: strain time series and event catalogs."
+   },
+   {
+    "name": "MAST",
+    "operator": "NASA STScI",
+    "url": "https://mast.stsci.edu/",
+    "description": "Space-telescope archives relevant to BH science."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "LIGO Scientific Collaboration (Caltech/MIT)",
+    "url": "https://www.ligo.caltech.edu/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "Bilby",
+    "url": "https://lscsoft.docs.ligo.org/bilby/"
+   },
+   {
+    "name": "PyCBC",
+    "url": "https://pycbc.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "black-holes",
+   "mathematics-and-physics-foundations"
+  ]
+ },
+ {
+  "id": "planetary-science",
+  "name": "Planetary science",
+  "summary": "The study of planets, moons and small bodies — their formation, interiors, atmospheres and habitability. Now driven by sample return, rovers and exoplanet characterization.",
+  "priorities": [
+   {
+    "text": "Understand the origin and evolution of our solar system and planetary systems around other stars.",
+    "source": {
+     "label": "NASA Science: Solar System",
+     "url": "https://science.nasa.gov/solar-system/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "What sets the inner solar system's volatile inventory and habitability?",
+    "source": {
+     "label": "A Limited Habitable Zone for Complex Life",
+     "url": "https://arxiv.org/abs/1902.04720"
+    }
+   },
+   {
+    "text": "How do ocean worlds like Enceladus sustain potentially habitable subsurface oceans?",
+    "source": {
+     "label": "The pH of Enceladus&#39; ocean",
+     "url": "https://arxiv.org/abs/1502.01946"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Seven temperate terrestrial planets around the nearby ultracool dwarf star TRAPPIST-1",
+    "authors": "Gillon, Michael et al.",
+    "year": 2017,
+    "arxiv": "1703.01424",
+    "url": "https://arxiv.org/abs/1703.01424",
+    "why": "Seven Earth-sized temperate planets around TRAPPIST-1."
+   },
+   {
+    "title": "Thermal emission from the Earth-sized exoplanet TRAPPIST-1 b using JWST",
+    "authors": "Greene, Thomas P. et al.",
+    "year": 2023,
+    "arxiv": "2303.14849",
+    "url": "https://arxiv.org/abs/2303.14849",
+    "why": "Thermal emission from Earth-sized exoplanet TRAPPIST-1 b measured by JWST."
+   },
+   {
+    "title": "Saturn&#39;s deep atmospheric flows revealed by the Cassini Grand Finale gravity measurements",
+    "authors": "Galanti, Eli et al.",
+    "year": 2019,
+    "arxiv": "1902.04268",
+    "url": "https://arxiv.org/abs/1902.04268",
+    "why": "Saturn's deep atmospheric flows from Cassini Grand Finale gravity data."
+   },
+   {
+    "title": "OSIRIS-REx Sample Analysis Plan -- Revision 3.0",
+    "authors": "Lauretta, Dante S. et al.",
+    "year": 2023,
+    "arxiv": "2308.11794",
+    "url": "https://arxiv.org/abs/2308.11794",
+    "why": "Sample analysis plan for asteroid Bennu samples (OSIRIS-REx)."
+   },
+   {
+    "title": "The Pluto System After New Horizons",
+    "authors": "Stern, S. Alan et al.",
+    "year": 2017,
+    "arxiv": "1712.05669",
+    "url": "https://arxiv.org/abs/1712.05669",
+    "why": "The Pluto system after New Horizons."
+   },
+   {
+    "title": "Characteristics of planetary candidates observed by Kepler, II: Analysis of the first four months of data",
+    "authors": "Borucki, William J. et al.",
+    "year": 2011,
+    "arxiv": "1102.0541",
+    "url": "https://arxiv.org/abs/1102.0541",
+    "why": "Characteristics of Kepler planet candidates — statistical exoplanet science begins."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "NASA Exoplanet Archive",
+    "operator": "NASA/JPL-Caltech",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/",
+    "description": "Planet and stellar host parameters, Kepler/TESS candidates."
+   },
+   {
+    "name": "PDS",
+    "operator": "NASA",
+    "url": "https://pds.nasa.gov/",
+    "description": "Planetary Data System: archive of all NASA planetary mission data."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "Lunar and Planetary Laboratory, University of Arizona",
+    "url": "https://www.lpl.arizona.edu/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "REBOUND",
+    "url": "https://rebound.readthedocs.io/"
+   },
+   {
+    "name": "Astropy",
+    "url": "https://www.astropy.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "solar-system",
+   "mathematics-and-physics-foundations"
+  ]
+ },
+ {
+  "id": "astrobiology",
+  "name": "Astrobiology",
+  "summary": "The study of the origin, evolution and distribution of life in the universe. Integrates biology, chemistry, planetary science and astronomy to characterize habitable environments and search for biosignatures.",
+  "priorities": [
+   {
+    "text": "Search for life beyond Earth and understand the limits of habitability.",
+    "source": {
+     "label": "NASA Astrobiology Program",
+     "url": "https://astrobiology.nasa.gov/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "Which remotely detectable signs of life are robust biosignatures?",
+    "source": {
+     "label": "Exoplanet Biosignatures: A Review of Remotely Detectable Signs of Life",
+     "url": "https://arxiv.org/abs/1705.05791"
+    }
+   },
+   {
+    "text": "What environmental false positives complicate oxygen as a biosignature?",
+    "source": {
+     "label": "Exoplanet Biosignatures: Understanding Oxygen as a Biosignature in the Context of Its Environment",
+     "url": "https://arxiv.org/abs/1705.07560"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Exoplanet Biosignatures: A Review of Remotely Detectable Signs of Life",
+    "authors": "Schwieterman, Edward W. et al.",
+    "year": 2017,
+    "arxiv": "1705.05791",
+    "url": "https://arxiv.org/abs/1705.05791",
+    "why": "Comprehensive review of remotely detectable biosignatures."
+   },
+   {
+    "title": "Exoplanet Biosignatures: A Framework for Their Assessment",
+    "authors": "Catling, David C. et al.",
+    "year": 2017,
+    "arxiv": "1705.06381",
+    "url": "https://arxiv.org/abs/1705.06381",
+    "why": "Framework for assessing exoplanet biosignatures."
+   },
+   {
+    "title": "Exoplanet Biosignatures: Understanding Oxygen as a Biosignature in the Context of Its Environment",
+    "authors": "Meadows, Victoria S. et al.",
+    "year": 2017,
+    "arxiv": "1705.07560",
+    "url": "https://arxiv.org/abs/1705.07560",
+    "why": "Oxygen as a biosignature and its environmental false positives."
+   },
+   {
+    "title": "Quantifying the Origins of Life on a Planetary Scale",
+    "authors": "Scharf, Caleb & Cronin, Leroy",
+    "year": 2015,
+    "arxiv": "1511.02549",
+    "url": "https://arxiv.org/abs/1511.02549",
+    "why": "Quantifying the origins of life on a planetary scale."
+   },
+   {
+    "title": "Habitability and Biosignatures of Hycean Worlds",
+    "authors": "Madhusudhan, Nikku et al.",
+    "year": 2021,
+    "arxiv": "2108.10888",
+    "url": "https://arxiv.org/abs/2108.10888",
+    "why": "Habitability and biosignatures of Hycean worlds."
+   },
+   {
+    "title": "The pH of Enceladus&#39; ocean",
+    "authors": "Glein, Christopher et al.",
+    "year": 2015,
+    "arxiv": "1502.01946",
+    "url": "https://arxiv.org/abs/1502.01946",
+    "why": "The pH of Enceladus' ocean from Cassini data."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "NASA Exoplanet Archive",
+    "operator": "NASA/JPL-Caltech",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/",
+    "description": "Host-star and planet parameters for habitability studies."
+   },
+   {
+    "name": "NASA PDS",
+    "operator": "NASA",
+    "url": "https://pds.nasa.gov/",
+    "description": "Planetary mission data relevant to ocean worlds."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "NASA Astrobiology Program",
+    "url": "https://astrobiology.nasa.gov/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "Zooniverse",
+    "url": "https://www.zooniverse.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "astrobiology",
+   "solar-system"
+  ]
+ },
+ {
+  "id": "heliophysics",
+  "name": "Heliophysics",
+  "summary": "The physics of the Sun and the heliosphere: space weather, the solar wind, and the coupled Sun-Earth system, studied as one system from the solar interior to the outer heliosphere.",
+  "priorities": [
+   {
+    "text": "Understand the Sun as a star and the coupled Sun-Earth system, including space-weather impacts on technology and society.",
+    "source": {
+     "label": "NASA Science: Heliophysics",
+     "url": "https://science.nasa.gov/heliophysics/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "What physical processes heat the solar corona and accelerate the solar wind?",
+    "source": {
+     "label": "The multi-scale nature of the solar wind",
+     "url": "https://arxiv.org/abs/1902.03448"
+    }
+   },
+   {
+    "text": "How does the Sun drive space weather that impacts technology and society?",
+    "source": {
+     "label": "Space weather: the solar perspective -- an update to Schwenn (2006)",
+     "url": "https://arxiv.org/abs/2104.04261"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "The multi-scale nature of the solar wind",
+    "authors": "Verscharen, Daniel et al.",
+    "year": 2019,
+    "arxiv": "1902.03448",
+    "url": "https://arxiv.org/abs/1902.03448",
+    "why": "The multi-scale nature of the solar wind."
+   },
+   {
+    "title": "The Solar Orbiter mission -- Science overview",
+    "authors": "Müller, D. et al.",
+    "year": 2020,
+    "arxiv": "2009.00861",
+    "url": "https://arxiv.org/abs/2009.00861",
+    "why": "Solar Orbiter mission science overview."
+   },
+   {
+    "title": "Parker Solar Probe: Four Years of Discoveries at Solar Cycle Minimum",
+    "authors": "Raouafi, N. E. et al.",
+    "year": 2023,
+    "arxiv": "2301.02727",
+    "url": "https://arxiv.org/abs/2301.02727",
+    "why": "Parker Solar Probe: four years of discoveries."
+   },
+   {
+    "title": "Space weather: the solar perspective -- an update to Schwenn (2006)",
+    "authors": "Temmer, Manuela",
+    "year": 2021,
+    "arxiv": "2104.04261",
+    "url": "https://arxiv.org/abs/2104.04261",
+    "why": "Space weather from the solar perspective — an update to Schwenn (2006)."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "CDAWeb",
+    "operator": "NASA",
+    "url": "https://cdaweb.gsfc.nasa.gov/",
+    "description": "Coordinated Data Analysis Web for heliophysics time-series data."
+   },
+   {
+    "name": "SWPC",
+    "operator": "NOAA",
+    "url": "https://www.swpc.noaa.gov/",
+    "description": "Space Weather Prediction Center alerts and data."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "NASA Heliophysics Division",
+    "url": "https://science.nasa.gov/heliophysics/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "sunpy",
+    "url": "https://sunpy.org/"
+   },
+   {
+    "name": "PySPEDAS",
+    "url": "https://pyspedas.readthedocs.io/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "mathematics-and-physics-foundations"
+  ]
+ },
+ {
+  "id": "astrophysical-data-science",
+  "name": "Astrophysical data science and methods",
+  "summary": "The methods layer of modern astronomy: software, statistics, machine learning and community cyberinfrastructure for handling petabyte-scale surveys.",
+  "priorities": [
+   {
+    "text": "Grow open-source software and community cyberinfrastructure for petabyte-scale astronomy.",
+    "source": {
+     "label": "NASA Astrophysics Division",
+     "url": "https://science.nasa.gov/astrophysics/"
+    }
+   }
+  ],
+  "openQuestions": [
+   {
+    "text": "How can machine learning extract reliable physics from next-generation surveys?",
+    "source": {
+     "label": "Machine Learning in Astronomy: a practical overview",
+     "url": "https://arxiv.org/abs/1904.07248"
+    }
+   }
+  ],
+  "papers": [
+   {
+    "title": "Astropy: A Community Python Package for Astronomy",
+    "authors": "The Astropy Collaboration",
+    "year": 2013,
+    "arxiv": "1307.6212",
+    "url": "https://arxiv.org/abs/1307.6212",
+    "why": "Astropy: the community Python package for astronomy."
+   },
+   {
+    "title": "The Astropy Project: Building an inclusive, open-science project and status of the v2.0 core package",
+    "authors": "The Astropy Collaboration",
+    "year": 2018,
+    "arxiv": "1801.02634",
+    "url": "https://arxiv.org/abs/1801.02634",
+    "why": "Astropy Project status and roadmap."
+   },
+   {
+    "title": "emcee: The MCMC Hammer",
+    "authors": "Foreman-Mackey, Daniel et al.",
+    "year": 2012,
+    "arxiv": "1202.3665",
+    "url": "https://arxiv.org/abs/1202.3665",
+    "why": "emcee: the MCMC hammer, ubiquitous in astronomical inference."
+   },
+   {
+    "title": "Machine Learning in Astronomy: a practical overview",
+    "authors": "Baron, Dalya",
+    "year": 2019,
+    "arxiv": "1904.07248",
+    "url": "https://arxiv.org/abs/1904.07248",
+    "why": "Machine learning in astronomy: a practical overview."
+   },
+   {
+    "title": "Square Kilometre Array Science Data Challenge 1",
+    "authors": "Bonaldi, Anna & Braun, Robert",
+    "year": 2018,
+    "arxiv": "1811.10454",
+    "url": "https://arxiv.org/abs/1811.10454",
+    "why": "SKA Science Data Challenge 1."
+   },
+   {
+    "title": "Square Kilometre Array Science Data Challenge 1: analysis and results",
+    "authors": "Bonaldi, A. et al.",
+    "year": 2020,
+    "arxiv": "2009.13346",
+    "url": "https://arxiv.org/abs/2009.13346",
+    "why": "SKA Science Data Challenge 1: analysis and results."
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Zooniverse",
+    "operator": "Citizen-science platform",
+    "url": "https://www.zooniverse.org/",
+    "description": "People-powered research; Galaxy Zoo and many more projects."
+   },
+   {
+    "name": "GWOSC",
+    "operator": "LIGO/Virgo/KAGRA",
+    "url": "https://gwosc.org/",
+    "description": "Open gravitational-wave data for methods development."
+   }
+  ],
+  "institutions": [
+   {
+    "name": "NSF NOIRLab",
+    "url": "https://noirlab.edu/"
+   }
+  ],
+  "tools": [
+   {
+    "name": "Astropy",
+    "url": "https://www.astropy.org/"
+   },
+   {
+    "name": "astroquery",
+    "url": "https://astroquery.readthedocs.io/"
+   },
+   {
+    "name": "astroML",
+    "url": "https://www.astroml.org/"
+   }
+  ],
+  "learnFirst": [
+   "introduction-to-astronomy",
+   "research-methods"
+  ]
+ }
+]

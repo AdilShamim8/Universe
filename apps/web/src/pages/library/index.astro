@@ -1,4 +1,69 @@
 ---
-import SectionPage from "../../components/SectionPage.astro";
+import Base from "../../layouts/Base.astro";
+import { loadLibrary } from "../../lib/curated";
+
+const { data: library, provenance } = loadLibrary();
+const categories = [...new Set(library.map((r) => r.category))].sort();
+const difficulties = ["beginner", "intermediate", "advanced", "research"];
+const fmt = (n: number) => n.toLocaleString("en-US");
 ---
-<SectionPage route="/library/" title="Library" summary="Official publications, manuals, datasets, tools and attribution." />
+<Base
+  title="Library"
+  description={`${library.length} verified resources — textbooks, courses, data archives, tools, observatories and missions.`}
+  current="/library/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">{fmt(library.length)} resources · all links verified</p>
+    <h1 class="hero-title">The resource library</h1>
+    <p class="hero-lede">
+      Every authoritative resource you need to learn and do astronomy: free textbooks, university
+      courses, data archives, software tools, observatories and mission pages. Each link was
+      individually verified on {provenance.verification.verifiedOn}.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#resources">Browse resources</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    <div class="filter-bar" id="resources" role="group" aria-label="Filter resources">
+      <span class="chip chip-beginner" data-diff="beginner">beginner</span>
+      <span class="chip chip-intermediate" data-diff="intermediate">intermediate</span>
+      <span class="chip chip-advanced" data-diff="advanced">advanced</span>
+      <span class="chip chip-research" data-diff="research">research</span>
+    </div>
+
+    {categories.map((cat) => {
+      const items = library.filter((r) => r.category === cat);
+      return (
+        <section class="section-head" id={cat}>
+          <span class="section-kicker">{items.length} resources</span>
+          <h2>{cat.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}</h2>
+        </section>
+      );
+    })}
+    <div class="card-grid">
+      {library.map((r) => (
+        <article class="card" data-difficulty={r.difficulty}>
+          <h3><a href={r.url} rel="noopener">{r.title}</a></h3>
+          <p>{r.description}</p>
+          <div class="card-meta">
+            <span class={`chip chip-${r.difficulty}`}>{r.difficulty}</span>
+            <span>{r.type.replace(/-/g, " ")}</span>
+            <span>{r.access}</span>
+          </div>
+          <div class="source-line">
+            {r.publisher} · {r.license} · <a href={r.url} rel="noopener">{new URL(r.url).hostname}</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="muted">
+      Redistribution notes: this library links out rather than importing content. Licenses vary
+      per resource (noted above); follow each source's terms for reuse. NASA imagery is generally
+      public domain; textbook and course content is typically copyrighted or CC-licensed by its
+      provider.
+    </p>
+  </div>
+</Base>

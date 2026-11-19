@@ -2,9 +2,15 @@
 import "@universe/ui/tokens.css";
 import "@universe/ui/base.css";
 import "@universe/ui/components.css";
+import "@fontsource/space-grotesk/400.css";
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/ibm-plex-mono/400.css";
 import "../styles/site.css";
-import { header, previewBanner, footer, themeToggle } from "@universe/ui";
-import { loadSiteModel } from "../lib/site-data";
+import { header, footer, themeToggle } from "@universe/ui";
 
 interface Props {
   title: string;
@@ -16,11 +22,15 @@ interface Props {
 }
 
 const { title, description, current, noindex } = Astro.props;
-const { data } = loadSiteModel();
-const navEntries = data.nav.map((n) => ({
-  route: n.route,
-  title: n.title,
-  count: n.count,
+const navEntries = [
+  { route: "/", title: "Home" },
+  { route: "/history/", title: "History" },
+  { route: "/academy/", title: "Academy" },
+  { route: "/explore/", title: "Explore" },
+  { route: "/research/", title: "Research" },
+  { route: "/library/", title: "Library" },
+].map((n) => ({
+  ...n,
   current: current !== undefined && (current === "/" ? n.route === "/" : n.route !== "/" && current.startsWith(n.route)),
 }));
 ---
@@ -29,7 +39,7 @@ const navEntries = data.nav.map((n) => ({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} · Universe Platform</title>
+    <title>{title} · Universe</title>
     {description && <meta name="description" content={description} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="generator" content={Astro.generator} />
@@ -58,15 +68,15 @@ const navEntries = data.nav.map((n) => ({
     </script>
   </head>
   <body>
-    <Fragment set:html={header(navEntries, { brand: "Universe Platform", tagline: "Open scientific learning infrastructure — engineering preview" })} />
-    <Fragment set:html={previewBanner("No scientific content has been reviewed or approved yet. Every section below is an honest empty state; nothing here is verified educational material.")} />
+    <div class="starfield" aria-hidden="true"></div>
+    <Fragment set:html={header(navEntries, { brand: "Universe", tagline: "Learn, explore and research the cosmos" })} />
     <Fragment set:html={themeToggle()} />
     <main id="main">
       <slot />
     </main>
     <Fragment set:html={footer({
-      status: "Engineering preview · no approved scientific records",
-      license: "Apache-2.0 proposed for code · CC BY 4.0 proposed for content (pending owner ratification)",
+      status: "Curated educational directory · original science pending human review",
+      license: "Code Apache-2.0 proposed · content CC BY 4.0 proposed",
     })} />
   </body>
 </html>

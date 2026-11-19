@@ -1,41 +1,127 @@
 ---
 import Base from "../layouts/Base.astro";
-import { loadSiteModel } from "../lib/site-data";
-import { emptyState } from "@universe/ui";
+import { loadTimeline, loadAcademy, loadResearch, loadLibrary } from "../lib/curated";
 
-const { data, sections } = loadSiteModel();
+const { data: timeline } = loadTimeline();
+const { data: academy } = loadAcademy();
+const { data: research } = loadResearch();
+const { data: library } = loadLibrary();
+
+const totalEvents = timeline.eras.reduce((n, e) => n + e.events.length, 0);
+const firstSteps = academy.slice(0, 3);
+const beginnerSubjects = academy.filter((s) => s.levels.includes("L0") || s.levels.includes("L1")).slice(0, 6);
+const topFields = research.slice(0, 4);
+const eraHighlights = [timeline.eras[0], timeline.eras[3], timeline.eras[6], timeline.eras[10], timeline.eras[11]];
+const featuredLibrary = library.slice(0, 6);
 ---
-<Base title="Start" description="Choose a learning goal and navigate to reviewed introductions." current="/">
+<Base title="Universe 101" description="Learn, explore and research the universe — a curated, source-backed guide from beginner to research level." current="/">
   <section class="hero">
-    <h1>Understand the universe, from your first question to open research.</h1>
-    <p>
-      A free, open learning platform in the making: evidence-first explanations, honest
-      uncertainty, and traceable sources. Currently an engineering preview — no scientific
-      content has been reviewed or approved yet.
+    <p class="hero-eyebrow">13.8 billion years · 2 trillion galaxies · one platform</p>
+    <h1 class="hero-title">Explore the universe, from the Big Bang to the research frontier</h1>
+    <p class="hero-lede">
+      A curated guide to the cosmos: a source-backed history of everything, structured learning
+      pathways from your first night sky to reading research papers, and exploration tools built
+      on real data.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/academy/">Start Learning</a>
+      <a class="btn btn-secondary" href="/explore/">Explore the Universe</a>
+    </div>
+    <p class="hero-meta">
+      <span><strong>{totalEvents}</strong> sourced timeline events</span>
+      <span><strong>{academy.length}</strong> learning pathways</span>
+      <span><strong>{library.length}</strong> verified resources</span>
+      <span><strong>{research.length}</strong> research fields</span>
     </p>
   </section>
 
-  <nav aria-label="Sections" class="section-grid-wrap">
-    <ul class="section-grid">
-      {sections.map((s) => (
-        <li>
-          <a href={s.route}>
-            <div class="section-card-title">{s.title}</div>
-            <div class="section-card-summary">{s.summary}</div>
-            {data.nav.find((n) => n.route === s.route)?.count === 0 && (
-              <div class="section-card-status">Awaiting reviewed content</div>
-            )}
-          </a>
-        </li>
+  <div class="container-pad">
+    <section class="section-head" id="journey">
+      <span class="section-kicker">The journey</span>
+      <h2>From first curiosity to research frontier</h2>
+      <p>Every stage of learning about the universe, in one place — each step links to authoritative, individually verified resources.</p>
+    </section>
+    <div class="card-grid">
+      {firstSteps.map((s) => (
+        <article class="card">
+          <h3><a href={`/academy/${s.id}/`}>{s.title}</a></h3>
+          <p>{s.overview}</p>
+          <div class="card-meta">
+            <span class={`chip chip-${s.pathway[0]?.level?.toLowerCase() ?? "beginner"}`}>{s.pathway[0]?.level ?? "L1"}</span>
+            <span>{s.pathway.length} steps</span>
+            <span>{s.pathway.reduce((n, st) => n + st.resources.length, 0)} resources</span>
+          </div>
+        </article>
       ))}
-    </ul>
-  </nav>
+    </div>
 
-  {data.emptyState && (
-  <Fragment set:html={emptyState(
-    "No approved content yet",
-    "This platform is in an engineering preview. Sections render honest empty states until human scientific reviewers approve records. No placeholder science is shown.",
-    { awaitingReview: true },
-  )} />
-)}
+    <section class="section-head" id="history-preview">
+      <span class="section-kicker">History</span>
+      <h2>A source-backed timeline of the cosmos</h2>
+      <p>{totalEvents} events across {timeline.eras.length} eras — every one carrying its authoritative source, date precision and uncertainty.</p>
+    </section>
+    <div class="card-grid">
+      {eraHighlights.map((era) => (
+        <article class="card">
+          <h3><a href={`/history/#${era.id}`}>{era.title}</a></h3>
+          <p>{era.summary}</p>
+          <div class="card-meta"><span>{era.events.length} events</span></div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head" id="beginner">
+      <span class="section-kicker">Beginner pathways</span>
+      <h2>Start where you are</h2>
+      <p>No prerequisites required — these pathways begin with everyday language and free resources.</p>
+    </section>
+    <div class="card-grid">
+      {beginnerSubjects.map((s) => (
+        <article class="card">
+          <h3><a href={`/academy/${s.id}/`}>{s.title}</a></h3>
+          <p>{s.overview}</p>
+          <div class="card-meta">
+            <span class="chip chip-beginner">{s.levels.includes("L0") ? "L0" : "L1"}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head" id="research-preview">
+      <span class="section-kicker">Research frontier</span>
+      <h2>What we know, and what we don't</h2>
+      <p>Active research fields with verified papers, open datasets, institutions and the open questions they're chasing.</p>
+    </section>
+    <div class="card-grid">
+      {topFields.map((f) => (
+        <article class="card">
+          <h3><a href={`/research/${f.id}/`}>{f.name}</a></h3>
+          <p>{f.openQuestions[0]?.text}</p>
+          <div class="card-meta">
+            <span>{f.papers.length} papers</span>
+            <span>{f.datasets.length} datasets</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <section class="section-head" id="library-preview">
+      <span class="section-kicker">Library</span>
+      <h2>Verified resources, ready to use</h2>
+      <p>Textbooks, courses, archives, tools and observatories — {library.length} resources, each individually link-verified.</p>
+    </section>
+    <div class="card-grid">
+      {featuredLibrary.map((r) => (
+        <article class="card">
+          <h3><a href={r.url} rel="noopener">{r.title}</a></h3>
+          <p>{r.description}</p>
+          <div class="card-meta">
+            <span class={`chip chip-${r.difficulty}`}>{r.difficulty}</span>
+            <span>{r.publisher}</span>
+          </div>
+          <div class="source-line">Source: <a href={r.url} rel="noopener">{new URL(r.url).hostname}</a></div>
+        </article>
+      ))}
+    </div>
+  </div>
 </Base>

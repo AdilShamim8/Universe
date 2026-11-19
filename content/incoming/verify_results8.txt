@@ -1,0 +1,17 @@
+200 https://oyc.yale.edu/courses/
+200 https://www.khanacademy.org/science/physics/cosmology-and-astronomy/xc7a94d8dd007f3d9:dcosmology-and-astronomy
+200 https://www.khanacademy.org/science/physics/xc7a94d8dd007f3d9:dcosmology-and-astronomy/v/big-bang-introduction
+200 https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules
+200 https://www.khanacademy.org/science/physics/xc7a94d8dd007f3d9:dcosmology-and-astronomy/v/introduction-to-light
+200 https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/video_galleries/lecture-videos/
+200 https://ocw.mit.edu/courses/8-286-the-early-universe-fall-2013/pages/syllabus/
+200 https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/syllabus/
+404 https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1-velocity-and-rates-of-change/
+200 https://ocw.mit.edu/courses/8-224-exploring-black-holes-general-relativity-astrophysics-spring-2003/pages/syllabus/
+200 https://ocw.mit.edu/courses/8-901-astrophysics-i-spring-2006/pages/syllabus/
+200 https://ocw.mit.edu/courses/12-400-the-solar-system-spring-2006/pages/syllabus/
+200 https://ocw.mit.edu/courses/8-902-astrophysics-ii-fall-2023/pages/syllabus/
+200 https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/pages/syllabus/
+200 https://www.youtube.com/playlist?list=PLpGHT1n4-mAuVGJ2E1uF9GSwLsx7p1xtm
+200 https://www.youtube.com/playlist?list=PLvh0vlLitZ7c8Avsn6gUaWX05uD5cedO-
+200 https://www.youtube.com/playlist?list=PL8_xPU5epJddRABXqJ5h5G0dk-XGtA5cZ
