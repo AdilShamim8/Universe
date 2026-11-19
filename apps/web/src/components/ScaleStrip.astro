@@ -1,0 +1,139 @@
+---
+/**
+ * ScaleStrip — log-scale visualization of the scale-of-the-universe ladder.
+ *
+ * Pure server-rendered CSS: each object occupies a column positioned by the
+ * log10 of its size; relative disc sizes compare neighbors. No JS, no
+ * canvas — degrades to the plain list on any device.
+ */
+interface ScaleItem {
+  name: string;
+  sizeKm: number | null;
+  sizeNote?: string;
+  type: string;
+  source: { label: string; url: string };
+}
+
+interface Props {
+  items: ScaleItem[];
+}
+
+const { items } = Astro.props;
+
+// Log positions: clamp numeric sizes into a 6-decade band (10^3 km .. 10^9 km).
+// Non-numeric entries (galaxies, universe) get explanatory positions.
+const NUM_MIN = 3; // 10^3 km (Moon ~3,475 km)
+const NUM_MAX = 9; // 10^9 km (Earth's orbit ~3e8 km)
+const logPos = (km: number) =>
+  Math.min(100, Math.max(0, ((Math.log10(km) - NUM_MIN) / (NUM_MAX - NUM_MIN)) * 100));
+
+interface Positioned {
+  item: ScaleItem;
+  x: number; // 0..100
+  disc: number; // px diameter for the disc, 8..44
+}
+
+const positioned: Positioned[] = items.map((item) => {
+  if (typeof item.sizeKm === "number") {
+    const x = logPos(item.sizeKm);
+    // disc: sqrt scale on the clamped position so big objects look bigger
+    const disc = 8 + (x / 100) * 36;
+    return { item, x, disc };
+  }
+  // non-numeric: distribute across the far region with fixed marks
+  const marks: Record<string, number> = {
+    Betelgeuse: 96,
+    "Solar System (heliosphere)": 99,
+    "Milky Way galaxy": 101,
+    "Local Group": 103,
+    "Observable universe": 105,
+  };
+  const x = marks[item.name] ?? 100;
+  return { item, x, disc: 40 };
+});
+
+// avoid label collisions: enforce min horizontal gap of 14%
+for (let i = 1; i < positioned.length; i++) {
+  const min = positioned[i - 1].x + 14;
+  if (positioned[i].x < min) positioned[i].x = min;
+}
+const maxPos = positioned[positioned.length - 1]?.x ?? 100;
+const norm = (x: number) => (x / Math.max(maxPos, 100)) * 100;
+---
+<div class="scalestrip" role="img" aria-label={`Scale ladder from ${items[0]?.name} to ${items[items.length - 1]?.name}: sizes increase logarithmically from thousands of kilometers to billions of light-years`}>
+  <div class="scalestrip-axis">
+    {positioned.map(({ item, x, disc }) => (
+      <div class="scalestrip-stop" style={`--x: ${norm(x)}%; --disc: ${disc}px;`}>
+        <span class="scalestrip-disc" aria-hidden="true"></span>
+        <span class="scalestrip-name">{item.name}</span>
+        <span class="scalestrip-size">{item.sizeKm ? `${item.sizeKm.toLocaleString("en-US")} km` : item.sizeNote}</span>
+      </div>
+    ))}
+  </div>
+  <p class="scalestrip-note muted">Horizontal position is logarithmic (each step ×10). Disc size compares neighbors visually — at true scale the page could not hold both the Moon and a galaxy.</p>
+</div>
+
+<style>
+  .scalestrip {
+    margin-block: var(--space-8);
+    border: var(--border-1) solid var(--border-0);
+    border-radius: var(--radius-lg);
+    background:
+      radial-gradient(ellipse 60% 100% at 50% 0%, color-mix(in oklab, var(--accent-3) 8%, transparent), transparent),
+      var(--bg-1);
+    padding: var(--space-8) var(--space-6) var(--space-4);
+    overflow: hidden;
+  }
+  .scalestrip-axis {
+    position: relative;
+    height: 130px;
+    min-width: 640px;
+  }
+  .scalestrip-stop {
+    position: absolute;
+    bottom: 28px;
+    left: var(--x);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 110px;
+    text-align: center;
+  }
+  .scalestrip-disc {
+    width: var(--disc);
+    height: var(--disc);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, color-mix(in oklab, var(--accent-0) 80%, white 20%), color-mix(in oklab, var(--accent-3) 70%, black 30%));
+    box-shadow: 0 0 12px color-mix(in oklab, var(--accent-0) 35%, transparent);
+    margin-block-end: 2px;
+  }
+  .scalestrip-name {
+    font-size: var(--text-xs);
+    color: var(--fg-0);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .scalestrip-size {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--fg-2);
+    line-height: 1.2;
+  }
+  .scalestrip-axis::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 12px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-1c), var(--accent-0), var(--accent-3));
+  }
+  .scalestrip-note {
+    font-size: var(--text-xs);
+    margin-block-start: var(--space-2);
+  }
+  .scalestrip {
+    overflow-x: auto;
+  }
+</style>

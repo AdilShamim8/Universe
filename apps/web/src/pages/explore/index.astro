@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import ScaleStrip from "../../components/ScaleStrip.astro";
 import { loadExplore } from "../../lib/curated";
 
 const { data: explore } = loadExplore();
@@ -111,6 +112,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <h2>From the Moon to the observable universe</h2>
       <p>Each step of the cosmic ladder with its source. Where a single size isn't meaningful, the note explains the measure used.</p>
     </section>
+    <ScaleStrip items={scale} />
     <ol class="timeline-events">
       {scale.map((s) => (
         <li class="timeline-event">
