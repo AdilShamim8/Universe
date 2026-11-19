@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -234,7 +234,6 @@ describe("curated: cross-dataset integrity", () => {
     }
   });
 
-  it("dist build exists after npm run build (smoke)", () => {
-    expect(existsSync(join(REPO_ROOT, "apps", "web", "dist", "index.html"))).toBe(true);
-  });
+  // NOTE: no dist-smoke here on purpose — CI runs tests before build, and the
+  // e2e suite already fails when the build output is missing.
 });
