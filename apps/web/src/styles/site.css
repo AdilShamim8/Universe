@@ -482,3 +482,34 @@ table.data-table {
   color: var(--accent-1);
   margin-block: var(--space-4);
 }
+
+/* ---- Hero with NASA imagery (LQIP placeholder) ---- */
+.hero-img {
+  background-image: linear-gradient(to top, color-mix(in oklab, var(--bg-0) 88%, transparent), color-mix(in oklab, var(--bg-0) 30%, transparent) 60%, transparent),
+    url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAWABgDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQG/8QAGhAAAwADAQAAAAAAAAAAAAAAAAECAxEhMf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A87jnpfJCS4Ux1pm92mjUSuRvTBOSdvgJi6iDZeAAZ1XQAB//2Q==");
+  background-size: cover;
+  background-position: center 30%;
+}
+@media (min-width: 760px) {
+  .hero-img {
+    background-image: linear-gradient(to top, color-mix(in oklab, var(--bg-0) 90%, transparent), color-mix(in oklab, var(--bg-0) 25%, transparent) 55%, transparent),
+      url("/img/pillars-hubble-1600.jpg");
+  }
+}
+.hero-img .hero-eyebrow,
+.hero-img .hero-title,
+.hero-img .hero-lede,
+.hero-img .hero-meta {
+  text-shadow: 0 1px 12px rgb(0 0 0 / 0.55);
+}
+.hero-credit {
+  position: absolute;
+  inset-block-end: var(--space-2);
+  inset-inline-end: var(--space-4);
+  font-size: 10px;
+  color: color-mix(in oklab, var(--fg-2) 80%, transparent);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.hero-credit:hover { color: var(--fg-1); }
