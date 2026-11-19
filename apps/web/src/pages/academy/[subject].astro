@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import SubjectEmblem from "../../components/SubjectEmblem.astro";
 import { loadAcademy, type AcademySubject } from "../../lib/curated";
 
 export function getStaticPaths() {
@@ -23,6 +24,7 @@ const nextSubjects = subject.next
 >
   <section class="hero">
     <p class="hero-eyebrow">{subject.levels.join(" · ")}</p>
+    <span class="subject-emblem subject-emblem-hero"><SubjectEmblem subject={subject.id} size={64} /></span>
     <h1 class="hero-title">{subject.title}</h1>
     <p class="hero-lede">{subject.overview}</p>
     <div class="hero-actions">

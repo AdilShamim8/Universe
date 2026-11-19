@@ -1,0 +1,39 @@
+---
+/**
+ * SubjectEmblem — original SVG emblem per Academy subject.
+ * Decorative (aria-hidden); consistent 48×48 geometric line art.
+ */
+interface Props {
+  subject: string;
+  size?: number;
+}
+const { subject, size = 48 } = Astro.props;
+
+const glyphs: Record<string, string> = {
+  "introduction-to-astronomy": `<circle cx="24" cy="24" r="14"/><path d="M24 6v4M24 38v4M6 24h4M38 24h4"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M32 16l6-6" stroke-dasharray="1 3"/>`,
+  "mathematics-and-physics-foundations": `<path d="M14 38L34 10"/><path d="M10 14h12M16 10v12"/><circle cx="32" cy="32" r="7"/><path d="M32 32h.01" stroke-width="3"/>`,
+  "solar-system": `<circle cx="24" cy="24" r="6" fill="currentColor"/><ellipse cx="24" cy="24" rx="18" ry="7" transform="rotate(-20 24 24)"/><circle cx="38" cy="30" r="2.4" fill="currentColor"/>`,
+  "stars-and-stellar-evolution": `<path d="M24 8l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><circle cx="36" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="36" r="1.5" fill="currentColor"/>`,
+  galaxies: `<circle cx="24" cy="24" r="2" fill="currentColor"/><path d="M24 24c0-6 5-9 10-7M24 24c6 0 9 5 7 10M24 24c0 6-5 9-10 7M24 24c-6 0-9-5-7-10"/>`,
+  "black-holes": `<circle cx="24" cy="24" r="8" fill="currentColor"/><ellipse cx="24" cy="24" rx="19" ry="5" transform="rotate(55 24 24)"/>`,
+  cosmology: `<circle cx="24" cy="24" r="16" stroke-dasharray="2 4"/><path d="M24 8v32M8 24h32" stroke-dasharray="1 4"/><circle cx="24" cy="24" r="4"/>`,
+  "dark-matter-and-dark-energy": `<path d="M24 10c7 0 12 5 12 11s-4 8-9 9l-3 8-3-8c-5-1-9-3-9-9s5-11 12-11z" stroke-dasharray="3 3"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/><circle cx="28" cy="20" r="1.6" fill="currentColor"/>`,
+  astrobiology: `<path d="M16 36V20a8 8 0 0 1 16 0v16"/><path d="M16 30h16"/><circle cx="24" cy="14" r="4"/><path d="M8 40h32"/>`,
+  "space-exploration": `<path d="M24 6c5 4 7 10 6 16l-6 6-6-6c-1-6 1-12 6-16z"/><circle cx="24" cy="14" r="2.4"/><path d="M18 24l-5 4M30 24l5 4M24 28v10"/>`,
+  "research-methods": `<path d="M12 36l8-8"/><circle cx="28" cy="20" r="8"/><path d="M34 14l4 4M34 26l4 4"/>`,
+};
+
+const glyph = glyphs[subject] ?? glyphs["introduction-to-astronomy"];
+---
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 48 48"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  set:html={glyph}
+/>

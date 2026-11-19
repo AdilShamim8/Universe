@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import SubjectEmblem from "../../components/SubjectEmblem.astro";
 import { loadAcademy } from "../../lib/curated";
 
 const { data: academy } = loadAcademy();
@@ -33,6 +34,7 @@ const totalResources = academy.reduce((n, s) => n + s.pathway.reduce((m, st) => 
     <div class="card-grid">
       {academy.map((s) => (
         <article class="card">
+          <span class="subject-emblem"><SubjectEmblem subject={s.id} size={40} /></span>
           <h3><a href={`/academy/${s.id}/`}>{s.title}</a></h3>
           <p>{s.overview}</p>
           <div class="card-meta">

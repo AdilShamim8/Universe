@@ -471,3 +471,14 @@ table.data-table {
   gap: var(--space-3);
   margin-block: var(--space-8) var(--space-4);
 }
+
+/* Subject emblems */
+.subject-emblem {
+  display: inline-flex;
+  color: var(--accent-2);
+  margin-block-end: var(--space-2);
+}
+.subject-emblem-hero {
+  color: var(--accent-1);
+  margin-block: var(--space-4);
+}
