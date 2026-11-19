@@ -15,6 +15,36 @@ Thank you for helping build an open scientific learning infrastructure. This pro
 
 Code style: TypeScript strict; Prettier defaults; Conventional Commits. Keep PRs small and reviewable.
 
+## Curated content contributions (links & imported facts)
+
+The fastest safe way to improve the site. Curated datasets
+(`content/curated/*.json`) hold verified external links, imported
+numeric facts, and their metadata — see [docs/content-workflow.md](docs/content-workflow.md)
+for why this publishes without scientific review.
+
+1. Pick a dataset: `library` (resources), `academy` (pathways),
+   `timeline` (events), `research` (papers/datasets/tools), `explore` (planets/missions/scale).
+2. Add or edit entries. Every entry needs a real source URL — never
+   invent a title, author, date, or number; copy them from the source.
+   For arXiv papers, take titles/authors from the abstract page's
+   citation metadata, not from memory.
+3. Re-verify: `node scripts/verify-curated-urls.mjs` — all links must
+   pass (transient network errors are reported as unverifiable, not
+   failed; bot-blocked 403s need a manual browser check).
+4. Update the dataset's `provenance.verification` block: date, counts,
+   pass rate.
+5. Gates: `npm test` (the curated contract tests enforce the schema)
+   and `npm run build` (the loader rejects missing provenance).
+6. PR with the verification output pasted in.
+
+Good contributions: more verified resources in an existing category;
+a new category for an underserved topic; replacing a dead link with
+the live canonical one; fixing a metadata typo against the source.
+Bad contributions: paraphrasing science into your own words inside a
+curated file (that is the reviewed layer), bumping a verification
+date without re-running the verifier, or adding a link you have not
+opened.
+
 ## Scientific content contributions
 
 Scientific records are the heart of the project and the most dangerous to get wrong. The full process is in `docs/editorial/REVIEW_PROCESS.md`; the essentials:
