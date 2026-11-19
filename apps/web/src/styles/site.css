@@ -439,3 +439,21 @@ table.data-table {
     color: #000;
   }
 }
+
+/* ---- Header polish ---- */
+.brand {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+.brand-mark {
+  color: var(--accent-1);
+}
+.site-header {
+  box-shadow: 0 1px 0 transparent;
+  transition: box-shadow var(--motion-med) var(--ease-out);
+}
+@media (min-width: 900px) {
+  .site-header:has(+ main .hero) {
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
+  }
+}
