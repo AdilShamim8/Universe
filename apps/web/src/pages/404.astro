@@ -2,7 +2,16 @@
 import Base from "../layouts/Base.astro";
 ---
 <Base title="Page not found" description="This page does not exist." noindex>
-  <h1>Page not found</h1>
-  <p>The page you asked for does not exist or was never published. If a record was renamed, its old slug redirects automatically; withdrawn records deliberately do not.</p>
-  <p><a href="/">Return to Start</a></p>
+  <section class="hero" style="padding-block: var(--space-24);">
+    <p class="hero-eyebrow">404 · lost in space</p>
+    <h1 class="hero-title" style="font-size: var(--text-3xl);">This page drifted out of orbit</h1>
+    <p class="hero-lede">
+      The page you asked for does not exist or was never published. Links that were renamed
+      redirect automatically; withdrawn records deliberately do not.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/">Back to the homepage</a>
+      <a class="btn btn-secondary" href="/search">Search the platform</a>
+    </div>
+  </section>
 </Base>
