@@ -76,7 +76,13 @@ test.describe("explore", () => {
   test("missions and scale sections render", async ({ page }) => {
     await page.goto("/explore/");
     expect(await page.locator(".card-grid .card", { hasText: /NASA|ESA|International/ }).count()).toBeGreaterThanOrEqual(14);
-    expect(await page.locator(".timeline-event", { hasText: /light-years|km|Moon/ }).count()).toBeGreaterThanOrEqual(10);
+    // scale ladder: every item renders a size (km value or explanatory note)
+    const scaleItems = page.locator("#scale ~ ol.timeline-event li");
+    expect(await scaleItems.count()).toBe(10);
+    for (let i = 0; i < 10; i++) {
+      const t = await scaleItems.nth(i).locator(".event-time").textContent();
+      expect(t!.trim().length).toBeGreaterThan(3);
+    }
   });
 });
 
