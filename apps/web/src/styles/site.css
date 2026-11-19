@@ -154,6 +154,14 @@ body > .theme-toggle {
   border-color: var(--accent-0);
   transform: translateY(-2px);
 }
+.card:focus-within {
+  border-color: var(--accent-0);
+}
+.card:focus-within a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
 .card h3 { font-family: var(--font-display); font-size: var(--text-lg); }
 .card h3 a { color: inherit; text-decoration: none; }
 .card h3 a:hover { text-decoration: underline; }
@@ -304,6 +312,8 @@ table.data-table {
   background: var(--accent-0);
   box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-0) 20%, transparent);
 }
+.timeline-event { scroll-margin-block-start: var(--space-16); }
+.timeline-event:target { border-color: var(--accent-0); }
 .timeline-event h3 { font-size: var(--text-base); margin-block-end: var(--space-1); }
 .timeline-event .event-time {
   font-family: var(--font-mono);
