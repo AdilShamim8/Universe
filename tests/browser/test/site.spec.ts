@@ -67,15 +67,20 @@ test.describe("academy", () => {
 test.describe("explore", () => {
   test("planet table has 10 bodies with numeric facts", async ({ page }) => {
     await page.goto("/explore/");
-    const rows = await page.locator(".data-table tbody tr").count();
-    expect(rows).toBe(10);
-    const earthRow = page.locator(".data-table tbody tr", { hasText: "Earth" });
+    const table = page.locator("#solar-system ~ .data-table-wrap table");
+    expect(await table.locator("tbody tr").count()).toBe(10);
+    const earthRow = table.locator("tbody tr", { hasText: "Earth" });
     await expect(earthRow).toContainText("12,756");
+    // exoplanet table: 8 rows with discovery methods
+    const exo = page.locator("#exoplanets ~ .data-table-wrap table");
+    expect(await exo.locator("tbody tr").count()).toBe(8);
+    await expect(exo).toContainText("Radial Velocity");
+    await expect(exo).toContainText("Transit");
   });
 
   test("missions and scale sections render", async ({ page }) => {
     await page.goto("/explore/");
-    expect(await page.locator(".card-grid .card", { hasText: /NASA|ESA|International/ }).count()).toBeGreaterThanOrEqual(14);
+    expect(await page.locator(".mtl-items .mtl-card", { hasText: /Apollo|Voyager|Hubble|Galileo|Cassini|Station|Chandra|Kepler|Horizons|Parker|Perseverance|Webb|JUICE|Euclid|Dragonfly/ }).count()).toBeGreaterThanOrEqual(14);
     // scale ladder: every item renders a size (km value or explanatory note)
     const scaleItems = page.locator("#scale ~ ol.timeline-event li");
     expect(await scaleItems.count()).toBe(10);
@@ -119,7 +124,7 @@ test.describe("coverage and honesty", () => {
 
   test("404 page renders helpfully", async ({ page }) => {
     await page.goto("/definitely-not-a-page/");
-    await expect(page.locator("h1")).toContainText("Page not found");
+    await expect(page.locator("h1.hero-title")).toContainText("drifted out of orbit");
   });
 });
 
@@ -161,7 +166,7 @@ test.describe("explore visualizations", () => {
     await page.goto("/explore/");
     const aria = await page.locator("svg.planetbars").getAttribute("aria-label");
     expect(aria).toContain("Jupiter");
-    expect(aria).toContain("1,398");
+    expect(aria).toContain("Jupiter 1,398,400 km");
   });
 
   test("planet table links into detail pages", async ({ page }) => {
