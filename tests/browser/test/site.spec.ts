@@ -75,8 +75,8 @@ test.describe("explore", () => {
 
   test("missions and scale sections render", async ({ page }) => {
     await page.goto("/explore/");
-    expect(await page.locator('.card-grid .card a[href*=mission], .card-grid .card').count()).toBeGreaterThanOrEqual(14);
-    expect(await page.locator("#scale .timeline-event").count()).toBeGreaterThanOrEqual(10);
+    expect(await page.locator(".card-grid .card", { hasText: /NASA|ESA|International/ }).count()).toBeGreaterThanOrEqual(14);
+    expect(await page.locator(".timeline-event", { hasText: /light-years|km|Moon/ }).count()).toBeGreaterThanOrEqual(10);
   });
 });
 
