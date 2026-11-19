@@ -391,3 +391,51 @@ table.data-table {
   color: var(--accent-2);
   margin-block-end: var(--space-2);
 }
+
+/* ---- Print: clean paper output, sources visible ---- */
+@media print {
+  .starfield,
+  .theme-toggle,
+  .hero-actions,
+  .timeline-era-nav,
+  .filter-bar,
+  .planet-nav,
+  .btn {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .hero {
+    background: none;
+    padding-block: 1.5rem;
+  }
+  .hero-title {
+    color: #000;
+    -webkit-text-fill-color: #000;
+    background: none;
+  }
+  .card,
+  .timeline-event,
+  .pathway-step {
+    break-inside: avoid;
+    border: 1px solid #999;
+    background: #fff;
+  }
+  .source-line a {
+    text-decoration: none;
+  }
+  /* print the real URLs after links, since paper has no hover */
+  .source-line a::after,
+  .resource-list a::after,
+  .card h3 a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9px;
+    color: #555;
+    word-break: break-all;
+  }
+  a {
+    color: #000;
+  }
+}
