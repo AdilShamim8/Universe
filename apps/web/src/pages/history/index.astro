@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import EraIcon from "../../components/EraIcon.astro";
 import { loadTimeline } from "../../lib/curated";
 
 const { data: timeline, provenance } = loadTimeline();
@@ -36,7 +37,10 @@ const totalEvents = eras.reduce((n, e) => n + e.events.length, 0);
 
     {eras.map((era) => (
       <section class="timeline-era" id={era.id} aria-labelledby={`${era.id}-h`}>
-        <h2 id={`${era.id}-h`}>{era.order}. {era.title}</h2>
+        <h2 id={`${era.id}-h`}>
+          <span class="era-icon"><EraIcon era={era.id} size={30} /></span>
+          {era.order}. {era.title}
+        </h2>
         <p class="era-summary">{era.summary}</p>
         <ol class="timeline-events">
           {era.events.map((ev) => (

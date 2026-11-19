@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import EraIcon from "../components/EraIcon.astro";
 import { loadTimeline, loadAcademy, loadResearch, loadLibrary } from "../lib/curated";
 
 const { data: timeline } = loadTimeline();
@@ -63,6 +64,7 @@ const featuredLibrary = library.slice(0, 6);
     <div class="card-grid">
       {eraHighlights.map((era) => (
         <article class="card">
+          <span class="era-icon era-icon-card"><EraIcon era={era.id} size={26} /></span>
           <h3><a href={`/history/#${era.id}`}>{era.title}</a></h3>
           <p>{era.summary}</p>
           <div class="card-meta"><span>{era.events.length} events</span></div>

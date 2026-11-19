@@ -365,3 +365,19 @@ table.data-table {
 .muted { color: var(--fg-2); }
 .mono { font-family: var(--font-mono); }
 .container-pad { padding-inline: var(--space-6); }
+
+/* Era icons */
+.timeline-era > h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.era-icon {
+  display: inline-flex;
+  color: var(--accent-0);
+  flex-shrink: 0;
+}
+.era-icon-card {
+  color: var(--accent-2);
+  margin-block-end: var(--space-2);
+}
