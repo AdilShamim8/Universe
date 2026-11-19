@@ -1,0 +1,132 @@
+---
+/**
+ * MissionTimeline — missions grouped by decade on a horizontal rail.
+ * Pure server-rendered HTML/CSS; the flat card list below remains the
+ * screen-reader / no-CSS view.
+ */
+interface Mission {
+  name: string;
+  year: number;
+  decade: string;
+  agency: string;
+  status: string;
+  summary: string;
+  url: string;
+}
+interface Props {
+  missions: Mission[];
+}
+const { missions } = Astro.props;
+const decades = [...new Set(missions.map((m) => m.decade))].sort();
+---
+<div class="mtl">
+  {decades.map((dec) => {
+    const inDec = missions.filter((m) => m.decade === dec).sort((a, b) => a.year - b.year);
+    return (
+      <div class="mtl-row">
+        <div class="mtl-decade" aria-hidden="true">{dec}</div>
+        <ol class="mtl-items">
+          {inDec.map((m) => (
+            <li class={`mtl-item mtl-${m.status}`}>
+              <a href={m.url} rel="noopener" class="mtl-card">
+                <span class="mtl-year">{m.year}</span>
+                <span class="mtl-name">{m.name}</span>
+                <span class="mtl-agency">{m.agency}</span>
+              </a>
+              <span class="mtl-status">{m.status}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    );
+  })}
+</div>
+
+<style>
+  .mtl {
+    margin-block: var(--space-8);
+    display: grid;
+    gap: var(--space-4);
+  }
+  .mtl-row {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: var(--space-4);
+    align-items: start;
+  }
+  .mtl-decade {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: color-mix(in oklab, var(--accent-0) 60%, var(--fg-2));
+    padding-block-start: var(--space-2);
+    text-align: right;
+  }
+  .mtl-items {
+    list-style: none;
+    padding: 0 0 0 var(--space-4);
+    margin: 0;
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    border-inline-start: 2px solid var(--border-1c);
+  }
+  .mtl-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mtl-item::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: calc(-1 * var(--space-4) - 7px);
+    inset-block-start: var(--space-3);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg-0);
+    border: 2px solid var(--accent-0);
+  }
+  .mtl-completed::before { border-color: var(--fg-2); }
+  .mtl-planned::before { border-color: var(--accent-1); border-style: dashed; }
+  .mtl-card {
+    display: grid;
+    gap: 2px;
+    padding: var(--space-3) var(--space-4);
+    background: color-mix(in oklab, var(--bg-2) 85%, transparent);
+    border: var(--border-1) solid var(--border-0);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: border-color var(--motion-fast) var(--ease-out);
+  }
+  .mtl-card:hover { border-color: var(--accent-0); }
+  .mtl-year {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--accent-1);
+  }
+  .mtl-name {
+    color: var(--fg-0);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+  .mtl-agency {
+    font-size: var(--text-xs);
+    color: var(--fg-2);
+  }
+  .mtl-status {
+    font-size: 9px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-inline-start: var(--space-4);
+  }
+  @media (max-width: 560px) {
+    .mtl-row { grid-template-columns: 1fr; }
+    .mtl-decade { text-align: left; padding: 0; }
+    .mtl-items { padding-inline-start: var(--space-3); }
+    .mtl-item::before { inset-inline-start: calc(-1 * var(--space-3) - 7px); }
+  }
+</style>

@@ -1,5 +1,8 @@
 ---
 import Base from "../../layouts/Base.astro";
+import ScaleStrip from "../../components/ScaleStrip.astro";
+import PlanetBars from "../../components/PlanetBars.astro";
+import MissionTimeline from "../../components/MissionTimeline.astro";
 import { loadExplore } from "../../lib/curated";
 
 const { data: explore } = loadExplore();
@@ -32,6 +35,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <h2>The planets, side by side</h2>
       <p>Numeric facts parsed directly from the NASA NSSDC Planetary Fact Sheet — not transcribed by hand.</p>
     </section>
+    <PlanetBars planets={planets} />
     <div class="data-table-wrap">
       <table class="data-table">
         <caption>Source: NASA NSSDC Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/)</caption>
@@ -52,7 +56,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
         <tbody>
           {planets.map((p) => (
             <tr>
-              <td><a href={p.page} rel="noopener">{p.name}</a></td>
+              <td><a href={`/explore/planets/${p.name.toLowerCase().replace(/\s+/g, "-")}/`}>{p.name}</a></td>
               <td>{p.type}</td>
               <td>{p.diameterKm?.toLocaleString("en-US") ?? "—"}</td>
               <td>{p.massE24kg ?? "—"}</td>
@@ -71,8 +75,39 @@ const activeMissions = missions.filter((m) => m.status === "active");
     <section class="section-head" id="exoplanets">
       <span class="section-kicker">Exoplanet explorer</span>
       <h2>Notable worlds beyond the solar system</h2>
-      <p>A starting set of milestone exoplanets. Parameters via the NASA Exoplanet Archive.</p>
+      <p>A starting set of milestone exoplanets. Masses, radii, periods and distances queried live from the NASA Exoplanet Archive.</p>
     </section>
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <caption>Source: NASA Exoplanet Archive — TAP query of the ps table (2026-11-19)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Planet</th>
+            <th scope="col">Type</th>
+            <th scope="col">Mass (M⊕)</th>
+            <th scope="col">Radius (R⊕)</th>
+            <th scope="col">Period (days)</th>
+            <th scope="col">Distance (ly)</th>
+            <th scope="col">Method</th>
+            <th scope="col">Discovered</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exoplanets.map((e) => (
+            <tr>
+              <td>{e.name}</td>
+              <td>{e.type}</td>
+              <td>{e.massEarth ?? "—"}</td>
+              <td>{e.radiusEarth ?? "—"}</td>
+              <td>{e.orbitalPeriodDays ?? "—"}</td>
+              <td>{e.distanceLy ?? "—"}</td>
+              <td>{e.discoveryMethod}</td>
+              <td>{e.discovered}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     <div class="card-grid">
       {exoplanets.map((e) => (
         <article class="card">
@@ -92,6 +127,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <span class="section-kicker">Mission explorer</span>
       <h2>{missions.length} missions, {activeMissions.length} still flying</h2>
     </section>
+    <MissionTimeline missions={missions} />
     <div class="card-grid">
       {missions.map((m) => (
         <article class="card">
@@ -111,6 +147,7 @@ const activeMissions = missions.filter((m) => m.status === "active");
       <h2>From the Moon to the observable universe</h2>
       <p>Each step of the cosmic ladder with its source. Where a single size isn't meaningful, the note explains the measure used.</p>
     </section>
+    <ScaleStrip items={scale} />
     <ol class="timeline-events">
       {scale.map((s) => (
         <li class="timeline-event">

@@ -1,0 +1,146 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { loadExplore, type Planet } from "../../../lib/curated";
+
+export function getStaticPaths() {
+  const { data: explore } = loadExplore();
+  return explore.planets.map((p) => ({
+    params: { planet: p.name.toLowerCase().replace(/\s+/g, "-") },
+    props: { planet: p },
+  }));
+}
+
+const { planet } = Astro.props as { planet: Planet };
+const { data: explore } = loadExplore();
+
+// ordered neighbors for prev/next navigation within the fact sheet order
+const idx = explore.planets.findIndex((p) => p.name === planet.name);
+const prev = explore.planets[idx - 1];
+const next = explore.planets[idx + 1];
+
+const fmt = (v: number | null | undefined, unit = "") =>
+  v === null || v === undefined ? "—" : `${v.toLocaleString("en-US")}${unit ? ` ${unit}` : ""}`;
+
+const facts: { label: string; value: string }[] = [
+  { label: "Type", value: planet.type },
+  { label: "Mass", value: fmt(planet.massE24kg, "×10²⁴ kg") },
+  { label: "Diameter", value: fmt(planet.diameterKm, "km") },
+  { label: "Density", value: fmt(planet.densityKgm3, "kg/m³") },
+  { label: "Surface gravity", value: fmt(planet.gravityMs2, "m/s²") },
+  { label: "Escape velocity", value: fmt(planet.escapeVelocityKms, "km/s") },
+  { label: "Rotation period", value: fmt(planet.rotationPeriodHours, "hours") },
+  { label: "Length of day", value: fmt(planet.lengthOfDayHours, "hours") },
+  { label: "Distance from Sun", value: fmt(planet.distanceFromSunE6km, "×10⁶ km") },
+  { label: "Orbital period", value: fmt(planet.orbitalPeriodDays, "days") },
+  { label: "Orbital velocity", value: fmt(planet.orbitalVelocityKms, "km/s") },
+  { label: "Mean temperature", value: fmt(planet.meanTemperatureC, "°C") },
+  { label: "Known moons", value: fmt(planet.moons) },
+  { label: "Ring system", value: planet.ringSystem === null ? "—" : planet.ringSystem ? "Yes" : "No" },
+  { label: "Global magnetic field", value: planet.magneticField === null ? "—" : planet.magneticField ? "Yes" : "No" },
+];
+
+// relative size bar vs Jupiter (largest body in the set)
+const maxSize = Math.max(...explore.planets.map((p) => p.diameterKm ?? 0));
+const sizePct = Math.max(2, Math.round(((planet.diameterKm ?? 0) / maxSize) * 100));
+const sizeAria = planet.name + " diameter " + fmt(planet.diameterKm, "km") + ", " + sizePct + "% of the diameter of Jupiter";
+
+const slug = (n: string) => n.toLowerCase().replace(/\s+/g, "-");
+---
+<Base
+  title={`${planet.name}`}
+  description={`${planet.name} — ${planet.description} Facts from the NASA NSSDC Planetary Fact Sheet.`}
+  current="/explore/"
+>
+  <section class="hero">
+    <p class="hero-eyebrow">{planet.type}</p>
+    <h1 class="hero-title">{planet.name}</h1>
+    <p class="hero-lede">{planet.description}</p>
+    <div class="hero-actions">
+      <a class="btn btn-secondary" href="/explore/#solar-system">Compare all planets</a>
+      <a class="btn btn-primary" href={planet.page} rel="noopener">NASA {planet.name} page ↗</a>
+    </div>
+  </section>
+
+  <div class="container-pad">
+    <section class="section-head">
+      <span class="section-kicker">Physical facts</span>
+      <h2>At a glance</h2>
+      <p>Every value parsed directly from the NASA NSSDC Planetary Fact Sheet — not transcribed by hand.</p>
+    </section>
+
+    <div class="planet-sizebar" role="img" aria-label={sizeAria}>
+      <div class="planet-sizebar-fill" style={`width: ${sizePct}%`}></div>
+      <span class="planet-sizebar-label mono">{fmt(planet.diameterKm, "km")} · {sizePct}% of the diameter of Jupiter</span>
+    </div>
+
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <caption>Source: <a href={planet.source.url} rel="noopener">{planet.source.label}</a></caption>
+        <tbody>
+          {facts.map((f) => (
+            <tr>
+              <th scope="row">{f.label}</th>
+              <td>{f.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="planet-nav" aria-label="Planet navigation">
+      {prev ? (
+        <a class="card planet-nav-link" href={`/explore/planets/${slug(prev.name)}/`}>
+          <span class="muted">← Previous</span>
+          <strong>{prev.name}</strong>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a class="card planet-nav-link" href={`/explore/planets/${slug(next.name)}/`}>
+          <span class="muted">Next →</span>
+          <strong>{next.name}</strong>
+        </a>
+      ) : <span></span>}
+    </nav>
+  </div>
+</Base>
+
+<style>
+  .planet-sizebar {
+    background: var(--bg-inset);
+    border: var(--border-1) solid var(--border-0);
+    border-radius: var(--radius-md);
+    height: 44px;
+    position: relative;
+    margin-block: var(--space-6);
+    overflow: hidden;
+  }
+  .planet-sizebar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, color-mix(in oklab, var(--accent-0) 70%, transparent), var(--accent-3));
+    border-radius: inherit;
+  }
+  .planet-sizebar-label {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: var(--space-4);
+    translate: 0 -50%;
+    font-size: var(--text-sm);
+    color: var(--fg-0);
+    background: color-mix(in oklab, var(--bg-0) 75%, transparent);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+  .planet-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-block: var(--space-12);
+  }
+  .planet-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    text-decoration: none;
+    color: var(--fg-0);
+  }
+</style>

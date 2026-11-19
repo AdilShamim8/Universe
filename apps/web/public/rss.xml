@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Universe 101</title>
+    <link>https://universe-101.vercel.app</link>
+    <description>Learn, explore and research the universe — a curated, source-backed guide from beginner to research level.</description>
+    <language>en</language>
+    <atom:link href="https://universe-101.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Era 1: The Early Universe</title>
+      <link>https://universe-101.vercel.app/history/#early-universe</link>
+      <guid>https://universe-101.vercel.app/history/#early-universe</guid>
+      <description>From the initial singularity to roughly one second after the Big Bang: the Planck epoch in which quantum gravity dominates, cosmic inflation, and the quark-gluon plasma of the electroweak and quark epochs. Physics below the Planck time is not yet observable. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 2: Particle Formation and the First Nuclei</title>
+      <link>https://universe-101.vercel.app/history/#expansion-particle-formation</link>
+      <guid>https://universe-101.vercel.app/history/#expansion-particle-formation</guid>
+      <description>From about one second to ten minutes after the Big Bang: protons and neutrons form, neutrinos decouple, electrons and positrons annihilate, and Big Bang nucleosynthesis fixes the cosmic abundance of hydrogen and helium. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 3: Recombination and the Cosmic Microwave Background</title>
+      <link>https://universe-101.vercel.app/history/#recombination-cmb</link>
+      <guid>https://universe-101.vercel.app/history/#recombination-cmb</guid>
+      <description>About 380,000 years after the Big Bang the universe cooled enough for neutral atoms to form, releasing the cosmic microwave background — the oldest light we can observe — and beginning the cosmic dark ages. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 4: Cosmic Dawn — the First Stars</title>
+      <link>https://universe-101.vercel.app/history/#first-stars</link>
+      <guid>https://universe-101.vercel.app/history/#first-stars</guid>
+      <description>Roughly 100 to 400 million years after the Big Bang, gravity collapsed the first gas clouds into massive, metal-free Population III stars — the 'cosmic dawn'. Their ultraviolet light began reionizing the universe and their fusion and supernovae created the first elements heavier than helium. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 5: The First Galaxies</title>
+      <link>https://universe-101.vercel.app/history/#first-galaxies</link>
+      <guid>https://universe-101.vercel.app/history/#first-galaxies</guid>
+      <description>Between roughly 400 million and one billion years after the Big Bang, small gas clouds merged into the first true galaxies, which assembled through repeated mergers into the larger spirals and ellipticals of the later universe. (5 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 6: Large-Scale Structure and Galaxy Clusters</title>
+      <link>https://universe-101.vercel.app/history/#structure-formation</link>
+      <guid>https://universe-101.vercel.app/history/#structure-formation</guid>
+      <description>From roughly 1 to 6 billion years after the Big Bang, gravity drew galaxies into groups, clusters, filaments, and voids — the cosmic web — while dark energy later began accelerating the expansion of the universe. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 7: Formation of the Solar System</title>
+      <link>https://universe-101.vercel.app/history/#solar-system-formation</link>
+      <guid>https://universe-101.vercel.app/history/#solar-system-formation</guid>
+      <description>About 4.6 billion years ago a cloud of gas and dust enriched by earlier generations of stars collapsed into a rotating disk, forming the Sun at its center and the planets from the leftover material. (5 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 8: Earth's Geological History</title>
+      <link>https://universe-101.vercel.app/history/#earth-geological-history</link>
+      <guid>https://universe-101.vercel.app/history/#earth-geological-history</guid>
+      <description>From the Moon-forming giant impact about 4.5 billion years ago through the growth of oceans, atmosphere, and moving tectonic plates, the young Earth was transformed from a molten world into a habitable planet. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 9: Evolution of Life on Earth</title>
+      <link>https://universe-101.vercel.app/history/#evolution-of-life</link>
+      <guid>https://universe-101.vercel.app/history/#evolution-of-life</guid>
+      <description>Life emerged on Earth by at least 3.5 billion years ago and perhaps earlier. Key milestones include oxygen-producing photosynthesis and the Great Oxidation Event, complex multicellular life, the Cambrian explosion, and the asteroid impact that ended the age of non-avian dinosaurs 66 million years ago. (7 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 10: Humanity Discovers the Universe</title>
+      <link>https://universe-101.vercel.app/history/#human-civilization-discovery</link>
+      <guid>https://universe-101.vercel.app/history/#human-civilization-discovery</guid>
+      <description>From the first recorded astronomical observations to the 20th-century discoveries that revealed the true scale and history of the cosmos, humanity gradually replaced an Earth-centered picture with the expanding universe of modern cosmology. (8 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 11: The Space Age</title>
+      <link>https://universe-101.vercel.app/history/#space-exploration</link>
+      <guid>https://universe-101.vercel.app/history/#space-exploration</guid>
+      <description>From Sputnik's 1957 launch to today's gravitational-wave observatories and planetary defense tests, humanity developed the tools to visit other worlds and observe the universe across the entire electromagnetic spectrum. (10 sourced events.)</description>
+    </item>
+    <item>
+      <title>Era 12: The Far Future (Model-Dependent Projections)</title>
+      <link>https://universe-101.vercel.app/history/#conditional-future</link>
+      <guid>https://universe-101.vercel.app/history/#conditional-future</guid>
+      <description>These events are projections based on stellar evolution models and orbital simulations, not observations. Each is clearly labeled with its assumptions; the timing depends on the model used and carries real uncertainty. (6 sourced events.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Introduction to Astronomy</title>
+      <link>https://universe-101.vercel.app/academy/introduction-to-astronomy/</link>
+      <guid>https://universe-101.vercel.app/academy/introduction-to-astronomy/</guid>
+      <description>A guided tour of the universe as astronomers understand it today, from the Earth-Moon system and naked-eye skywatching to planets, stars, galaxies and the Big Bang. It builds the vocabulary, scale intuition and observing habits that every other astronomy subject assumes. Because it uses everyday language and backyard observations, it is the standard entry point for curious beginners. (6 steps, 15 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Mathematics and Physics Foundations</title>
+      <link>https://universe-101.vercel.app/academy/mathematics-and-physics-foundations/</link>
+      <guid>https://universe-101.vercel.app/academy/mathematics-and-physics-foundations/</guid>
+      <description>The calculus, algebra and classical physics toolkit on which all quantitative astronomy rests: mechanics, gravitation, electromagnetism, waves and probability. Astronomy at the intermediate level and above is applied physics, so a firm grip on these subjects is the single biggest predictor of success. This pathway consolidates them with an astronomical flavor where possible. (7 steps, 19 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: The Solar System</title>
+      <link>https://universe-101.vercel.app/academy/solar-system/</link>
+      <guid>https://universe-101.vercel.app/academy/solar-system/</guid>
+      <description>A comparative survey of the Sun's family: terrestrial planets, giant planets, moons, rings, asteroids, comets and dwarf planets, plus how the system formed and how it compares with exoplanet systems. Solar system science blends geology, chemistry, atmospheres and orbital dynamics, and it anchors the search for habitable worlds elsewhere. (7 steps, 18 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Stars and Stellar Evolution</title>
+      <link>https://universe-101.vercel.app/academy/stars-and-stellar-evolution/</link>
+      <guid>https://universe-101.vercel.app/academy/stars-and-stellar-evolution/</guid>
+      <description>How stars form from interstellar clouds, shine by nuclear fusion, age, and die as white dwarfs, neutron stars or black holes. Stars make almost every chemical element in the periodic table and their lives set the clock for galaxies, so this subject is the backbone of astrophysics. It progresses from observational properties to quantitative stellar structure. (7 steps, 14 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Galaxies</title>
+      <link>https://universe-101.vercel.app/academy/galaxies/</link>
+      <guid>https://universe-101.vercel.app/academy/galaxies/</guid>
+      <description>The study of galaxies — our Milky Way, spiral and elliptical systems, active galactic nuclei and quasars, and galaxy evolution across cosmic time. Galaxies are the building blocks of the universe and the arenas where star formation, dark matter and black-hole feedback interact, making them a central topic of modern astronomy. (7 steps, 15 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Black Holes</title>
+      <link>https://universe-101.vercel.app/academy/black-holes/</link>
+      <guid>https://universe-101.vercel.app/academy/black-holes/</guid>
+      <description>Black holes — stellar remnants and supermassive anchors of galaxies — are the most extreme objects in physics, where gravity dominates everything. The subject covers their formation, the relativity needed to understand them, observational evidence from X-ray binaries to the Event Horizon Telescope, and their role in galaxy evolution. It demands solid physics preparation and rewards it with the deepest insights in astrophysics. (7 steps, 14 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Cosmology</title>
+      <link>https://universe-101.vercel.app/academy/cosmology/</link>
+      <guid>https://universe-101.vercel.app/academy/cosmology/</guid>
+      <description>The origin, content, dynamics and fate of the universe as a whole: the Big Bang, expansion, the cosmic microwave background, nucleosynthesis and structure formation. Cosmology ties together every other subject — stellar physics, galaxies and particle physics — into a single narrative of cosmic history, and it is where precision measurement meets deep theory. (6 steps, 13 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Dark Matter and Dark Energy</title>
+      <link>https://universe-101.vercel.app/academy/dark-matter-and-dark-energy/</link>
+      <guid>https://universe-101.vercel.app/academy/dark-matter-and-dark-energy/</guid>
+      <description>Roughly 95 percent of the universe is made of substances we cannot see directly: dark matter holding galaxies together and dark energy driving accelerating expansion. This subject examines the observational evidence — rotation curves, clusters, gravitational lensing, supernovae, the CMB — and the leading candidate explanations. It is the clearest signal that physics is incomplete. (5 steps, 10 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Astrobiology</title>
+      <link>https://universe-101.vercel.app/academy/astrobiology/</link>
+      <guid>https://universe-101.vercel.app/academy/astrobiology/</guid>
+      <description>The search for life beyond Earth: habitable zones, ocean worlds, biosignatures, extremophiles and the origin of life itself. It draws on astronomy, biology, chemistry and geology, and it frames one of the biggest questions in science — are we alone? Missions to Mars, Europa and Enceladus, and exoplanet atmosphere studies, all feed into it. (5 steps, 11 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Space Exploration</title>
+      <link>https://universe-101.vercel.app/academy/space-exploration/</link>
+      <guid>https://universe-101.vercel.app/academy/space-exploration/</guid>
+      <description>The history, technology and science of spaceflight: rockets and orbits, robotic missions to planets and comets, telescopes in space and the human return to the Moon. Understanding how missions are designed and flown turns astronomy from passive observation into active investigation of the solar system and beyond. (6 steps, 13 resources.)</description>
+    </item>
+    <item>
+      <title>Learning pathway: Research Methods in Astronomy</title>
+      <link>https://universe-101.vercel.app/academy/research-methods/</link>
+      <guid>https://universe-101.vercel.app/academy/research-methods/</guid>
+      <description>How professional astronomy is actually done: proposing and carrying out observations, reducing and analyzing data, writing code with Astropy and NumPy, statistics and error analysis, and communicating results. This is the bridge from coursework to contributing science, whether in graduate school or through citizen science and amateur research. (7 steps, 15 resources.)</description>
+    </item>
+    <item>
+      <title>Research field: Cosmology</title>
+      <link>https://universe-101.vercel.app/research/cosmology/</link>
+      <guid>https://universe-101.vercel.app/research/cosmology/</guid>
+      <description>Cosmology studies the origin, evolution and large-scale properties of the universe as a whole — its age, composition, geometry and expansion history. The concordance model is flat ΛCDM, anchored by the cosmic microwave background and large-scale structure. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Galaxies and large-scale structure</title>
+      <link>https://universe-101.vercel.app/research/galaxies-and-structure/</link>
+      <guid>https://universe-101.vercel.app/research/galaxies-and-structure/</guid>
+      <description>The study of galaxies — their formation, evolution, morphology and clustering — and of the cosmic web of dark matter and gas they trace. Combines deep surveys, spectroscopy and hydrodynamical simulations. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Stars and stellar evolution</title>
+      <link>https://universe-101.vercel.app/research/stars-and-stellar-evolution/</link>
+      <guid>https://universe-101.vercel.app/research/stars-and-stellar-evolution/</guid>
+      <description>The physics of stars: formation, structure, nucleosynthesis, and endpoints as white dwarfs, neutron stars or black holes. Precision asteroseismology and large surveys have transformed the field. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Black holes</title>
+      <link>https://universe-101.vercel.app/research/black-holes/</link>
+      <guid>https://universe-101.vercel.app/research/black-holes/</guid>
+      <description>Black holes — regions where gravity is so strong nothing escapes — are studied through X-ray binaries, active galactic nuclei, gravitational waves and direct imaging. The 2010s brought the detection (GW150914) and imaging (EHT) revolutions. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Planetary science</title>
+      <link>https://universe-101.vercel.app/research/planetary-science/</link>
+      <guid>https://universe-101.vercel.app/research/planetary-science/</guid>
+      <description>The study of planets, moons and small bodies — their formation, interiors, atmospheres and habitability. Now driven by sample return, rovers and exoplanet characterization. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Astrobiology</title>
+      <link>https://universe-101.vercel.app/research/astrobiology/</link>
+      <guid>https://universe-101.vercel.app/research/astrobiology/</guid>
+      <description>The study of the origin, evolution and distribution of life in the universe. Integrates biology, chemistry, planetary science and astronomy to characterize habitable environments and search for biosignatures. (6 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Heliophysics</title>
+      <link>https://universe-101.vercel.app/research/heliophysics/</link>
+      <guid>https://universe-101.vercel.app/research/heliophysics/</guid>
+      <description>The physics of the Sun and the heliosphere: space weather, the solar wind, and the coupled Sun-Earth system, studied as one system from the solar interior to the outer heliosphere. (4 verified papers.)</description>
+    </item>
+    <item>
+      <title>Research field: Astrophysical data science and methods</title>
+      <link>https://universe-101.vercel.app/research/astrophysical-data-science/</link>
+      <guid>https://universe-101.vercel.app/research/astrophysical-data-science/</guid>
+      <description>The methods layer of modern astronomy: software, statistics, machine learning and community cyberinfrastructure for handling petabyte-scale surveys. (6 verified papers.)</description>
+    </item>
+  </channel>
+</rss>

@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import EraIcon from "../components/EraIcon.astro";
 import { loadTimeline, loadAcademy, loadResearch, loadLibrary } from "../lib/curated";
 
 const { data: timeline } = loadTimeline();
@@ -15,7 +16,7 @@ const eraHighlights = [timeline.eras[0], timeline.eras[3], timeline.eras[6], tim
 const featuredLibrary = library.slice(0, 6);
 ---
 <Base title="Universe 101" description="Learn, explore and research the universe — a curated, source-backed guide from beginner to research level." current="/">
-  <section class="hero">
+  <section class="hero hero-img">
     <p class="hero-eyebrow">13.8 billion years · 2 trillion galaxies · one platform</p>
     <h1 class="hero-title">Explore the universe, from the Big Bang to the research frontier</h1>
     <p class="hero-lede">
@@ -33,6 +34,9 @@ const featuredLibrary = library.slice(0, 6);
       <span><strong>{library.length}</strong> verified resources</span>
       <span><strong>{research.length}</strong> research fields</span>
     </p>
+    <a class="hero-credit" href="https://images.nasa.gov/details/GSFC_20171208_Archive_e000842" rel="noopener">
+      Image: NASA, ESA, and the Hubble Heritage Team (STScI/AURA) — Pillars of Creation, near-infrared
+    </a>
   </section>
 
   <div class="container-pad">
@@ -63,6 +67,7 @@ const featuredLibrary = library.slice(0, 6);
     <div class="card-grid">
       {eraHighlights.map((era) => (
         <article class="card">
+          <span class="era-icon era-icon-card"><EraIcon era={era.id} size={26} /></span>
           <h3><a href={`/history/#${era.id}`}>{era.title}</a></h3>
           <p>{era.summary}</p>
           <div class="card-meta"><span>{era.events.length} events</span></div>

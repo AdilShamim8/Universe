@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import EraIcon from "../../components/EraIcon.astro";
 import { loadTimeline } from "../../lib/curated";
 
 const { data: timeline, provenance } = loadTimeline();
@@ -32,11 +33,18 @@ const totalEvents = eras.reduce((n, e) => n + e.events.length, 0);
           <li><a href={`#${era.id}`}>{era.order}. {era.title}</a></li>
         ))}
       </ul>
+      <p class="era-progress" role="status">
+        {totalEvents} events · {eras.length} eras · cosmological age {model.ageGyr} ± {model.ageUncertaintyGyr} Gyr
+        <span aria-hidden="true"> · ΛCDM</span>
+      </p>
     </nav>
 
     {eras.map((era) => (
       <section class="timeline-era" id={era.id} aria-labelledby={`${era.id}-h`}>
-        <h2 id={`${era.id}-h`}>{era.order}. {era.title}</h2>
+        <h2 id={`${era.id}-h`}>
+          <span class="era-icon"><EraIcon era={era.id} size={30} /></span>
+          {era.order}. {era.title}
+        </h2>
         <p class="era-summary">{era.summary}</p>
         <ol class="timeline-events">
           {era.events.map((ev) => (
@@ -58,6 +66,11 @@ const totalEvents = eras.reduce((n, e) => n + e.events.length, 0);
         </ol>
       </section>
     ))}
+
+    <nav class="era-footnav" aria-label="Continue through eras">
+      <a class="btn btn-secondary" href="#early-universe">↑ Restart at era 1</a>
+      <a class="btn btn-secondary" href="/academy/">Study the physics →</a>
+    </nav>
 
     <p class="muted">
       Timeline content is a curated, source-linked dataset (verified {provenance.verification.verifiedOn}).

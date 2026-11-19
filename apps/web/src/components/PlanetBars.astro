@@ -1,0 +1,85 @@
+---
+/**
+ * PlanetBars — original SVG bar chart of planet diameters (log scale).
+ * Server-rendered, no JS. Decorative axis labels in mono font; the
+ * accessible table adjacent to it carries the same data.
+ */
+interface Planet {
+  name: string;
+  diameterKm: number | null;
+}
+interface Props {
+  planets: Planet[];
+  max?: number; // largest diameter for scaling
+}
+const { planets, max } = Astro.props;
+
+const bodies = planets.filter((p) => typeof p.diameterKm === "number") as (Planet & { diameterKm: number })[];
+const maxD = max ?? Math.max(...bodies.map((p) => p.diameterKm));
+
+// log-scale widths: log10(d) from log10(2000) to log10(maxD)
+const lo = Math.log10(2000);
+const hi = Math.log10(maxD);
+const widthPct = (d: number) => Math.max(4, ((Math.log10(d) - lo) / (hi - lo)) * 100);
+
+const W = 720;
+const rowH = 26;
+const labelW = 90;
+const H = bodies.length * rowH + 34;
+const barMax = W - labelW - 70;
+const fmt = (d: number) => (d >= 1000 ? `${(d / 1000).toFixed(d >= 10000 ? 0 : 1)}k` : `${d}`);
+---
+<svg
+  viewBox={`0 0 ${W} ${H}`}
+  width="100%"
+  height={H}
+  role="img"
+  aria-label={`Diameter comparison, log scale: ${bodies.map((p) => `${p.name} ${p.diameterKm.toLocaleString("en-US")} km`).join("; ")}`}
+  class="planetbars"
+>
+  {bodies.map((p, i) => {
+    const y = i * rowH + 6;
+    const w = (widthPct(p.diameterKm) / 100) * barMax;
+    return (
+      <g>
+        <text x={labelW - 8} y={y + 13} text-anchor="end" class="pb-name">{p.name}</text>
+        <rect x={labelW} y={y} width={w} height={16} rx={8} class="pb-bar" style={`--i: ${i % 3};`} />
+        <text x={labelW + w + 8} y={y + 13} class="pb-val">{fmt(p.diameterKm)} km</text>
+      </g>
+    );
+  })}
+  <line x1={labelW} y1={bodies.length * rowH + 12} x2={W - 70} y2={bodies.length * rowH + 12} class="pb-axis" />
+  <text x={labelW} y={H - 4} class="pb-tick">2k km</text>
+  <text x={labelW + barMax / 3} y={H - 4} class="pb-tick" text-anchor="middle">log scale</text>
+  <text x={W - 70} y={H - 4} class="pb-tick" text-anchor="end">{fmt(maxD)} km</text>
+</svg>
+
+<style>
+  .planetbars {
+    background: var(--bg-1);
+    border: var(--border-1) solid var(--border-0);
+    border-radius: var(--radius-md);
+    max-width: 100%;
+    height: auto;
+  }
+  .pb-name {
+    fill: var(--fg-1);
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .pb-bar {
+    fill: url(#pb-grad);
+    fill: color-mix(in oklab, var(--accent-0) calc(85% - var(--i) * 12%), var(--accent-3));
+  }
+  .pb-val {
+    fill: var(--fg-2);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .pb-axis { stroke: var(--border-1c); stroke-width: 1; }
+  .pb-tick {
+    fill: var(--fg-2);
+    font-family: var(--font-mono);
+    font-size: 10px;
+  }
+</style>

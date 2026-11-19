@@ -21,6 +21,7 @@
     "astro": "7.4.12"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.6",
     "pagefind": "^1.6.0"
   }
 }

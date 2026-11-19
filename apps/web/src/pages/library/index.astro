@@ -26,12 +26,15 @@ const fmt = (n: number) => n.toLocaleString("en-US");
   </section>
 
   <div class="container-pad">
-    <div class="filter-bar" id="resources" role="group" aria-label="Filter resources">
-      <span class="chip chip-beginner" data-diff="beginner">beginner</span>
-      <span class="chip chip-intermediate" data-diff="intermediate">intermediate</span>
-      <span class="chip chip-advanced" data-diff="advanced">advanced</span>
-      <span class="chip chip-research" data-diff="research">research</span>
+    <div class="filter-bar" id="resources" role="group" aria-label="Filter resources by difficulty">
+      <span class="muted" id="lib-count">{library.length} resources</span>
+      <button class="filter-btn" data-diff="all" aria-pressed="true">all</button>
+      {difficulties.map((d) => (
+        <button class="filter-btn" data-diff={d} aria-pressed="false">{d}</button>
+      ))}
     </div>
+
+    <noscript><p class="muted">Filtering needs JavaScript — every resource is listed below in full.</p></noscript>
 
     {categories.map((cat) => {
       const items = library.filter((r) => r.category === cat);
@@ -42,7 +45,7 @@ const fmt = (n: number) => n.toLocaleString("en-US");
         </section>
       );
     })}
-    <div class="card-grid">
+    <div class="card-grid" id="lib-grid">
       {library.map((r) => (
         <article class="card" data-difficulty={r.difficulty}>
           <h3><a href={r.url} rel="noopener">{r.title}</a></h3>
@@ -58,6 +61,30 @@ const fmt = (n: number) => n.toLocaleString("en-US");
         </article>
       ))}
     </div>
+
+    <script>
+      // Progressive enhancement: filter library cards by difficulty.
+      const bar = document.querySelector('[role="group"][aria-label^="Filter resources"]');
+      const grid = document.getElementById("lib-grid");
+      const count = document.getElementById("lib-count");
+      if (bar && grid) {
+        bar.addEventListener("click", (e) => {
+          const btn = e.target.closest(".filter-btn");
+          if (!btn) return;
+          const diff = btn.dataset.diff;
+          for (const b of bar.querySelectorAll(".filter-btn")) {
+            b.setAttribute("aria-pressed", String(b === btn));
+          }
+          let shown = 0;
+          for (const card of grid.querySelectorAll(".card")) {
+            const match = diff === "all" || card.dataset.difficulty === diff;
+            card.hidden = !match;
+            if (match) shown++;
+          }
+          if (count) count.textContent = `${shown} of ${grid.querySelectorAll(".card").length} resources`;
+        });
+      }
+    </script>
 
     <p class="muted">
       Redistribution notes: this library links out rather than importing content. Licenses vary
