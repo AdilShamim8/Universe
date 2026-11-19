@@ -75,8 +75,39 @@ const activeMissions = missions.filter((m) => m.status === "active");
     <section class="section-head" id="exoplanets">
       <span class="section-kicker">Exoplanet explorer</span>
       <h2>Notable worlds beyond the solar system</h2>
-      <p>A starting set of milestone exoplanets. Parameters via the NASA Exoplanet Archive.</p>
+      <p>A starting set of milestone exoplanets. Masses, radii, periods and distances queried live from the NASA Exoplanet Archive.</p>
     </section>
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <caption>Source: NASA Exoplanet Archive — TAP query of the ps table (2026-11-19)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Planet</th>
+            <th scope="col">Type</th>
+            <th scope="col">Mass (M⊕)</th>
+            <th scope="col">Radius (R⊕)</th>
+            <th scope="col">Period (days)</th>
+            <th scope="col">Distance (ly)</th>
+            <th scope="col">Method</th>
+            <th scope="col">Discovered</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exoplanets.map((e) => (
+            <tr>
+              <td>{e.name}</td>
+              <td>{e.type}</td>
+              <td>{e.massEarth ?? "—"}</td>
+              <td>{e.radiusEarth ?? "—"}</td>
+              <td>{e.orbitalPeriodDays ?? "—"}</td>
+              <td>{e.distanceLy ?? "—"}</td>
+              <td>{e.discoveryMethod}</td>
+              <td>{e.discovered}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     <div class="card-grid">
       {exoplanets.map((e) => (
         <article class="card">

@@ -3,7 +3,7 @@
   "kind": "imported-fact-data",
   "description": "Planetary facts parsed live from the NASA NSSDC Planetary Fact Sheet; missions and scale objects with source URLs.",
   "verification": {
-   "method": "Parsed programmatically from https://nssdc.gsfc.nasa.gov/planetary/factsheet/ on 2026-11-18; mission/scale URLs curl-verified 200",
+   "method": "Parsed programmatically from https://nssdc.gsfc.nasa.gov/planetary/factsheet/ on 2026-11-18; mission/scale URLs curl-verified 200; exoplanet mass/radius/period/distance/method queried live from the Exoplanet Archive TAP service (ps table) on 2026-11-19",
    "verifiedOn": "2026-11-19",
    "passRate": "all numeric values machine-parsed from source"
   }
@@ -256,34 +256,44 @@
     "name": "51 Pegasi b",
     "discovered": 1995,
     "type": "hot Jupiter",
-    "distanceLy": 50,
+    "distanceLy": 15.5,
     "notes": "First exoplanet found orbiting a Sun-like star; Nobel-cited discovery.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 193.88,
+    "discoveryMethod": "Radial Velocity",
+    "orbitalPeriodDays": 4.23
    },
    {
     "name": "HD 209458 b",
     "discovered": 1999,
     "type": "hot Jupiter",
-    "distanceLy": 157,
+    "distanceLy": 48.3,
     "notes": "First transiting exoplanet; first detection of an exoplanet atmosphere.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 232.02,
+    "radiusEarth": 15.58,
+    "discoveryMethod": "Radial Velocity",
+    "orbitalPeriodDays": 3.52
    },
    {
     "name": "Kepler-186f",
     "discovered": 2014,
     "type": "super-Earth",
-    "distanceLy": 579,
+    "distanceLy": 177.6,
     "notes": "First Earth-size planet found in the habitable zone of another star.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "radiusEarth": 1.12,
+    "discoveryMethod": "Transit",
+    "orbitalPeriodDays": 129.95
    },
    {
     "name": "TRAPPIST-1 e",
@@ -292,53 +302,71 @@
     "distanceLy": 40,
     "notes": "One of seven Earth-sized worlds around an ultracool dwarf star.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 0.692,
+    "radiusEarth": 0.92,
+    "discoveryMethod": "Transit",
+    "orbitalPeriodDays": 6.1
    },
    {
     "name": "Proxima Centauri b",
     "discovered": 2016,
     "type": "super-Earth",
-    "distanceLy": 4.24,
+    "distanceLy": 1.3,
     "notes": "Closest known exoplanet to the Solar System.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 1.27,
+    "discoveryMethod": "Radial Velocity",
+    "orbitalPeriodDays": 11.19
    },
    {
     "name": "Kepler-452b",
     "discovered": 2015,
     "type": "super-Earth",
-    "distanceLy": 1800,
+    "distanceLy": 551.7,
     "notes": "'Earth's cousin' — a super-Earth in a habitable-zone orbit around a Sun-like star.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "radiusEarth": 1.5,
+    "discoveryMethod": "Transit",
+    "orbitalPeriodDays": 384.84
    },
    {
     "name": "WASP-12b",
     "discovered": 2008,
     "type": "hot Jupiter",
-    "distanceLy": 1400,
+    "distanceLy": 427.2,
     "notes": "A carbon-rich planet being consumed by its star.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 454.5,
+    "radiusEarth": 20.46,
+    "discoveryMethod": "Transit",
+    "orbitalPeriodDays": 1.09
    },
    {
     "name": "K2-18 b",
     "discovered": 2015,
     "type": "mini-Neptune",
-    "distanceLy": 124,
+    "distanceLy": 38.0,
     "notes": "Hycean candidate; JWST has detected methane and CO2 in its atmosphere.",
     "source": {
-     "label": "NASA Exoplanet Archive",
+     "label": "NASA Exoplanet Archive (TAP query, 2026-11-19)",
      "url": "https://exoplanetarchive.ipac.caltech.edu/"
-    }
+    },
+    "massEarth": 8.92,
+    "radiusEarth": 2.37,
+    "discoveryMethod": "Transit",
+    "orbitalPeriodDays": 32.94
    }
   ],
   "missions": [

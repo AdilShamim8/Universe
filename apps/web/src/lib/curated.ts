@@ -192,6 +192,10 @@ export interface ExploreModel {
     discovered: number;
     type: string;
     distanceLy: number;
+    massEarth?: number | null;
+    radiusEarth?: number | null;
+    orbitalPeriodDays?: number | null;
+    discoveryMethod?: string;
     notes: string;
     source: { label: string; url: string };
   }[];
