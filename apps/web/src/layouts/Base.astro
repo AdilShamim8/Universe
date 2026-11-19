@@ -55,6 +55,13 @@ const navEntries = [
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Universe 101",
+      url: SITE,
+      description: description ?? "Learn, explore and research the universe — a curated, source-backed guide from beginner to research level.",
+    })} />
     <meta name="generator" content={Astro.generator} />
     <script is:inline>
       // Theme + motion preferences before first paint (no flash). The toggle
