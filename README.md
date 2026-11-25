@@ -1,4 +1,4 @@
-# Universe 101
+# Universe 
 
 **Status: v0.2 — curated product.** The site now serves real, useful content everywhere: a source-backed timeline of 77 events across 12 eras, 11 learning pathways with 157 verified resources, a research directory of 8 fields with 46 arXiv-verified papers, a library of 79 verified resources, and exploration tools built on live-parsed NASA fact-sheet data. Original scientific explanations (our own prose about the science) are still pending qualified human review — see [docs/content-workflow.md](docs/content-workflow.md) for the two-layer policy that lets curated content ship without ever faking a review state.
 
